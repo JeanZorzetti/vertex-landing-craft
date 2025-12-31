@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -8,22 +10,12 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80)` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/80 via-navy/70 to-navy-dark/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/95 via-navy-dark/90 to-navy-dark/95" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="mb-8 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/10 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-gold text-sm font-medium tracking-wide">
-                Agência de Marketing Boutique
-              </span>
-            </div>
-          </div>
-
           {/* Headline */}
           <h1 className="animate-fade-in-up animation-delay-100 text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
             Tráfego pago com{" "}
@@ -38,7 +30,20 @@ const HeroSection = () => {
 
           {/* CTA Button */}
           <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="gold" size="xl" className="gold-shimmer">
+            <Button
+              variant="gold"
+              size="xl"
+              className="gold-shimmer"
+              onClick={() => {
+                const contactSection = document.getElementById('contato');
+                if (contactSection) {
+                  const headerOffset = 80;
+                  const elementPosition = contactSection.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+            >
               Agendar Conversa Gratuita
             </Button>
             <span className="text-primary-foreground/60 text-sm">

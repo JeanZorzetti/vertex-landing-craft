@@ -60,7 +60,19 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant={isScrolled ? "gold" : "goldOutline"} size="sm">
+            <Button
+              variant={isScrolled ? "gold" : "goldOutline"}
+              size="sm"
+              onClick={() => {
+                const contactSection = document.getElementById('contato');
+                if (contactSection) {
+                  const headerOffset = 80;
+                  const elementPosition = contactSection.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+            >
               Contato
             </Button>
           </nav>
@@ -102,7 +114,21 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="gold" size="sm" className="w-fit">
+              <Button
+                variant="gold"
+                size="sm"
+                className="w-fit"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  const contactSection = document.getElementById('contato');
+                  if (contactSection) {
+                    const headerOffset = 80;
+                    const elementPosition = contactSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                  }
+                }}
+              >
                 Contato
               </Button>
             </div>

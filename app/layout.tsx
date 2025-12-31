@@ -30,20 +30,26 @@ const gotham = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vértice Marketing | Agência de Tráfego Pago & Performance",
-  description: "Agência de marketing boutique especializada em tráfego pago e performance. Tecnologia proprietária e acompanhamento próximo para resultados reais.",
+  title: "Vértice Marketing | Tráfego Pago, CRM e Performance Digital",
+  description: "Sua parceira estratégica em marketing digital. Tráfego pago transparente, CRM proprietário e consultoria de performance para crescimento previsível.",
   authors: [{ name: "Vértice Marketing" }],
-  keywords: ["marketing", "tráfego pago", "gestão de tráfego", "CRM", "consultoria de performance", "marketing digital", "agência boutique"],
+  keywords: ["marketing digital", "tráfego pago", "gestão de tráfego", "CRM", "consultoria de performance", "agência de marketing", "performance digital", "Google Ads", "Meta Ads"],
   openGraph: {
-    title: "Vértice Marketing | Agência de Tráfego Pago & Performance",
-    description: "O ponto de encontro entre a sua meta e o nosso método. Parceria estratégica para construir resultados reais.",
+    title: "Vértice Marketing | Tráfego Pago, CRM e Performance Digital",
+    description: "O ponto de encontro entre a sua visão e a nossa tecnologia. Parceria estratégica para crescimento previsível com dados verificados.",
     type: "website",
-    images: [{ url: "https://lovable.dev/opengraph-image-p98pqg.png" }],
+    locale: "pt_BR",
+    siteName: "Vértice Marketing",
   },
   twitter: {
     card: "summary_large_image",
     site: "@VerticeMarketing",
-    images: ["https://lovable.dev/opengraph-image-p98pqg.png"],
+    title: "Vértice Marketing | Tráfego Pago e Performance",
+    description: "Sua parceira estratégica em marketing digital com transparência radical e resultados verificados.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
