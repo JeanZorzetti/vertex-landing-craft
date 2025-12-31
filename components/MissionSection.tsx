@@ -47,7 +47,7 @@ const MissionSection = () => {
             <span className="text-gold">faturamento</span> do seu negócio
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Nossa missão é simples e agressiva: pegar empresas que têm um produto incrível e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o "bom o suficiente". Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.{" "}
+            Nossa missão é simples e agressiva: pegar empresas que têm um produto incrível e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o &ldquo;bom o suficiente&rdquo;. Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.{" "}
             <span className="text-foreground font-semibold">Existimos para garantir que o seu negócio nunca pare de crescer.</span>
           </p>
         </div>
