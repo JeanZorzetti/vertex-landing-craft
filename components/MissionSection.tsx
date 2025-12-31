@@ -53,38 +53,29 @@ const MissionSection = () => {
             Nossa missão é simples e objetiva: pegar empresas que têm produtos e serviços incríveis e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o &ldquo;bom o suficiente&rdquo;. Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.
           </p>
 
-          {/* Frase de impacto com design moderno */}
-          <div className="relative mt-12 mb-12">
-            {/* Background decorativo */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-gold/5 to-primary/5 blur-3xl" />
-
-            {/* Card principal */}
-            <div className="relative bg-gradient-to-br from-navy-dark via-primary to-navy-dark p-12 md:p-16 rounded-3xl shadow-2xl overflow-hidden group">
-              {/* Pattern decorativo */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-gold/30 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/20 rounded-full blur-3xl" />
-              </div>
-
-              {/* Shimmer effect on hover */}
+          {/* Frase de impacto com design clean */}
+          <div className="relative mt-10 mb-10">
+            {/* Card principal - design minimalista */}
+            <div className="relative bg-gradient-to-br from-navy-dark to-primary p-8 md:p-10 rounded-2xl shadow-lg overflow-hidden group border border-gold/10">
+              {/* Shimmer sutil no hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
 
               {/* Conteúdo */}
               <div className="relative z-10 text-center">
-                <div className="mb-8">
-                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
-                    Existimos para garantir que<br className="hidden md:block" /> o seu negócio
+                <div className="mb-6">
+                  <p className="text-xl md:text-2xl font-semibold text-white/90 leading-relaxed mb-2">
+                    Existimos para garantir que o seu negócio
                   </p>
-                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold uppercase">
+                  <p className="text-2xl md:text-3xl font-bold text-gold uppercase tracking-wide">
                     nunca pare de crescer.
                   </p>
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA Button - mais clean */}
                 <Button
                   variant="gold"
-                  size="xl"
-                  className="gold-shimmer group text-lg px-10 py-7 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  size="lg"
+                  className="gold-shimmer group shadow-md hover:shadow-lg transition-all duration-300"
                   onClick={() => {
                     const contactSection = document.getElementById('contato');
                     if (contactSection) {
@@ -95,9 +86,9 @@ const MissionSection = () => {
                     }
                   }}
                 >
-                  <span className="flex items-center gap-3">
+                  <span className="flex items-center gap-2">
                     Comece a crescer agora
-                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Button>
               </div>
