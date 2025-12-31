@@ -73,11 +73,8 @@ const MissionSection = () => {
               <div className="relative z-10 text-center">
                 <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8">
                   Existimos para garantir que<br className="hidden md:block" /> o seu negócio{" "}
-                  <span className="relative inline-block text-gold">
+                  <span className="text-gold">
                     nunca pare de crescer
-                    <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 4C50 1 100 1 150 4C170 6 190 6 200 4" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="animate-[slideIn_1.5s_ease-out]"/>
-                    </svg>
                   </span>
                   .
                 </p>
