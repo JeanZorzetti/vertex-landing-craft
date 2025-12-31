@@ -73,7 +73,7 @@ const MissionSection = () => {
               <div className="relative z-10 text-center">
                 <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8">
                   Existimos para garantir que<br className="hidden md:block" /> o seu negócio{" "}
-                  <span className="text-gold">
+                  <span className="text-gold uppercase">
                     nunca pare de crescer
                   </span>
                   .
