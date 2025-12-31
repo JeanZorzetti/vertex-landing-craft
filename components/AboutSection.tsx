@@ -11,7 +11,7 @@ const AboutSection = () => {
 
               <img
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                alt="Profissional analisando gráfico de crescimento no computador"
+                alt="Dashboard com métricas e análise de dados de marketing"
                 className="w-full rounded-lg shadow-elevated object-cover aspect-[4/3]"
               />
             </div>
@@ -20,73 +20,74 @@ const AboutSection = () => {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <div className="inline-block mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
-              Nossa Filosofia
+              Como Trabalhamos
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              O Ponto de Encontro entre a sua{" "}
-              <span className="text-gold">Visão</span> e a nossa{" "}
-              <span className="text-gold">Tecnologia</span>
+              Um processo <span className="text-gold">transparente</span> que gera{" "}
+              <span className="text-gold">resultados reais</span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Na geometria, um vértice é o ponto exato onde duas linhas se encontram para formar algo maior. Na nossa filosofia, a <strong className="text-foreground">Vértice Marketing</strong> representa exatamente esse momento de conexão: o encontro entre a sua ambição de negócio e a nossa inteligência estratégica.
+                Não acreditamos em fórmulas mágicas. Cada estratégia que desenvolvemos é baseada em <strong className="text-foreground">dados concretos</strong>, <strong className="text-foreground">testes validados</strong> e <strong className="text-foreground">métricas mensuráveis</strong>. Você acompanha cada centavo investido e cada resultado alcançado.
               </p>
 
               <p>
-                Acreditamos que o marketing digital de alto padrão não deve ser baseado em suposições, mas em <strong className="text-foreground">fatos</strong>. Por isso, nossa cultura é guiada pelo símbolo do <strong className="text-gold">&ldquo;Check&rdquo;</strong> presente em nossa marca: a busca incessante pelo resultado verificado, pela estratégia autêntica e pela segurança de que cada centavo investido está sendo monitorado.
-              </p>
-
-              <p>
-                Não somos apenas uma agência de execução; somos <strong className="text-foreground">parceiros de jornada</strong>. Unimos a sobriedade dos dados com a elegância de um atendimento próximo, garantindo que sua empresa cresça com solidez, previsibilidade e tecnologia de ponta.
+                Trabalhamos com empresas que buscam crescimento sustentável e previsível. Nosso time combina expertise em tráfego pago, automação de vendas e tecnologia de ponta para criar um sistema completo de aquisição de clientes que funciona 24/7.
               </p>
             </div>
 
-            {/* 3 Pilares */}
+            {/* Processo em 4 etapas */}
             <div className="mt-10 pt-8 border-t border-border">
               <h3 className="text-lg font-semibold text-foreground mb-6">
-                Os 3 Pilares da Nossa Filosofia
+                Nosso Método em 4 Etapas
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <span className="text-gold font-bold text-xl">1</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Verificação Constante (O Check)</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Diagnóstico Profundo</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Assim como nosso símbolo sugere aprovação e autenticidade, validamos cada etapa do processo. Do tráfego pago ao CRM, nada é feito no &ldquo;escuro&rdquo;. Trabalhamos com dados checados para garantir sua segurança.
+                      Analisamos seu negócio, concorrência e público-alvo para identificar as melhores oportunidades de crescimento. Definimos KPIs claros e metas realistas.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                    </svg>
+                    <span className="text-gold font-bold text-xl">2</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Equilíbrio e Sobriedade</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Implementação Estratégica</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Fugimos de promessas milagrosas e do marketing agressivo que mancha reputações. Nossa abordagem traz o equilíbrio e o profissionalismo que marcas de alto valor — como clínicas e escritórios — exigem para se posicionar.
+                      Criamos e executamos campanhas de tráfego pago otimizadas, configuramos sistemas de CRM e automações para nutrir leads até a conversão em vendas.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+                    <span className="text-gold font-bold text-xl">3</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Tecnologia Humanizada</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Monitoramento Constante</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Usamos tecnologia proprietária e automação para potencializar vendas, mas nunca para substituir o relacionamento. Aqui, a inovação serve para aproximar o seu negócio do cliente certo.
+                      Acompanhamos todos os indicadores em tempo real através de dashboards personalizados. Você tem visibilidade total sobre investimento, leads e retorno financeiro.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-gold font-bold text-xl">4</span>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-foreground mb-2">Otimização Contínua</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Testamos, ajustamos e melhoramos constantemente. Cada dado é analisado para maximizar seu ROI e reduzir custos de aquisição de clientes.
                     </p>
                   </div>
                 </div>
