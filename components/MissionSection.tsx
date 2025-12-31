@@ -96,42 +96,39 @@ const MissionSection = () => {
           </div>
         </div>
 
-        {/* Visão - Design Clean com Imagem */}
-        <div className="max-w-5xl mx-auto text-center mb-20 relative">
-          {/* Card com imagem de fundo */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            {/* Imagem de fundo - Handshake */}
-            <div
-              className="absolute inset-0 bg-cover bg-center opacity-50"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80')`,
-              }}
-            />
+        {/* Visão - Com imagem de fundo espalhada na tela */}
+        <div className="relative -mx-6 lg:-mx-8 mb-20 py-20 overflow-hidden">
+          {/* Imagem de fundo - Handshake espalhada */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-30"
+            style={{
+              backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80')`,
+            }}
+          />
 
-            {/* Overlay gradient - mais transparente */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/90 to-background/80" />
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/90 to-background/85" />
 
-            {/* Content */}
-            <div className="relative p-12 md:p-16">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/10 rounded-full border border-gold/30">
-                <Eye className="w-4 h-4 text-gold" />
-                <span className="text-gold text-xs font-bold tracking-widest uppercase">
-                  Nossa Visão
-                </span>
-              </div>
-
-              {/* Título */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
-                Ser a força invisível por trás dos{" "}
-                <span className="text-gold">novos líderes de mercado</span>
-              </h2>
-
-              {/* Descrição */}
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Vemos um futuro onde nossos parceiros não competem por preço, mas dominam seus nichos pela autoridade e presença digital. Queremos ser reconhecidos como a inteligência comercial que transformou negócios locais em potências nacionais, fornecendo a tecnologia e a estratégia para quem não tem medo de ser grande.
-              </p>
+          {/* Content */}
+          <div className="relative max-w-5xl mx-auto text-center px-6 lg:px-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/10 rounded-full border border-gold/30">
+              <Eye className="w-4 h-4 text-gold" />
+              <span className="text-gold text-xs font-bold tracking-widest uppercase">
+                Nossa Visão
+              </span>
             </div>
+
+            {/* Título */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
+              Ser a força invisível por trás dos{" "}
+              <span className="text-gold">novos líderes de mercado</span>
+            </h2>
+
+            {/* Descrição */}
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Vemos um futuro onde nossos parceiros não competem por preço, mas dominam seus nichos pela autoridade e presença digital. Queremos ser reconhecidos como a inteligência comercial que transformou negócios locais em potências nacionais, fornecendo a tecnologia e a estratégia para quem não tem medo de ser grande.
+            </p>
           </div>
         </div>
 
