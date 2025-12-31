@@ -97,14 +97,20 @@ const MissionSection = () => {
         </div>
 
         {/* Visão - Com imagem de fundo espalhada na tela */}
-        <div className="relative -mx-6 lg:-mx-8 mb-20 py-32 overflow-hidden min-h-[600px]">
-          {/* Imagem de fundo - GRANDE e ESPALHADA cobrindo tudo */}
+        <div className="relative -mx-6 lg:-mx-8 mb-20 py-32 overflow-hidden min-h-[700px]">
+          {/* Imagem de fundo - ENORME expandindo MUITO além das bordas */}
           <div
-            className="absolute inset-[-100px] bg-cover bg-center opacity-95"
+            className="absolute opacity-95"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=2400&q=90')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center center',
+              top: '-200px',
+              left: '-200px',
+              right: '-200px',
+              bottom: '-200px',
+              width: 'calc(100% + 400px)',
+              height: 'calc(100% + 400px)',
             }}
           />
 
