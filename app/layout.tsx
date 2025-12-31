@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -7,9 +7,25 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryProvider } from "./providers";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+const gotham = localFont({
+  src: [
+    {
+      path: "../public/fonts/Gotham-Book.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Gotham-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Gotham-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gotham",
   display: "swap",
 });
 
@@ -38,7 +54,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={montserrat.className}>
+      <body className={`${gotham.variable} font-sans`}>
         <ReactQueryProvider>
           <TooltipProvider>
             <Toaster />

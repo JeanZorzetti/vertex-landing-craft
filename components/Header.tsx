@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,51 +35,15 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="relative">
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 48 48"
-                fill="none"
-                className={`transition-colors duration-300 ${
-                  isScrolled ? "text-primary" : "text-gold"
-                }`}
-              >
-                <path
-                  d="M12 12L24 36L36 12"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-                <path
-                  d="M18 24L22 28L30 20"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </svg>
-            </div>
-            <div>
-              <span
-                className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              >
-                Vértice
-              </span>
-              <span
-                className={`block text-xs font-medium -mt-0.5 transition-colors duration-300 ${
-                  isScrolled ? "text-gold" : "text-gold"
-                }`}
-              >
-                Marketing
-              </span>
-            </div>
+          <a href="#" className="flex items-center group">
+            <Image
+              src={isScrolled ? "/logos/logo-main.png" : "/logos/logo-white.png"}
+              alt="Vértice Marketing"
+              width={180}
+              height={50}
+              className="h-10 w-auto transition-opacity duration-300 hover:opacity-80"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}
