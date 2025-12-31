@@ -23,14 +23,13 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Headline */}
           <h1 className="animate-fade-in-up animation-delay-100 text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Tráfego pago com{" "}
-            <span className="text-gold">transparência</span> e{" "}
-            <span className="text-gold">acompanhamento real</span>.
+            Sua empresa tem um teto de crescimento?{" "}
+            <span className="text-gold">Nós viemos para quebrá-lo.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="animate-fade-in-up animation-delay-200 text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Construímos resultados juntos, com relatórios claros e dedicação exclusiva ao seu negócio.
+            Tráfego, Tecnologia e Estratégia desenhados para quem quer escalar resultados reais.
           </p>
 
           {/* CTA Button */}
