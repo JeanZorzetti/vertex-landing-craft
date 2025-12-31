@@ -28,8 +28,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft py-4"
-          : "bg-transparent py-6"
+          ? "bg-white shadow-soft py-4"
+          : "bg-white shadow-sm py-6"
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
@@ -53,15 +53,13 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-gold ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
+                className="text-sm font-medium text-foreground transition-colors duration-300 hover:text-gold"
               >
                 {link.label}
               </a>
             ))}
             <Button
-              variant={isScrolled ? "gold" : "goldOutline"}
+              variant="gold"
               size="sm"
               onClick={() => {
                 const contactSection = document.getElementById('contato');
@@ -83,17 +81,9 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X
-                className={`w-6 h-6 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              />
+              <X className="w-6 h-6 text-foreground" />
             ) : (
-              <Menu
-                className={`w-6 h-6 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              />
+              <Menu className="w-6 h-6 text-foreground" />
             )}
           </button>
         </div>
@@ -106,9 +96,7 @@ const Header = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors ${
-                    isScrolled ? "text-foreground" : "text-primary-foreground"
-                  }`}
+                  className="text-sm font-medium text-foreground transition-colors hover:text-gold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
