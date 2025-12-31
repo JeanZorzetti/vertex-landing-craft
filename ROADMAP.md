@@ -1,7 +1,7 @@
 # 🗺️ Roadmap de Melhorias - Vértice Marketing
 
 ## 📋 Visão Geral
-Este roadmap documenta todas as melhorias identificadas na análise heurística de Nielsen e solicitações específicas do cliente para transformar a landing page em um site institucional completo e funcional.
+Este roadmap documenta todas as melhorias identificadas na análise heurística de Nielsen e solicitações específicas do cliente para transformar o site em um site institucional completo e funcional.
 
 ---
 
@@ -48,7 +48,7 @@ Este roadmap documenta todas as melhorias identificadas na análise heurística 
   - "Agendar Conversa Gratuita" → redireciona para #contato
   - Scroll suave com offset para header fixo
 
-### ✅ 1.3 Migração: Landing Page → Site Institucional
+### ✅ 1.3 Migração: Site → Site Institucional
 - [ ] **Estrutura de páginas** (preparação para multi-page)
   - Manter estrutura atual como homepage
   - Preparar arquitetura para futuras páginas:
@@ -59,7 +59,7 @@ Este roadmap documenta todas as melhorias identificadas na análise heurística 
     - `/contato` - Página dedicada de contato
 
 - [ ] **Atualizar metadados**
-  - Título: "Landing Page" → "Site Institucional"
+  - Título: "Site" → "Site Institucional"
   - Descrição otimizada para SEO
   - Schema.org markup (Organization, LocalBusiness)
 
