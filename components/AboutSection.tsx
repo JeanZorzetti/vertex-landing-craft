@@ -3,17 +3,34 @@ const AboutSection = () => {
     <section id="sobre" className="py-24 bg-background v-pattern">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
+          {/* Image - cobrindo metade horizontal */}
           <div className="order-2 lg:order-1">
-            <div className="relative">
-              {/* Decorative frame */}
-              <div className="absolute -inset-4 border-2 border-gold/20 rounded-lg -z-10 transform translate-x-4 translate-y-4" />
+            <div className="relative h-full min-h-[500px]">
+              {/* Imagem cobrindo metade da tela */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Equipe analisando estratégias de marketing digital"
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay sutil para melhor contraste */}
+                <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/20 to-transparent" />
+              </div>
 
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                alt="Dashboard com métricas e análise de dados de marketing"
-                className="w-full rounded-lg shadow-elevated object-cover aspect-[4/3]"
-              />
+              {/* Badge decorativo flutuante */}
+              <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg max-w-xs">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">Resultados Comprovados</p>
+                    <p className="text-lg font-bold text-foreground">+150% ROI Médio</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
