@@ -205,6 +205,15 @@
     }
   }
 
+  @keyframes drawCircle {
+    from {
+      stroke-dashoffset: 163;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
   .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out forwards;
   }
