@@ -97,21 +97,23 @@ const MissionSection = () => {
         </div>
 
         {/* Visão - Com imagem de fundo espalhada na tela */}
-        <div className="relative -mx-6 lg:-mx-8 mb-20 py-20 overflow-hidden">
-          {/* Imagem de fundo - Handshake espalhada */}
+        <div className="relative -mx-6 lg:-mx-8 mb-20 py-24 overflow-hidden">
+          {/* Imagem de fundo - Handshake espalhada SEM CORTAR */}
           <div
-            className="absolute inset-[-50px] bg-cover bg-center opacity-90 scale-110"
+            className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-90"
             style={{
               backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80')`,
             }}
           />
 
-          {/* Bordas foscas com blur gradient - efeito de desfoque nas bordas */}
-          <div className="absolute inset-0 backdrop-blur-[2px] [mask-image:radial-gradient(ellipse_at_center,transparent_30%,black_100%)]" />
+          {/* Gradiente FORTE no topo */}
+          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/80 to-transparent" />
 
-          {/* Gradiente de escurecimento nas bordas */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60" />
+          {/* Gradiente FORTE no fundo */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/80 to-transparent" />
+
+          {/* Gradiente suave nas laterais */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
 
           {/* Content */}
           <div className="relative max-w-5xl mx-auto text-center px-6 lg:px-8">
