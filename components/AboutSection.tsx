@@ -51,7 +51,7 @@ const AboutSection = () => {
               </p>
 
               <p>
-                Trabalhamos com empresas que buscam crescimento sustentável e previsível. Nosso time combina expertise em tráfego pago, automação de vendas e tecnologia de ponta para criar um sistema completo de aquisição de clientes que funciona 24/7.
+                Trabalhamos com empresas que buscam crescimento sustentável e previsível. Nosso time combina expertise em <strong className="text-foreground">tráfego pago</strong>, <strong className="text-foreground">estratégia digital</strong> e <strong className="text-foreground">análise de dados</strong> para criar campanhas que geram resultados mensuráveis e escaláveis.
               </p>
             </div>
 
@@ -80,7 +80,7 @@ const AboutSection = () => {
                   <div className="flex-1">
                     <h4 className="font-semibold text-foreground mb-2">Implementação Estratégica</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Criamos e executamos campanhas de tráfego pago otimizadas, configuramos sistemas de CRM e automações para nutrir leads até a conversão em vendas.
+                      Criamos e executamos campanhas de tráfego pago otimizadas para atrair o público certo. Desenvolvemos páginas de captura e estratégias de conversão que transformam visitantes em clientes.
                     </p>
                   </div>
                 </div>
