@@ -39,9 +39,9 @@ const Header = () => {
             <Image
               src={isScrolled ? "/logos/logo-main.png" : "/logos/logo-gold-only.png"}
               alt="Vértice Marketing"
-              width={220}
-              height={60}
-              className="h-12 md:h-14 w-auto transition-opacity duration-300 hover:opacity-90"
+              width={260}
+              height={70}
+              className="h-14 md:h-16 w-auto transition-opacity duration-300 hover:opacity-90"
               style={{ objectFit: 'contain' }}
               priority
             />
