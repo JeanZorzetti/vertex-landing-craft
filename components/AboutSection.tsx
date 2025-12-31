@@ -51,7 +51,7 @@ const AboutSection = () => {
               </p>
 
               <p>
-                Trabalhamos com empresas que buscam crescimento sustentável e previsível. Nosso time combina expertise em <strong className="text-foreground">tráfego pago</strong>, <strong className="text-foreground">estratégia digital</strong> e <strong className="text-foreground">análise de dados</strong> para criar campanhas que geram resultados mensuráveis e escaláveis.
+                Trabalhamos com empresas que buscam crescimento sustentável e previsível. Nosso time combina expertise em <strong className="text-foreground">tráfego pago</strong>, <strong className="text-foreground">estratégia digital</strong> e <strong className="text-foreground">análise de dados</strong>, utilizando um <strong className="text-foreground">CRM proprietário</strong> desenvolvido especialmente para atender as necessidades de cada cliente e garantir resultados mensuráveis e escaláveis.
               </p>
             </div>
 
