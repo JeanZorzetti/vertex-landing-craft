@@ -1,4 +1,7 @@
-import { Target, Eye, CheckCircle2, TrendingUp, Users, Award } from "lucide-react";
+"use client";
+
+import { Target, Eye, CheckCircle2, TrendingUp, Users, Award, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const values = [
   {
@@ -46,15 +49,43 @@ const MissionSection = () => {
             Desbloquear o máximo potencial de{" "}
             <span className="text-gold">faturamento</span> do seu negócio
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Nossa missão é simples e objetiva: pegar empresas que têm produtos e serviços incríveis e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o &ldquo;bom o suficiente&rdquo;. Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.{" "}
-            <span className="relative inline-block mt-6">
-              <span className="text-foreground font-bold text-xl md:text-2xl block relative z-10">
-                Existimos para garantir que o seu negócio nunca pare de crescer.
-              </span>
-              <span className="absolute bottom-1 left-0 w-full h-3 bg-gold/20 -z-0 animate-[slideIn_1s_ease-out]" />
-            </span>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+            Nossa missão é simples e objetiva: pegar empresas que têm produtos e serviços incríveis e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o &ldquo;bom o suficiente&rdquo;. Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.
           </p>
+
+          {/* Frase de impacto com animação */}
+          <div className="relative mb-8 p-8 rounded-2xl bg-gradient-to-r from-gold/5 via-gold/10 to-gold/5 border-2 border-gold/20 overflow-hidden group hover:border-gold/40 transition-all duration-500">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+            <p className="relative text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center leading-tight">
+              Existimos para garantir que o seu negócio{" "}
+              <span className="text-gold relative inline-block">
+                nunca pare de crescer
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-gold animate-[slideIn_1.5s_ease-out]" />
+              </span>
+              .
+            </p>
+          </div>
+
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <Button
+              variant="gold"
+              size="lg"
+              className="gold-shimmer group text-lg px-8 py-6"
+              onClick={() => {
+                const contactSection = document.getElementById('contato');
+                if (contactSection) {
+                  const headerOffset = 80;
+                  const elementPosition = contactSection.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                }
+              }}
+            >
+              Comece a crescer agora
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
 
         {/* Visão */}
