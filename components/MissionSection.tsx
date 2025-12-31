@@ -123,26 +123,29 @@ const MissionSection = () => {
           {/* Gradiente nas laterais */}
           <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40 z-10" />
 
-          {/* Content */}
+          {/* Content com fundo para legibilidade */}
           <div className="relative max-w-5xl mx-auto text-center px-6 lg:px-8 z-20">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/10 rounded-full border border-gold/30">
-              <Eye className="w-4 h-4 text-gold" />
-              <span className="text-gold text-xs font-bold tracking-widest uppercase">
-                Nossa Visão
-              </span>
+            {/* Container com fundo semi-transparente para melhor legibilidade */}
+            <div className="bg-background/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/20 rounded-full border border-gold/40">
+                <Eye className="w-5 h-5 text-gold" />
+                <span className="text-gold text-sm font-bold tracking-widest uppercase">
+                  Nossa Visão
+                </span>
+              </div>
+
+              {/* Título */}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+                Ser a força invisível por trás dos{" "}
+                <span className="text-gold">novos líderes de mercado</span>
+              </h2>
+
+              {/* Descrição */}
+              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-3xl mx-auto font-medium">
+                Vemos um futuro onde nossos parceiros não competem por preço, mas dominam seus nichos pela autoridade e presença digital. Queremos ser reconhecidos como a inteligência comercial que transformou negócios locais em potências nacionais, fornecendo a tecnologia e a estratégia para quem não tem medo de ser grande.
+              </p>
             </div>
-
-            {/* Título */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
-              Ser a força invisível por trás dos{" "}
-              <span className="text-gold">novos líderes de mercado</span>
-            </h2>
-
-            {/* Descrição */}
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Vemos um futuro onde nossos parceiros não competem por preço, mas dominam seus nichos pela autoridade e presença digital. Queremos ser reconhecidos como a inteligência comercial que transformou negócios locais em potências nacionais, fornecendo a tecnologia e a estratégia para quem não tem medo de ser grande.
-            </p>
           </div>
         </div>
 
