@@ -96,61 +96,80 @@ const MissionSection = () => {
           </div>
         </div>
 
-        {/* Visão */}
-        <div className="max-w-4xl mx-auto text-center mb-24 p-8 md:p-12 bg-gradient-to-br from-primary to-navy-dark rounded-2xl border border-gold/20 shadow-2xl">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <Eye className="w-5 h-5 text-gold" />
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-              Nossa Visão
-            </span>
+        {/* Visão - Design Moderno */}
+        <div className="max-w-5xl mx-auto text-center mb-20 relative group">
+          {/* Background com efeito glassmorphism */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-gold/5 to-navy-dark/10 blur-2xl rounded-3xl" />
+
+          <div className="relative bg-gradient-to-br from-navy-dark via-primary to-navy-dark p-10 md:p-14 rounded-3xl border border-gold/20 shadow-xl overflow-hidden">
+            {/* Shimmer effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+
+            {/* Badge */}
+            <div className="relative inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/10 rounded-full border border-gold/30">
+              <Eye className="w-4 h-4 text-gold" />
+              <span className="text-gold text-xs font-bold tracking-widest uppercase">
+                Nossa Visão
+              </span>
+            </div>
+
+            {/* Título */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+              Ser a força invisível por trás dos{" "}
+              <span className="text-gold">novos líderes de mercado</span>
+            </h2>
+
+            {/* Descrição */}
+            <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-3xl mx-auto">
+              Vemos um futuro onde nossos parceiros não competem por preço, mas dominam seus nichos pela autoridade e presença digital. Queremos ser reconhecidos como a inteligência comercial que transformou negócios locais em potências nacionais, fornecendo a tecnologia e a estratégia para quem não tem medo de ser grande.
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ser a força invisível por trás dos{" "}
-            <span className="text-gold">novos líderes de mercado</span>
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-            Vemos um futuro onde nossos parceiros não competem por preço, mas dominam seus nichos pela autoridade e presença digital. Queremos ser reconhecidos como a inteligência comercial que transformou negócios locais em potências nacionais, fornecendo a tecnologia e a estratégia para quem não tem medo de ser grande.
-          </p>
         </div>
 
-        {/* Valores */}
+        {/* Valores - Design Moderno */}
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
-              Nossos Valores
+          {/* Header */}
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gold/5 rounded-full border border-gold/20">
+              <span className="text-gold text-xs font-bold tracking-widest uppercase">
+                Nossos Valores
+              </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
               O DNA do nosso <span className="text-gold">Resultado</span>
             </h2>
           </div>
 
-          {/* Values Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Values Grid - Design Aprimorado */}
+          <div className="grid md:grid-cols-2 gap-6">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="group relative p-8 bg-secondary rounded-xl border border-border/50 hover:border-gold/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group relative p-7 bg-white rounded-2xl border-2 border-border/30 hover:border-gold/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
               >
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <value.icon className="w-7 h-7 text-gold" strokeWidth={1.5} />
+                {/* Gradient background on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+
+                {/* Icon com badge design */}
+                <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <value.icon className="w-6 h-6 text-gold" strokeWidth={2} />
                 </div>
 
                 {/* Content */}
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-1">
+                <div className="relative">
+                  <h3 className="text-xl font-bold text-foreground mb-1.5">
                     {value.title}
                   </h3>
-                  <p className="text-sm text-gold font-semibold mb-4 uppercase tracking-wide">
+                  <p className="text-xs text-gold font-bold mb-3 uppercase tracking-wider">
                     {value.subtitle}
                   </p>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {value.description}
                   </p>
                 </div>
 
-                {/* Decorative corner */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-gold/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Corner accent */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-gold/10 to-transparent rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             ))}
           </div>
