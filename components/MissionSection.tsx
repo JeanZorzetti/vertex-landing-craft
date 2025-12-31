@@ -102,7 +102,7 @@ const MissionSection = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             {/* Imagem de fundo - Handshake */}
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-15"
+              className="absolute inset-0 bg-cover bg-center opacity-30"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80')`,
               }}
