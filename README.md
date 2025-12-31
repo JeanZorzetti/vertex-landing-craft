@@ -1,6 +1,6 @@
-# Vértice Marketing - Landing Page
+# Vértice Marketing - Site Institucional
 
-Landing page da agência de marketing Vértice, construída com Next.js, React, TypeScript, TailwindCSS e shadcn/ui.
+Site institucional da agência de marketing Vértice, construído com Next.js, React, TypeScript, TailwindCSS e shadcn/ui.
 
 ## Tecnologias
 
