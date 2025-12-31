@@ -20,51 +20,61 @@ const AboutSection = () => {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <div className="inline-block mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
-              Sobre Nós
+              Nossa Filosofia
             </div>
-            
+
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              Uma Nova Forma de{" "}
-              <span className="text-gold">Parceria</span>{" "}
-              em Marketing
+              Marketing Digital Baseado em{" "}
+              <span className="text-gold">Usabilidade</span>
             </h2>
-            
+
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Sabemos que empreender é uma escalada desafiadora. Por isso, a{" "}
-                <strong className="text-foreground">Vértice Marketing</strong> foi criada para caminhar junto com você desde o primeiro passo.
+                Na <strong className="text-foreground">Vértice Marketing</strong>, aplicamos as <strong className="text-gold">Heurísticas de Nielsen</strong> — princípios universais de usabilidade — ao marketing digital para criar campanhas que realmente convertem.
               </p>
-              
+
               <p>
-                Acreditamos que a tecnologia e o tráfego pago são ferramentas poderosas, mas só funcionam com acompanhamento próximo e dedicação genuína.
+                Assim como uma interface bem projetada facilita a experiência do usuário, nossas estratégias de tráfego pago são desenhadas para serem <strong className="text-foreground">claras, intuitivas e eficientes</strong>.
               </p>
-              
+
               <p>
-                Nosso nome reflete nossa filosofia: o <strong className="text-foreground">Vértice</strong> é o ponto onde duas retas se encontram — o momento onde a sua ambição se une à nossa estratégia técnica.
+                Nosso nome reflete esse princípio: o <strong className="text-foreground">Vértice</strong> é o ponto de encontro ideal — onde a jornada do cliente se alinha perfeitamente com os seus objetivos de negócio.
               </p>
-              
+
               <p>
-                O símbolo de <strong className="text-gold">&ldquo;Check&rdquo;</strong> em nossa marca representa nosso compromisso: verificar seus dados e cuidar do seu faturamento todos os dias.
+                O símbolo de <strong className="text-gold">&ldquo;Check&rdquo;</strong> em nossa marca representa nosso compromisso com a <strong className="text-foreground">visibilidade do sistema</strong>: você sempre sabe onde seu investimento está e quais resultados está gerando.
               </p>
             </div>
 
-            {/* Value Promise - replaces fake stats */}
+            {/* Nielsen Heuristics Applied */}
             <div className="mt-10 pt-8 border-t border-border">
               <h3 className="text-lg font-semibold text-foreground mb-4">
-                Nosso Compromisso com Você
+                Princípios que Guiam Nosso Trabalho
               </h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 mt-2 rounded-full bg-gold flex-shrink-0" />
-                  <span className="text-muted-foreground">Relatórios claros e acessíveis sobre cada centavo investido</span>
+                  <span className="text-muted-foreground">
+                    <strong className="text-foreground">Visibilidade:</strong> Dashboards em tempo real e relatórios transparentes
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 mt-2 rounded-full bg-gold flex-shrink-0" />
-                  <span className="text-muted-foreground">Reuniões regulares para alinhar expectativas e resultados</span>
+                  <span className="text-muted-foreground">
+                    <strong className="text-foreground">Linguagem Clara:</strong> Sem jargões técnicos, explicações diretas
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 mt-2 rounded-full bg-gold flex-shrink-0" />
-                  <span className="text-muted-foreground">Suporte próximo e respostas rápidas às suas dúvidas</span>
+                  <span className="text-muted-foreground">
+                    <strong className="text-foreground">Controle e Liberdade:</strong> Você decide a direção, nós executamos com excelência
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-2 h-2 mt-2 rounded-full bg-gold flex-shrink-0" />
+                  <span className="text-muted-foreground">
+                    <strong className="text-foreground">Prevenção de Erros:</strong> Testes constantes antes de escalar investimento
+                  </span>
                 </li>
               </ul>
             </div>
