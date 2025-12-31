@@ -37,7 +37,7 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center group relative">
             <Image
-              src="/logos/logo-gold-only.png"
+              src="/logos/logo-main.png"
               alt="Vértice Marketing"
               width={220}
               height={60}
