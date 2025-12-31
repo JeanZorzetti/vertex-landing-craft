@@ -30,7 +30,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="animate-fade-in-up animation-delay-200 text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Sua agência boutique de marketing digital. Construímos resultados juntos, com relatórios claros e dedicação exclusiva ao seu negócio.
+            Construímos resultados juntos, com relatórios claros e dedicação exclusiva ao seu negócio.
           </p>
 
           {/* CTA Button */}
