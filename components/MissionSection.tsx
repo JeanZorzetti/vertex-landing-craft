@@ -53,38 +53,57 @@ const MissionSection = () => {
             Nossa missão é simples e objetiva: pegar empresas que têm produtos e serviços incríveis e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o &ldquo;bom o suficiente&rdquo;. Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.
           </p>
 
-          {/* Frase de impacto com animação */}
-          <div className="relative mb-8 p-8 rounded-2xl bg-gradient-to-r from-gold/5 via-gold/10 to-gold/5 border-2 border-gold/20 overflow-hidden group hover:border-gold/40 transition-all duration-500">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-            <p className="relative text-2xl md:text-3xl lg:text-4xl font-bold text-foreground text-center leading-tight">
-              Existimos para garantir que o seu negócio{" "}
-              <span className="text-gold relative inline-block">
-                nunca pare de crescer
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gold animate-[slideIn_1.5s_ease-out]" />
-              </span>
-              .
-            </p>
-          </div>
+          {/* Frase de impacto com design moderno */}
+          <div className="relative mt-12 mb-12">
+            {/* Background decorativo */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-gold/5 to-primary/5 blur-3xl" />
 
-          {/* CTA Button */}
-          <div className="flex justify-center">
-            <Button
-              variant="gold"
-              size="lg"
-              className="gold-shimmer group text-lg px-8 py-6"
-              onClick={() => {
-                const contactSection = document.getElementById('contato');
-                if (contactSection) {
-                  const headerOffset = 80;
-                  const elementPosition = contactSection.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                }
-              }}
-            >
-              Comece a crescer agora
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            {/* Card principal */}
+            <div className="relative bg-gradient-to-br from-navy-dark via-primary to-navy-dark p-12 md:p-16 rounded-3xl shadow-2xl overflow-hidden group">
+              {/* Pattern decorativo */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gold/30 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/20 rounded-full blur-3xl" />
+              </div>
+
+              {/* Shimmer effect on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+
+              {/* Conteúdo */}
+              <div className="relative z-10 text-center">
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8">
+                  Existimos para garantir que<br className="hidden md:block" /> o seu negócio{" "}
+                  <span className="relative inline-block text-gold">
+                    nunca pare de crescer
+                    <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 4C50 1 100 1 150 4C170 6 190 6 200 4" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="animate-[slideIn_1.5s_ease-out]"/>
+                    </svg>
+                  </span>
+                  .
+                </p>
+
+                {/* CTA Button */}
+                <Button
+                  variant="gold"
+                  size="xl"
+                  className="gold-shimmer group text-lg px-10 py-7 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contato');
+                    if (contactSection) {
+                      const headerOffset = 80;
+                      const elementPosition = contactSection.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  <span className="flex items-center gap-3">
+                    Comece a crescer agora
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                  </span>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
 
