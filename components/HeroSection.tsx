@@ -7,8 +7,11 @@ const HeroSection = () => {
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80)` }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80)`,
+          backgroundPosition: 'center 60%'
+        }}
       >
         {/* Overlay escuro pesado para máximo contraste */}
         <div className="absolute inset-0 bg-black/85" />
