@@ -35,13 +35,14 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center group">
+          <a href="#" className="flex items-center group relative">
             <Image
               src={isScrolled ? "/logos/logo-main.png" : "/logos/logo-white.png"}
               alt="Vértice Marketing"
-              width={180}
-              height={50}
-              className="h-10 w-auto transition-opacity duration-300 hover:opacity-80"
+              width={220}
+              height={60}
+              className="h-12 md:h-14 w-auto transition-opacity duration-300 hover:opacity-90"
+              style={{ objectFit: 'contain' }}
               priority
             />
           </a>
