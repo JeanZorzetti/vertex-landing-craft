@@ -61,49 +61,49 @@ const AboutSection = () => {
                 Nosso Método em 4 Etapas
               </h3>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <div className="group flex items-start gap-4 p-4 -ml-4 rounded-xl transition-all duration-300 hover:bg-gold/5 hover:shadow-md cursor-pointer">
+                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                     <span className="text-gold font-bold text-xl">1</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Diagnóstico Profundo</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h4 className="font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">Diagnóstico Profundo</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                       Analisamos seu negócio, concorrência e público-alvo para identificar as melhores oportunidades de crescimento. Definimos KPIs claros e metas realistas.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <div className="group flex items-start gap-4 p-4 -ml-4 rounded-xl transition-all duration-300 hover:bg-gold/5 hover:shadow-md cursor-pointer">
+                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                     <span className="text-gold font-bold text-xl">2</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Implementação Estratégica</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h4 className="font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">Implementação Estratégica</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                       Criamos e executamos campanhas de tráfego pago otimizadas para atrair o público certo. Desenvolvemos páginas de captura e estratégias de conversão que transformam visitantes em clientes.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <div className="group flex items-start gap-4 p-4 -ml-4 rounded-xl transition-all duration-300 hover:bg-gold/5 hover:shadow-md cursor-pointer">
+                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                     <span className="text-gold font-bold text-xl">3</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Monitoramento Constante</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h4 className="font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">Monitoramento Constante</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                       Acompanhamos todos os indicadores em tempo real através de dashboards personalizados. Você tem visibilidade total sobre investimento, leads e retorno financeiro.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
+                <div className="group flex items-start gap-4 p-4 -ml-4 rounded-xl transition-all duration-300 hover:bg-gold/5 hover:shadow-md cursor-pointer">
+                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                     <span className="text-gold font-bold text-xl">4</span>
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold text-foreground mb-2">Otimização Contínua</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h4 className="font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">Otimização Contínua</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                       Testamos, ajustamos e melhoramos constantemente. Cada dado é analisado para maximizar seu ROI e reduzir custos de aquisição de clientes.
                     </p>
                   </div>
