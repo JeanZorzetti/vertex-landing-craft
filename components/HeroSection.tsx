@@ -34,7 +34,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="animate-fade-in-up animation-delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="animate-fade-in-up animation-delay-300">
             <Button
               variant="gold"
               size="xl"
@@ -51,22 +51,12 @@ const HeroSection = () => {
             >
               Agendar Conversa Gratuita
             </Button>
-            <span className="text-white/70 text-sm">
-              Sem compromisso • 30 minutos
-            </span>
           </div>
         </div>
       </div>
 
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-600">
-        <div className="w-6 h-10 rounded-full border-2 border-white/40 flex justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-gold animate-bounce" />
-        </div>
-      </div>
     </section>
   );
 };
