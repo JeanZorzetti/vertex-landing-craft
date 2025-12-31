@@ -102,14 +102,14 @@ const MissionSection = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             {/* Imagem de fundo - Handshake */}
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-30"
+              className="absolute inset-0 bg-cover bg-center opacity-50"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80')`,
               }}
             />
 
-            {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background" />
+            {/* Overlay gradient - mais transparente */}
+            <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/90 to-background/80" />
 
             {/* Content */}
             <div className="relative p-12 md:p-16">
