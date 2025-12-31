@@ -97,26 +97,28 @@ const MissionSection = () => {
         </div>
 
         {/* Visão - Com imagem de fundo espalhada na tela */}
-        <div className="relative -mx-6 lg:-mx-8 mb-20 py-24 overflow-hidden">
-          {/* Imagem de fundo - Handshake espalhada SEM CORTAR */}
+        <div className="relative -mx-6 lg:-mx-8 mb-20 py-32 overflow-hidden min-h-[600px]">
+          {/* Imagem de fundo - GRANDE e ESPALHADA cobrindo tudo */}
           <div
-            className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-90"
+            className="absolute inset-[-100px] bg-cover bg-center opacity-95"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=2400&q=90')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
             }}
           />
 
-          {/* Gradiente FORTE no topo */}
-          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background via-background/80 to-transparent" />
+          {/* Gradiente MUITO FORTE no topo - MAIOR */}
+          <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/90 to-transparent z-10" />
 
-          {/* Gradiente FORTE no fundo */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background via-background/80 to-transparent" />
+          {/* Gradiente MUITO FORTE no fundo - MAIOR */}
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/90 to-transparent z-10" />
 
-          {/* Gradiente suave nas laterais */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
+          {/* Gradiente nas laterais */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40 z-10" />
 
           {/* Content */}
-          <div className="relative max-w-5xl mx-auto text-center px-6 lg:px-8">
+          <div className="relative max-w-5xl mx-auto text-center px-6 lg:px-8 z-20">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/10 rounded-full border border-gold/30">
               <Eye className="w-4 h-4 text-gold" />
