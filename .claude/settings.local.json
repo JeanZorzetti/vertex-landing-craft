@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcopy:*)",
+      "Bash(robocopy:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(powershell -NoProfile -Command \"Get-ChildItem -Filter ''*.tsx'' | ForEach-Object { $content = Get-Content $_FullName -Raw; if \\($content -and $content -notmatch ''^\\\\s*\"\"use client\"\"''\\) { Set-Content $_FullName -Value \\(''\"\"use client\"\";'' + [Environment]::NewLine + [Environment]::NewLine + $content\\) -NoNewline } }\")",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(for file in accordion.tsx alert-dialog.tsx avatar.tsx checkbox.tsx collapsible.tsx command.tsx context-menu.tsx dialog.tsx dropdown-menu.tsx hover-card.tsx label.tsx menubar.tsx navigation-menu.tsx popover.tsx progress.tsx radio-group.tsx scroll-area.tsx select.tsx separator.tsx sheet.tsx slider.tsx switch.tsx tabs.tsx toast.tsx toggle.tsx tooltip.tsx)",
+      "Bash(done)",
+      "Bash(powershell:*)",
+      "Bash(del add-use-client.ps1)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nMigração completa de Vite para Next.js 15\n\n- Removido Vite e React Router\n- Implementado Next.js 15 com App Router\n- Convertidos componentes para Server/Client Components\n- Atualizado tsconfig, eslint e postcss para Next.js\n- Adicionada diretiva \"use client\" em componentes interativos\n- Mantidas todas as bibliotecas de UI \\(shadcn/ui, Radix UI, TailwindCSS\\)\n- Build de produção funcionando perfeitamente\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
