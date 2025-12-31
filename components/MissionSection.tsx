@@ -48,8 +48,11 @@ const MissionSection = () => {
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             Nossa missão é simples e objetiva: pegar empresas que têm produtos e serviços incríveis e quebrar as barreiras que impedem o seu crescimento. Não aceitamos o &ldquo;bom o suficiente&rdquo;. Usamos tecnologia de dados e estratégias de tráfego validadas para criar um fluxo de vendas constante, previsível e escalável.{" "}
-            <span className="text-foreground font-bold text-xl md:text-2xl block mt-4 animate-pulse">
-              Existimos para garantir que o seu negócio nunca pare de crescer.
+            <span className="relative inline-block mt-6">
+              <span className="text-foreground font-bold text-xl md:text-2xl block relative z-10">
+                Existimos para garantir que o seu negócio nunca pare de crescer.
+              </span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-gold/20 -z-0 animate-[slideIn_1s_ease-out]" />
             </span>
           </p>
         </div>
