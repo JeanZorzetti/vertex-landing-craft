@@ -71,13 +71,14 @@ const MissionSection = () => {
 
               {/* Conteúdo */}
               <div className="relative z-10 text-center">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8">
-                  Existimos para garantir que<br className="hidden md:block" /> o seu negócio{" "}
-                  <span className="text-gold uppercase">
-                    nunca pare de crescer
-                  </span>
-                  .
-                </p>
+                <div className="mb-8">
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+                    Existimos para garantir que<br className="hidden md:block" /> o seu negócio
+                  </p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold uppercase">
+                    nunca pare de crescer.
+                  </p>
+                </div>
 
                 {/* CTA Button */}
                 <Button
