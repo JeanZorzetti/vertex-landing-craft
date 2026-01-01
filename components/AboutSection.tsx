@@ -3,15 +3,16 @@ const AboutSection = () => {
     <section id="sobre" className="py-24 bg-background v-pattern">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image - cobrindo metade horizontal com zoom */}
+          {/* Image - cobrindo metade horizontal com zoom MÁXIMO */}
           <div className="order-2 lg:order-1">
             <div className="relative h-full min-h-[500px]">
-              {/* Imagem cobrindo metade da tela com escala maior */}
+              {/* Imagem cobrindo metade da tela com escala MASSIVA */}
               <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
                   alt="Equipe analisando estratégias de marketing digital"
-                  className="w-full h-full object-cover scale-125"
+                  className="w-full h-full object-cover scale-[2]"
+                  style={{ objectPosition: '30% 40%' }}
                 />
                 {/* Overlay sutil para melhor contraste */}
                 <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/20 to-transparent" />
