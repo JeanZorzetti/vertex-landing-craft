@@ -43,9 +43,11 @@ const AboutSection = () => {
 
           {/* Processo em 4 etapas - ULTRA DINÂMICO */}
           <div className="relative pt-8 pb-12 px-8">
-            <h3 className="text-lg font-semibold text-foreground mb-8 text-center">
-              Nosso Método em 4 Etapas
-            </h3>
+            <div className="text-center mb-8">
+              <h3 className="text-lg font-semibold text-foreground border-2 border-gold/30 rounded-xl py-4 px-6 inline-block bg-background/50 backdrop-blur-sm shadow-lg">
+                Nosso Método em 4 Etapas
+              </h3>
+            </div>
 
             {/* Timeline vertical com linha conectora animada */}
             <div className="relative space-y-8 max-w-4xl mx-auto">
