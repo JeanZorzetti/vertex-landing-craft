@@ -12,8 +12,8 @@ const AboutSection = () => {
                   className="absolute w-full h-full"
                   style={{
                     backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80)',
-                    backgroundSize: '250%',
-                    backgroundPosition: '35% 45%',
+                    backgroundSize: '350%',
+                    backgroundPosition: '40% 50%',
                     backgroundRepeat: 'no-repeat'
                   }}
                 />
