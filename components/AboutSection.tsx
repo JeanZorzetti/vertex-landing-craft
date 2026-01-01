@@ -29,7 +29,7 @@ const AboutSection = () => {
           {/* Background Image do Dashboard - Cobrindo todo o método */}
           <div className="absolute inset-0 overflow-hidden rounded-3xl">
             <div
-              className="absolute w-full h-full opacity-15"
+              className="absolute w-full h-full opacity-40"
               style={{
                 backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80)',
                 backgroundSize: 'cover',
@@ -38,7 +38,7 @@ const AboutSection = () => {
               }}
             />
             {/* Overlay escuro para contraste */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
           </div>
 
           {/* Processo em 4 etapas - ULTRA DINÂMICO */}
