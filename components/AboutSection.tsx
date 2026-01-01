@@ -3,8 +3,8 @@ const AboutSection = () => {
     <section id="sobre" className="py-24 bg-background v-pattern">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header Section */}
-        <div className="max-w-3xl mb-16">
-          <div className="inline-block mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
+        <div className="max-w-3xl mb-16 mx-auto text-center">
+          <div className="mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
             Como Trabalhamos
           </div>
 
