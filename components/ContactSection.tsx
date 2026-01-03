@@ -1,5 +1,8 @@
+"use client";
+
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import ContactForm from "./ContactForm";
+import { PopupButton } from "react-calendly";
 
 const contactInfo = [
   {
@@ -87,12 +90,12 @@ const ContactSection = () => {
                 Agende diretamente um horário na nossa agenda e vamos
                 entender como podemos ajudar o seu negócio a crescer.
               </p>
-              <a
-                href="#"
-                className="inline-block text-gold font-semibold hover:underline"
-              >
-                Ver agenda disponível →
-              </a>
+              <PopupButton
+                url="https://calendly.com/verticecomp"
+                rootElement={typeof document !== 'undefined' ? document.getElementById('__next') || document.body : document.body}
+                text="Ver agenda disponível →"
+                className="inline-block text-gold font-semibold hover:underline cursor-pointer bg-transparent border-none p-0"
+              />
             </div>
           </div>
 

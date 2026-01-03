@@ -4,10 +4,13 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,10 +22,10 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: "#sobre", label: "Sobre" },
-    { href: "#servicos", label: "Serviços" },
-    { href: "#diferenciais", label: "Diferenciais" },
-    { href: "#blog", label: "Blog" },
+    { href: "/sobre", label: "Sobre" },
+    { href: "/servicos", label: "Serviços" },
+    { href: "/diferenciais", label: "Diferenciais" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (
@@ -36,7 +39,7 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center group relative">
+          <Link href="/" className="flex items-center group relative">
             <Image
               src={isScrolled ? "/logos/logo-main.png" : "/logos/logo-gold-only.png"}
               alt="Vértice Marketing"
@@ -46,36 +49,29 @@ const Header = () => {
               style={{ objectFit: 'contain' }}
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-gold ${
-                  isScrolled ? "text-foreground" : "text-white"
+                  pathname === link.href ? "text-gold" : (isScrolled ? "text-foreground" : "text-white")
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <Button
-              variant={isScrolled ? "gold" : "goldOutline"}
-              size="sm"
-              onClick={() => {
-                const contactSection = document.getElementById('contato');
-                if (contactSection) {
-                  const headerOffset = 80;
-                  const elementPosition = contactSection.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                }
-              }}
-            >
-              Contato
-            </Button>
+            <Link href="/contato">
+              <Button
+                variant={isScrolled ? "gold" : "goldOutline"}
+                size="sm"
+              >
+                Contato
+              </Button>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -98,34 +94,26 @@ const Header = () => {
           }`}>
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-medium transition-colors hover:text-gold ${
-                    isScrolled ? "text-foreground" : "text-white"
+                    pathname === link.href ? "text-gold" : (isScrolled ? "text-foreground" : "text-white")
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <Button
-                variant="gold"
-                size="sm"
-                className="w-fit"
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  const contactSection = document.getElementById('contato');
-                  if (contactSection) {
-                    const headerOffset = 80;
-                    const elementPosition = contactSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                  }
-                }}
-              >
-                Contato
-              </Button>
+              <Link href="/contato" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button
+                  variant="gold"
+                  size="sm"
+                  className="w-fit"
+                >
+                  Contato
+                </Button>
+              </Link>
             </div>
           </nav>
         )}

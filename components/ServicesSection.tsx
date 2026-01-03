@@ -2,6 +2,7 @@
 
 import { Target, Database, TrendingUp, Monitor, Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
 
 const services = [
   {
@@ -81,21 +82,27 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mx-auto mb-16 flex flex-col items-center gap-4">
-          <div className="px-6 py-2 bg-background/80 backdrop-blur-sm rounded-lg">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-              Nossos Serviços
-            </span>
-          </div>
-          <div className="px-8 py-6 bg-background/80 backdrop-blur-sm rounded-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              O Ecossistema <span className="text-gold">Vértice</span>
-            </h2>
-          </div>
-          <div className="px-8 py-4 bg-background/80 backdrop-blur-sm rounded-xl max-w-2xl">
-            <p className="text-muted-foreground">
-              Soluções integradas que trabalham juntas para acelerar o crescimento do seu negócio.
-            </p>
-          </div>
+          <Card className="border-gold/20 bg-background/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="px-6 py-2">
+              <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+                Nossos Serviços
+              </span>
+            </CardContent>
+          </Card>
+          <Card className="border-gold/30 bg-background/80 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <CardContent className="px-8 py-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                O Ecossistema <span className="text-gold">Vértice</span>
+              </h2>
+            </CardContent>
+          </Card>
+          <Card className="border-gold/20 bg-background/80 backdrop-blur-sm max-w-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardContent className="px-8 py-4">
+              <p className="text-muted-foreground">
+                Soluções integradas que trabalham juntas para acelerar o crescimento do seu negócio.
+              </p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Services Grid - Ultra Dynamic */}
