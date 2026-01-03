@@ -41,8 +41,12 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="servicos" className="py-24 bg-secondary geometric-pattern-gold">
-      <div className="container mx-auto px-6 lg:px-8">
+    <section id="servicos" className="py-24 bg-gradient-to-b from-background via-secondary to-background relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-block mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
@@ -56,32 +60,107 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Services Grid - Ultra Dynamic */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group relative bg-background rounded-xl p-8 shadow-soft hover:shadow-elevated transition-all duration-500 hover:-translate-y-2 border border-border/50"
+              className="group relative"
+              style={{
+                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+              }}
             >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-lg bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors duration-300">
-                <service.icon className="w-7 h-7 text-gold" strokeWidth={1.5} />
+              {/* Glow effect on hover */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-gold via-gold-light to-gold rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-700 group-hover:duration-300" />
+
+              {/* Card */}
+              <div className="relative h-full bg-white dark:bg-background rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden">
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/0 group-hover:from-gold/10 group-hover:via-gold/5 group-hover:to-transparent transition-all duration-700" />
+
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                {/* Floating particles effect */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse" />
+
+                {/* Content */}
+                <div className="relative">
+                  {/* Icon Container with multi-layer animation */}
+                  <div className="relative mb-6">
+                    {/* Outer rotating ring */}
+                    <div className="absolute inset-0 w-16 h-16 rounded-2xl border-2 border-gold/20 scale-100 group-hover:scale-125 group-hover:rotate-180 transition-all duration-700 ease-out" />
+
+                    {/* Middle pulsing ring */}
+                    <div className="absolute inset-0 w-16 h-16 rounded-2xl bg-gold/5 scale-100 group-hover:scale-110 transition-all duration-500" />
+
+                    {/* Icon background */}
+                    <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/20 via-gold/10 to-transparent flex items-center justify-center group-hover:shadow-lg group-hover:shadow-gold/30 transition-all duration-500 group-hover:scale-110">
+                      <service.icon className="w-8 h-8 text-gold group-hover:scale-110 group-hover:rotate-12 transition-all duration-500" strokeWidth={1.5} />
+                    </div>
+
+                    {/* Orbiting dot */}
+                    <div className="absolute top-0 right-0 w-3 h-3 bg-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-ping" />
+                  </div>
+
+                  {/* Title with underline effect */}
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-gold transition-colors duration-300 mb-2">
+                      {service.title}
+                    </h3>
+                    <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-gold to-transparent transition-all duration-700 ease-out" />
+                  </div>
+
+                  {/* Description with staggered reveal */}
+                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-500">
+                    {service.description}
+                  </p>
+
+                  {/* Arrow indicator */}
+                  <div className="mt-6 flex items-center gap-2 text-gold opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-2 transition-all duration-500">
+                    <span className="text-sm font-semibold">Saiba mais</span>
+                    <svg className="w-4 h-4 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Corner accent */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-gold/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Bottom accent line with progress animation */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left rounded-b-2xl" />
               </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-bold text-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-
-              {/* Hover accent line */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gold to-gold-light rounded-b-xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes bounce-x {
+          0%, 100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(4px);
+          }
+        }
+
+        .animate-bounce-x {
+          animation: bounce-x 1s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
