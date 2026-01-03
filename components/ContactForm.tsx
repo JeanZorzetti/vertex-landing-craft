@@ -15,6 +15,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { toast } from "sonner";
 import { Loader2, Send } from "lucide-react";
 
@@ -37,6 +44,11 @@ const contactFormSchema = z.object({
     .max(100, "Nome da empresa muito longo")
     .optional()
     .or(z.literal("")),
+  annualRevenue: z
+    .string()
+    .min(1, "Selecione uma opção")
+    .optional()
+    .or(z.literal("")),
   message: z
     .string()
     .min(10, "Mensagem deve ter pelo menos 10 caracteres")
@@ -55,6 +67,7 @@ export default function ContactForm() {
       email: "",
       phone: "",
       company: "",
+      annualRevenue: "",
       message: "",
     },
   });
@@ -155,27 +168,56 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Empresa (opcional) */}
-        <FormField
-          control={form.control}
-          name="company"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel className="text-foreground font-medium">
-                Empresa <span className="text-muted-foreground text-sm">(opcional)</span>
-              </FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Nome da sua empresa"
-                  {...field}
-                  className="bg-background border-border focus:border-gold focus:ring-gold"
-                  disabled={isSubmitting}
-                />
-              </FormControl>
-              <FormMessage className="text-sm" />
-            </FormItem>
-          )}
-        />
+        {/* Empresa e Faturamento Anual em grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <FormField
+            control={form.control}
+            name="company"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-foreground font-medium">
+                  Empresa <span className="text-muted-foreground text-sm">(opcional)</span>
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder="Nome da sua empresa"
+                    {...field}
+                    className="bg-background border-border focus:border-gold focus:ring-gold"
+                    disabled={isSubmitting}
+                  />
+                </FormControl>
+                <FormMessage className="text-sm" />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="annualRevenue"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-foreground font-medium">
+                  Faturamento Anual <span className="text-muted-foreground text-sm">(opcional)</span>
+                </FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
+                  <FormControl>
+                    <SelectTrigger className="bg-background border-border focus:border-gold focus:ring-gold">
+                      <SelectValue placeholder="Selecione uma faixa" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="ate-100k">Até R$ 100 mil</SelectItem>
+                    <SelectItem value="100k-500k">R$ 100 mil - R$ 500 mil</SelectItem>
+                    <SelectItem value="500k-1m">R$ 500 mil - R$ 1 milhão</SelectItem>
+                    <SelectItem value="1m-5m">R$ 1 milhão - R$ 5 milhões</SelectItem>
+                    <SelectItem value="acima-5m">Acima de R$ 5 milhões</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage className="text-sm" />
+              </FormItem>
+            )}
+          />
+        </div>
 
         {/* Mensagem */}
         <FormField

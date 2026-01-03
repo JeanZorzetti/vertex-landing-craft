@@ -5,14 +5,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contato@verticemarketing.com.br",
-    href: "mailto:contato@verticemarketing.com.br",
+    value: "verticecom@gmail.com",
+    href: "mailto:verticecom@gmail.com",
   },
   {
     icon: Phone,
     title: "Telefone",
-    value: "(11) 9999-9999",
-    href: "tel:+5511999999999",
+    value: "(62) 99326-5713",
+    href: "tel:+556299326571 3",
   },
   {
     icon: MapPin,
