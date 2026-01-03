@@ -6,13 +6,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#D4AF37] py-16">
+    <footer className="bg-[#B8860B] py-16">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
           <div className="mb-12 flex justify-center">
             <Image
-              src="/logos/logo-gold-only.png"
+              src="/logos/logo-white.png"
               alt="Vértice Marketing"
               width={300}
               height={80}
