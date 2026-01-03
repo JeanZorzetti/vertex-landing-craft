@@ -1,7 +1,5 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const Footer = () => {
@@ -23,31 +21,8 @@ const Footer = () => {
             />
           </div>
 
-          {/* CTA */}
-          <p className="text-primary-foreground/70 mb-6 max-w-md">
-            Quer entender como podemos ajudar seu negócio? Agende uma conversa gratuita e sem compromisso.
-          </p>
-
-          <Button
-            variant="gold"
-            size="lg"
-            className="mb-12 gold-shimmer"
-            onClick={() => {
-              const contactSection = document.getElementById('contato');
-              if (contactSection) {
-                const headerOffset = 80;
-                const elementPosition = contactSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-              }
-            }}
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Entrar em Contato
-          </Button>
-
           {/* Divider */}
-          <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mb-8" />
+          <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mb-8 mt-8" />
 
           {/* Copyright */}
           <p className="text-sm text-primary-foreground/50">
