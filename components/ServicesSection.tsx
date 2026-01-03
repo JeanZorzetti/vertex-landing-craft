@@ -78,23 +78,29 @@ const ServicesSection = () => {
 
               {/* Card */}
               <div className="relative h-full bg-white rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden shadow-lg">
-                {/* Textura Padrão V's Entrelaçados - Manual da Marca */}
-                <div className="absolute inset-0 opacity-[0.08] group-hover:opacity-[0.12] transition-opacity duration-500 pointer-events-none">
+                {/* Textura Padrão V's Entrelaçados - Manual da Marca - INTENSA */}
+                <div className="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none">
                   <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                      <pattern id={`v-pattern-${index}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                        {/* V entrelaçado - padrão repetido */}
-                        <path d="M10 0 L15 10 L20 0" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M0 0 L5 10 L10 0" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
-                        <path d="M20 0 L25 10 L30 0" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+                      <pattern id={`v-pattern-${index}`} x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                        {/* V entrelaçado - padrão repetido com cores INTENSAS */}
+                        <path d="M7.5 0 L11.25 7.5 L15 0" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="1"/>
+                        <path d="M0 0 L3.75 7.5 L7.5 0" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                        <path d="M15 0 L18.75 7.5 L22.5 0" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                        <path d="M22.5 0 L26.25 7.5 L30 0" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
 
-                        <path d="M10 20 L15 30 L20 20" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M0 20 L5 30 L10 20" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
-                        <path d="M20 20 L25 30 L30 20" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+                        <path d="M7.5 15 L11.25 22.5 L15 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="1"/>
+                        <path d="M0 15 L3.75 22.5 L7.5 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                        <path d="M15 15 L18.75 22.5 L22.5 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.8"/>
+                        <path d="M22.5 15 L26.25 22.5 L30 15" stroke="#D4AF37" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
 
-                        {/* Linha diagonal para dar profundidade */}
-                        <path d="M5 10 L15 30" stroke="#D4AF37" strokeWidth="0.5" opacity="0.3"/>
-                        <path d="M25 10 L15 30" stroke="#D4AF37" strokeWidth="0.5" opacity="0.3"/>
+                        {/* Linhas diagonais para dar profundidade - mais fortes */}
+                        <path d="M3.75 7.5 L11.25 22.5" stroke="#D4AF37" strokeWidth="1" opacity="0.5"/>
+                        <path d="M18.75 7.5 L11.25 22.5" stroke="#D4AF37" strokeWidth="1" opacity="0.5"/>
+
+                        {/* Pontos decorativos */}
+                        <circle cx="11.25" cy="7.5" r="1" fill="#D4AF37" opacity="0.6"/>
+                        <circle cx="11.25" cy="22.5" r="1" fill="#D4AF37" opacity="0.6"/>
                       </pattern>
                     </defs>
                     <rect width="100%" height="100%" fill={`url(#v-pattern-${index})`}/>
