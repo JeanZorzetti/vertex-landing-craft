@@ -6,26 +6,26 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-dark py-16">
+    <footer className="bg-[#1e3a5f] py-16">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
-          <div className="mb-8">
+          <div className="mb-12 flex justify-center">
             <Image
               src="/logos/logo-white.png"
               alt="Vértice Marketing"
-              width={200}
-              height={55}
-              className="h-12 w-auto"
+              width={300}
+              height={80}
+              className="h-20 w-auto mx-auto"
               style={{ objectFit: 'contain' }}
             />
           </div>
 
           {/* Divider */}
-          <div className="w-full max-w-xs h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent mb-8 mt-8" />
+          <div className="w-full max-w-md h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-8" />
 
           {/* Copyright */}
-          <p className="text-sm text-primary-foreground/50">
+          <p className="text-sm text-white/70">
             © {currentYear} Vértice Marketing. Todos os direitos reservados.
           </p>
         </div>
