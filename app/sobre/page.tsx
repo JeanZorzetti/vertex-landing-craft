@@ -1,4 +1,5 @@
 import AboutSection from '@/components/AboutSection';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Sobre Nós - Vértice Marketing',
@@ -183,7 +184,7 @@ export default function SobrePage() {
             <p className="text-xl text-gray-300 mb-8">
               Agende uma conversa gratuita e descubra como podemos ajudar sua empresa a crescer.
             </p>
-            <a
+            <Link
               href="/#contato"
               className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-gold/50 hover:scale-105"
             >
@@ -191,7 +192,7 @@ export default function SobrePage() {
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
