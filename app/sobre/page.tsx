@@ -1,4 +1,6 @@
 import AboutSection from '@/components/AboutSection';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export const metadata = {
@@ -9,6 +11,7 @@ export const metadata = {
 export default function SobrePage() {
   return (
     <main className="min-h-screen">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-b from-navy via-navy-dark to-background overflow-hidden">
         {/* Background Pattern */}
@@ -196,6 +199,8 @@ export default function SobrePage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
