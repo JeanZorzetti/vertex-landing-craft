@@ -78,30 +78,26 @@ const ServicesSection = () => {
 
               {/* Card */}
               <div className="relative h-full bg-white rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden shadow-lg">
-                {/* Watermark Pattern - Marca d'água GRANDE e VISÍVEL */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none">
-                  <svg width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Logo Vértice - V estilizado em camadas */}
-                    {/* Camada externa - maior */}
-                    <path d="M100 20 L170 160 L30 160 Z" fill="#D4AF37" opacity="0.15" stroke="#D4AF37" strokeWidth="3"/>
+                {/* Textura Padrão V's Entrelaçados - Manual da Marca */}
+                <div className="absolute inset-0 opacity-[0.08] group-hover:opacity-[0.12] transition-opacity duration-500 pointer-events-none">
+                  <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id={`v-pattern-${index}`} x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        {/* V entrelaçado - padrão repetido */}
+                        <path d="M10 0 L15 10 L20 0" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M0 0 L5 10 L10 0" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+                        <path d="M20 0 L25 10 L30 0" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
 
-                    {/* Camada média */}
-                    <path d="M100 40 L150 140 L50 140 Z" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" strokeWidth="2.5"/>
+                        <path d="M10 20 L15 30 L20 20" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M0 20 L5 30 L10 20" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
+                        <path d="M20 20 L25 30 L30 20" stroke="#D4AF37" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.6"/>
 
-                    {/* Camada interna - menor e mais opaca */}
-                    <path d="M100 60 L130 120 L70 120 Z" fill="#D4AF37" opacity="0.35" stroke="#D4AF37" strokeWidth="2"/>
-
-                    {/* Detalhe central - círculo com borda */}
-                    <circle cx="100" cy="100" r="18" fill="#D4AF37" opacity="0.4" stroke="#D4AF37" strokeWidth="2"/>
-                    <circle cx="100" cy="100" r="12" fill="white" opacity="0.3"/>
-                    <circle cx="100" cy="100" r="6" fill="#D4AF37" opacity="0.5"/>
-
-                    {/* Linhas de detalhe lateral */}
-                    <line x1="30" y1="160" x2="100" y2="20" stroke="#D4AF37" strokeWidth="1.5" opacity="0.2"/>
-                    <line x1="170" y1="160" x2="100" y2="20" stroke="#D4AF37" strokeWidth="1.5" opacity="0.2"/>
-
-                    {/* Texto VÉRTICE estilizado */}
-                    <text x="100" y="185" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#D4AF37" opacity="0.3" textAnchor="middle">VÉRTICE</text>
+                        {/* Linha diagonal para dar profundidade */}
+                        <path d="M5 10 L15 30" stroke="#D4AF37" strokeWidth="0.5" opacity="0.3"/>
+                        <path d="M25 10 L15 30" stroke="#D4AF37" strokeWidth="0.5" opacity="0.3"/>
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill={`url(#v-pattern-${index})`}/>
                   </svg>
                 </div>
 
