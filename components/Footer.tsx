@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="mb-12 flex justify-center">
             <Image
-              src="/logos/logo-white.png"
+              src="/logos/logo-gold-only.png"
               alt="Vértice Marketing"
               width={400}
               height={120}
