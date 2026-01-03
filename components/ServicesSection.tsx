@@ -77,15 +77,30 @@ const ServicesSection = () => {
 
               {/* Card */}
               <div className="relative h-full bg-white rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden shadow-lg">
-                {/* Watermark Pattern - Marca d'água dourada */}
-                <div className="absolute bottom-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-                  <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Triângulo estilizado representando o "V" de Vértice */}
-                    <path d="M50 10 L85 75 L15 75 Z" fill="currentColor" className="text-gold" opacity="0.3"/>
-                    <path d="M50 20 L75 65 L25 65 Z" fill="currentColor" className="text-gold" opacity="0.4"/>
-                    <path d="M50 30 L65 55 L35 55 Z" fill="currentColor" className="text-gold" opacity="0.5"/>
-                    {/* Círculo central */}
-                    <circle cx="50" cy="50" r="8" fill="currentColor" className="text-gold" opacity="0.6"/>
+                {/* Watermark Pattern - Marca d'água GRANDE e VISÍVEL */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none">
+                  <svg width="280" height="280" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Logo Vértice - V estilizado em camadas */}
+                    {/* Camada externa - maior */}
+                    <path d="M100 20 L170 160 L30 160 Z" fill="#D4AF37" opacity="0.15" stroke="#D4AF37" strokeWidth="3"/>
+
+                    {/* Camada média */}
+                    <path d="M100 40 L150 140 L50 140 Z" fill="#D4AF37" opacity="0.25" stroke="#D4AF37" strokeWidth="2.5"/>
+
+                    {/* Camada interna - menor e mais opaca */}
+                    <path d="M100 60 L130 120 L70 120 Z" fill="#D4AF37" opacity="0.35" stroke="#D4AF37" strokeWidth="2"/>
+
+                    {/* Detalhe central - círculo com borda */}
+                    <circle cx="100" cy="100" r="18" fill="#D4AF37" opacity="0.4" stroke="#D4AF37" strokeWidth="2"/>
+                    <circle cx="100" cy="100" r="12" fill="white" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="6" fill="#D4AF37" opacity="0.5"/>
+
+                    {/* Linhas de detalhe lateral */}
+                    <line x1="30" y1="160" x2="100" y2="20" stroke="#D4AF37" strokeWidth="1.5" opacity="0.2"/>
+                    <line x1="170" y1="160" x2="100" y2="20" stroke="#D4AF37" strokeWidth="1.5" opacity="0.2"/>
+
+                    {/* Texto VÉRTICE estilizado */}
+                    <text x="100" y="185" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#D4AF37" opacity="0.3" textAnchor="middle">VÉRTICE</text>
                   </svg>
                 </div>
 
@@ -126,9 +141,24 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Description with staggered reveal */}
-                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-500">
+                  <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-500 mb-6">
                     {service.description}
                   </p>
+
+                  {/* Botão Saiba Mais */}
+                  <a
+                    href="/#contato"
+                    className="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:text-gold-light"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                  >
+                    <span>Saiba mais</span>
+                    <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
                 </div>
 
                 {/* Corner accent */}
