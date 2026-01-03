@@ -150,7 +150,7 @@ const MissionSection = () => {
         </div>
 
         {/* Valores - Design Moderno */}
-        <div className="max-w-6xl mx-auto">
+        <div id="diferenciais" className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gold/5 rounded-full border border-gold/20">
