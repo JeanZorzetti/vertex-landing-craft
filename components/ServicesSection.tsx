@@ -1,3 +1,5 @@
+"use client";
+
 import { Target, Database, TrendingUp, Monitor, Search, ShoppingCart } from "lucide-react";
 
 const services = [
@@ -135,32 +137,6 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes bounce-x {
-          0%, 100% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(4px);
-          }
-        }
-
-        .animate-bounce-x {
-          animation: bounce-x 1s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 };
