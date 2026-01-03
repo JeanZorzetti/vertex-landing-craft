@@ -92,7 +92,7 @@ const ContactSection = () => {
               </p>
               <PopupButton
                 url="https://calendly.com/verticecomp"
-                rootElement={typeof document !== 'undefined' ? document.getElementById('__next') || document.body : document.body}
+                rootElement={typeof window !== 'undefined' ? document.body : undefined}
                 text="Ver agenda disponível →"
                 className="inline-block text-gold font-semibold hover:underline cursor-pointer bg-transparent border-none p-0"
               />
