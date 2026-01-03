@@ -163,36 +163,98 @@ const MissionSection = () => {
             </h2>
           </div>
 
-          {/* Values Grid - Design Aprimorado */}
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Values Grid - Design ULTRA DINÂMICO Azul e Dourado */}
+          <div className="grid md:grid-cols-2 gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="group relative p-7 bg-white rounded-2xl border-2 border-border/30 hover:border-gold/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="group relative"
+                style={{
+                  animation: `fadeInUp 0.8s ease-out ${index * 0.15}s both`
+                }}
               >
-                {/* Gradient background on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                {/* Glow dourado externo no hover */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-gold via-gold-light to-gold rounded-3xl opacity-0 group-hover:opacity-30 blur-2xl transition-all duration-700" />
 
-                {/* Icon com badge design */}
-                <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <value.icon className="w-6 h-6 text-gold" strokeWidth={2} />
+                {/* Card com gradiente azul → dourado */}
+                <div className="relative h-full bg-gradient-to-br from-navy via-navy-dark to-navy rounded-3xl p-8 border-2 border-gold/20 group-hover:border-gold/60 transition-all duration-500 overflow-hidden shadow-2xl">
+
+                  {/* Pattern de fundo com V's entrelaçados */}
+                  <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <pattern id={`v-pattern-card-${index}`} x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+                          <path d="M12.5 0 L18.75 12.5 L25 0" stroke="#D4AF37" strokeWidth="2" fill="none" opacity="1"/>
+                          <path d="M0 0 L6.25 12.5 L12.5 0" stroke="#D4AF37" strokeWidth="2" fill="none" opacity="0.7"/>
+                          <path d="M12.5 25 L18.75 37.5 L25 25" stroke="#D4AF37" strokeWidth="2" fill="none" opacity="1"/>
+                          <path d="M0 25 L6.25 37.5 L12.5 25" stroke="#D4AF37" strokeWidth="2" fill="none" opacity="0.7"/>
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill={`url(#v-pattern-card-${index})`}/>
+                    </svg>
+                  </div>
+
+                  {/* Shimmer effect diagonal */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 skew-x-12" />
+
+                  {/* Floating particles dourados */}
+                  <div className="absolute top-4 right-4 w-24 h-24 bg-gold/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 group-hover:animate-pulse" />
+                  <div className="absolute bottom-4 left-4 w-32 h-32 bg-gold/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100" />
+
+                  {/* Icon Container - Dinâmico */}
+                  <div className="relative mb-6 flex items-start gap-4">
+                    {/* Icon background com múltiplas camadas */}
+                    <div className="relative flex-shrink-0">
+                      {/* Anel externo rotativo */}
+                      <div className="absolute inset-0 w-16 h-16 rounded-2xl border-2 border-gold/30 group-hover:scale-125 group-hover:rotate-180 transition-all duration-700" />
+
+                      {/* Anel médio pulsante */}
+                      <div className="absolute inset-0 w-16 h-16 rounded-2xl bg-gold/10 group-hover:scale-110 transition-all duration-500" />
+
+                      {/* Icon container */}
+                      <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-gold via-gold-light to-gold flex items-center justify-center group-hover:shadow-2xl group-hover:shadow-gold/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                        <value.icon className="w-8 h-8 text-navy group-hover:scale-110 transition-transform duration-500" strokeWidth={2.5} />
+                      </div>
+
+                      {/* Orbiting particle */}
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-ping" />
+                    </div>
+
+                    {/* Número do card */}
+                    <div className="ml-auto">
+                      <span className="text-6xl font-bold text-gold/10 group-hover:text-gold/20 transition-colors duration-500">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative">
+                    {/* Subtítulo dourado */}
+                    <p className="text-xs text-gold font-bold mb-2 uppercase tracking-widest">
+                      {value.subtitle}
+                    </p>
+
+                    {/* Título com underline animado */}
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-gold transition-colors duration-300 mb-2">
+                        {value.title}
+                      </h3>
+                      <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-gold via-gold-light to-transparent transition-all duration-700 rounded-full" />
+                    </div>
+
+                    {/* Descrição */}
+                    <p className="text-white/70 leading-relaxed group-hover:text-white/90 transition-colors duration-500">
+                      {value.description}
+                    </p>
+                  </div>
+
+                  {/* Bottom accent line animado */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-gold via-gold-light to-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+
+                  {/* Corner accent superior direito */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-gold/20 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-
-                {/* Content */}
-                <div className="relative">
-                  <h3 className="text-xl font-bold text-foreground mb-1.5">
-                    {value.title}
-                  </h3>
-                  <p className="text-xs text-gold font-bold mb-3 uppercase tracking-wider">
-                    {value.subtitle}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-gold/10 to-transparent rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             ))}
           </div>
