@@ -76,7 +76,7 @@ const ServicesSection = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-gold via-gold-light to-gold rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-700 group-hover:duration-300" />
 
               {/* Card */}
-              <div className="relative h-full bg-white dark:bg-background rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden">
+              <div className="relative h-full bg-white rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden shadow-lg">
                 {/* Watermark Pattern - Marca d'água dourada */}
                 <div className="absolute bottom-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
                   <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,14 +129,6 @@ const ServicesSection = () => {
                   <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-500">
                     {service.description}
                   </p>
-
-                  {/* Arrow indicator */}
-                  <div className="mt-6 flex items-center gap-2 text-gold opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-2 transition-all duration-500">
-                    <span className="text-sm font-semibold">Saiba mais</span>
-                    <svg className="w-4 h-4 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
                 </div>
 
                 {/* Corner accent */}
