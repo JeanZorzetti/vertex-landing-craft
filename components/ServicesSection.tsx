@@ -45,25 +45,29 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="servicos" className="py-24 bg-gradient-to-b from-background via-secondary to-background relative overflow-hidden">
-      {/* Background Pattern - Textura V's do Manual da Marca */}
-      <div className="absolute inset-0 opacity-15">
+      {/* Background Pattern - Textura V's do Manual da Marca - MAIOR E MAIS INTENSA */}
+      <div className="absolute inset-0 opacity-35">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="v-pattern-background" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-              {/* V entrelaçado - padrão repetido */}
-              <path d="M10 0 L15 10 L20 0" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M0 0 L5 10 L10 0" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
-              <path d="M20 0 L25 10 L30 0" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
-              <path d="M30 0 L35 10 L40 0" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+            <pattern id="v-pattern-background" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+              {/* V entrelaçado - padrão repetido MAIOR E MAIS INTENSO */}
+              <path d="M20 0 L30 20 L40 0" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="1"/>
+              <path d="M0 0 L10 20 L20 0" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+              <path d="M40 0 L50 20 L60 0" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+              <path d="M60 0 L70 20 L80 0" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
 
-              <path d="M10 20 L15 30 L20 20" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M0 20 L5 30 L10 20" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
-              <path d="M20 20 L25 30 L30 20" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
-              <path d="M30 20 L35 30 L40 20" stroke="#D4AF37" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
+              <path d="M20 40 L30 60 L40 40" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="1"/>
+              <path d="M0 40 L10 60 L20 40" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+              <path d="M40 40 L50 60 L60 40" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.9"/>
+              <path d="M60 40 L70 60 L80 40" stroke="#D4AF37" strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
 
-              {/* Linhas diagonais */}
-              <path d="M5 10 L15 30" stroke="#D4AF37" strokeWidth="0.8" opacity="0.4"/>
-              <path d="M25 10 L15 30" stroke="#D4AF37" strokeWidth="0.8" opacity="0.4"/>
+              {/* Linhas diagonais mais grossas */}
+              <path d="M10 20 L30 60" stroke="#D4AF37" strokeWidth="1.5" opacity="0.6"/>
+              <path d="M50 20 L30 60" stroke="#D4AF37" strokeWidth="1.5" opacity="0.6"/>
+
+              {/* Pontos decorativos maiores */}
+              <circle cx="30" cy="20" r="2" fill="#D4AF37" opacity="0.8"/>
+              <circle cx="30" cy="60" r="2" fill="#D4AF37" opacity="0.8"/>
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#v-pattern-background)"/>
