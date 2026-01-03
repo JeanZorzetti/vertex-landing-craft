@@ -16,7 +16,7 @@ const Footer = () => {
               alt="Vértice Marketing"
               width={400}
               height={120}
-              className="h-32 w-auto mx-auto brightness-0 invert"
+              className="h-32 w-auto mx-auto"
               style={{ objectFit: 'contain' }}
             />
           </div>
