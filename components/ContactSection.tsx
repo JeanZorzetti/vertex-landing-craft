@@ -5,8 +5,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "verticecom@gmail.com",
-    href: "mailto:verticecom@gmail.com",
+    value: "verticecomp@gmail.com",
+    href: "mailto:verticecomp@gmail.com",
   },
   {
     icon: Phone,
