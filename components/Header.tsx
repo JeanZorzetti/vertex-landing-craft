@@ -41,7 +41,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center group relative">
             <Image
-              src={isScrolled ? "/logos/logo-main.png" : "/logos/logo-gold-only.png"}
+              src="/logos/logo-gold-only.png"
               alt="Vértice Marketing"
               width={260}
               height={70}
