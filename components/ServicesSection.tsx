@@ -77,6 +77,18 @@ const ServicesSection = () => {
 
               {/* Card */}
               <div className="relative h-full bg-white dark:bg-background rounded-2xl p-8 border-2 border-border/30 group-hover:border-gold/50 transition-all duration-500 overflow-hidden">
+                {/* Watermark Pattern - Marca d'água dourada */}
+                <div className="absolute bottom-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
+                  <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {/* Triângulo estilizado representando o "V" de Vértice */}
+                    <path d="M50 10 L85 75 L15 75 Z" fill="currentColor" className="text-gold" opacity="0.3"/>
+                    <path d="M50 20 L75 65 L25 65 Z" fill="currentColor" className="text-gold" opacity="0.4"/>
+                    <path d="M50 30 L65 55 L35 55 Z" fill="currentColor" className="text-gold" opacity="0.5"/>
+                    {/* Círculo central */}
+                    <circle cx="50" cy="50" r="8" fill="currentColor" className="text-gold" opacity="0.6"/>
+                  </svg>
+                </div>
+
                 {/* Animated background gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/0 group-hover:from-gold/10 group-hover:via-gold/5 group-hover:to-transparent transition-all duration-700" />
 
