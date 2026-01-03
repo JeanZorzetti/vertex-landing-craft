@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#B8860B] py-16">
+    <footer className="bg-[#C9A961] py-16">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
@@ -14,9 +14,9 @@ const Footer = () => {
             <Image
               src="/logos/logo-white.png"
               alt="Vértice Marketing"
-              width={300}
-              height={80}
-              className="h-20 w-auto mx-auto"
+              width={400}
+              height={120}
+              className="h-32 w-auto mx-auto brightness-0 invert"
               style={{ objectFit: 'contain' }}
             />
           </div>
