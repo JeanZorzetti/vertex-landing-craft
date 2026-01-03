@@ -81,15 +81,21 @@ const ServicesSection = () => {
       <div className="container mx-auto px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block mb-4 text-gold text-sm font-semibold tracking-widest uppercase">
-            Nossos Serviços
+          <div className="inline-block mb-4 px-6 py-2 bg-background/80 backdrop-blur-sm rounded-lg">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+              Nossos Serviços
+            </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            O Ecossistema <span className="text-gold">Vértice</span>
-          </h2>
-          <p className="text-muted-foreground">
-            Soluções integradas que trabalham juntas para acelerar o crescimento do seu negócio.
-          </p>
+          <div className="inline-block px-8 py-6 bg-background/80 backdrop-blur-sm rounded-2xl mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              O Ecossistema <span className="text-gold">Vértice</span>
+            </h2>
+          </div>
+          <div className="inline-block px-8 py-4 bg-background/80 backdrop-blur-sm rounded-xl">
+            <p className="text-muted-foreground">
+              Soluções integradas que trabalham juntas para acelerar o crescimento do seu negócio.
+            </p>
+          </div>
         </div>
 
         {/* Services Grid - Ultra Dynamic */}
