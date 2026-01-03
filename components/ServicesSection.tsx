@@ -1,6 +1,7 @@
 "use client";
 
 import { Target, Database, TrendingUp, Monitor, Search, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -146,7 +147,7 @@ const ServicesSection = () => {
                   </p>
 
                   {/* Botão Saiba Mais */}
-                  <a
+                  <Link
                     href="/#contato"
                     className="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:text-gold-light"
                     onClick={(e) => {
@@ -158,7 +159,7 @@ const ServicesSection = () => {
                     <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Corner accent */}
