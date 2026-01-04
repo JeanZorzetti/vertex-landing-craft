@@ -28,7 +28,7 @@ const Footer = () => {
   };
 
   const socialMedia = [
-    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/vertice.assessoria/" },
     { name: "LinkedIn", icon: Linkedin, href: "#" },
     { name: "Facebook", icon: Facebook, href: "#" },
   ];
@@ -57,6 +57,8 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label={social.name}
                 >
