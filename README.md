@@ -26,6 +26,10 @@ Site institucional da agência de marketing Vértice, construído com Next.js, R
 # Instalar dependências
 npm install
 
+# Configurar variáveis de ambiente
+cp .env.example .env.local
+# Edite .env.local e adicione seu Google Analytics ID
+
 # Rodar em modo de desenvolvimento
 npm run dev
 
@@ -38,6 +42,15 @@ npm start
 # Lint do código
 npm run lint
 ```
+
+### Configuração do Google Analytics
+
+1. Crie uma conta em https://analytics.google.com
+2. Obtenha seu ID de medição (formato: `G-XXXXXXXXXX`)
+3. Crie um arquivo `.env.local` na raiz do projeto
+4. Adicione: `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`
+
+**📖 Para guia completo, veja:** [GUIA-CONFIGURACAO-SEO.md](GUIA-CONFIGURACAO-SEO.md)
 
 ## Estrutura do Projeto
 
@@ -70,12 +83,26 @@ npm run lint
 
 ## Características
 
+### Design e UX
 - Design responsivo e moderno
-- Otimizado para SEO com metadados do Next.js
-- Performance otimizada com Server e Client Components
 - Animações suaves e transições
 - Tema com cores da marca (Navy Blue e Gold)
 - Componentes reutilizáveis e acessíveis
+
+### SEO e Performance
+- ✅ Otimizado para SEO com metadados do Next.js
+- ✅ Sitemap.xml dinâmico
+- ✅ Robots.txt configurado
+- ✅ Structured Data (Schema.org) implementado
+- ✅ Google Analytics 4 integrado
+- ✅ Meta tags otimizadas (Open Graph, Twitter Cards)
+- ✅ Performance otimizada com Server e Client Components
+
+### Funcionalidades
+- Sistema administrativo para gerenciar blog
+- Formulário de contato com armazenamento
+- Seções: Sobre, Serviços, Diferenciais, Blog, Contato
+- Painel admin para visualizar contatos recebidos
 
 ## Migração do Vite para Next.js
 

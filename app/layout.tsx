@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryProvider } from "./providers";
 import StructuredData from "@/components/StructuredData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const gotham = localFont({
   src: [
@@ -108,6 +109,10 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <StructuredData />
+        {/* Adicione seu Google Analytics ID aqui */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </head>
       <body className={`${gotham.variable} font-sans`}>
         <ReactQueryProvider>
