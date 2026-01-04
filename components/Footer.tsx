@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <Image
-              src="/logos/logo-white.png"
+              src="/logos/logo-gold-only.png"
               alt="Vértice Marketing"
               width={200}
               height={60}
