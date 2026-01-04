@@ -1,6 +1,7 @@
 import AboutSection from '@/components/AboutSection';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
 
 export const metadata = {
   title: 'Sobre Nós - Vértice Marketing',
@@ -12,6 +13,7 @@ export default function SobrePage() {
     <main className="min-h-screen">
       <Header />
       <AboutSection />
+      <CTASection />
       <Footer />
     </main>
   );

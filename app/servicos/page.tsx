@@ -1,6 +1,7 @@
 import ServicesSection from '@/components/ServicesSection';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
 
 export const metadata = {
   title: 'Serviços - Vértice Marketing',
@@ -12,6 +13,7 @@ export default function ServicosPage() {
     <main className="min-h-screen">
       <Header />
       <ServicesSection />
+      <CTASection />
       <Footer />
     </main>
   );

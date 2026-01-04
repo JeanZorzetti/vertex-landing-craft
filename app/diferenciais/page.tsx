@@ -1,6 +1,7 @@
 import MissionSection from '@/components/MissionSection';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
 
 export const metadata = {
   title: 'Nossos Diferenciais - Vértice Marketing',
@@ -12,6 +13,7 @@ export default function DiferenciaisPage() {
     <main className="min-h-screen">
       <Header />
       <MissionSection />
+      <CTASection />
       <Footer />
     </main>
   );

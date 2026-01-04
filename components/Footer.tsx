@@ -21,8 +21,8 @@ const Footer = () => {
       { name: "Consultoria", href: "/servicos#consultoria" },
     ],
     contato: [
-      { icon: Mail, text: "contato@verticemarketing.com.br", href: "mailto:contato@verticemarketing.com.br" },
-      { icon: Phone, text: "(11) 99999-9999", href: "tel:+5511999999999" },
+      { icon: Mail, text: "verticecomp@gmail.com", href: "mailto:verticecomp@gmail.com" },
+      { icon: Phone, text: "(62) 99326-5713", href: "tel:+556299326571 3" },
       { icon: MapPin, text: "São Paulo, SP", href: "#" },
     ],
   };
