@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Lock, Mail } from "lucide-react";
+import { Lock, Mail, Home } from "lucide-react";
+import Link from "next/link";
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
@@ -176,6 +177,18 @@ export default function AdminLoginPage() {
           </div>
         </div>
       </div>
+
+      {/* Floating Button to Home */}
+      <Link href="/">
+        <Button
+          className="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+          variant="gold"
+          size="icon"
+          title="Voltar ao site"
+        >
+          <Home className="w-6 h-6" />
+        </Button>
+      </Link>
     </div>
   );
 }
