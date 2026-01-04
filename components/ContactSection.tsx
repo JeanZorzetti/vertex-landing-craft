@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Localização",
-    value: "São Paulo, SP",
+    value: "Rua Cequeira Cesar nº 60, Zona Sul, São Paulo - SP",
     href: null,
   },
   {
