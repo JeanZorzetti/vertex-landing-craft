@@ -16,8 +16,8 @@ export default function AdminLoginPage() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Autenticação simples - ALTERE ESTAS CREDENCIAIS!
-    if (email === "admin@verticemarketing.com" && password === "vertice2024") {
+    // Autenticação simples
+    if (email === "verticecomp@gmail.com" && password === "123456") {
       // Salvar token de autenticação
       localStorage.setItem("adminAuth", "true");
       router.push("/admin/dashboard");
@@ -126,7 +126,7 @@ export default function AdminLoginPage() {
           {/* Info */}
           <div className="mt-6 text-center">
             <p className="text-xs text-muted-foreground">
-              Credenciais padrão: admin@verticemarketing.com / vertice2024
+              Acesso administrativo
             </p>
           </div>
         </div>

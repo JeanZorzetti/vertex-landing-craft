@@ -140,6 +140,12 @@ const Footer = () => {
               >
                 Termos de Uso
               </Link>
+              <Link
+                href="/admin/login"
+                className="text-white/60 hover:text-white transition-colors duration-300 text-xs opacity-50 hover:opacity-100"
+              >
+                Admin
+              </Link>
             </div>
           </div>
         </div>
