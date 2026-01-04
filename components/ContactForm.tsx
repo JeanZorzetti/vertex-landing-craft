@@ -81,6 +81,23 @@ export default function ContactForm() {
 
       console.log("Formulário enviado:", data);
 
+      // Salvar no localStorage para o admin visualizar
+      const contactSubmission = {
+        id: Date.now().toString(),
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        company: data.company || "",
+        revenue: data.annualRevenue || "",
+        message: data.message,
+        date: new Date().toISOString(),
+      };
+
+      const savedContacts = localStorage.getItem("contactSubmissions");
+      const contacts = savedContacts ? JSON.parse(savedContacts) : [];
+      contacts.unshift(contactSubmission);
+      localStorage.setItem("contactSubmissions", JSON.stringify(contacts));
+
       toast.success("Mensagem enviada com sucesso!", {
         description: "Entraremos em contato em breve. Obrigado!",
       });

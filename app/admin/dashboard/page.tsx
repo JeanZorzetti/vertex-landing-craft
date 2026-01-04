@@ -5,11 +5,12 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { FileText, Plus, LogOut, Edit, Trash2 } from "lucide-react";
+import { FileText, Plus, LogOut, Edit, Trash2, Mail, TrendingUp } from "lucide-react";
 
 export default function AdminDashboard() {
   const router = useRouter();
   const [posts, setPosts] = useState<any[]>([]);
+  const [contactsCount, setContactsCount] = useState(0);
 
   useEffect(() => {
     // Verificar autenticação
@@ -23,6 +24,12 @@ export default function AdminDashboard() {
     const savedPosts = localStorage.getItem("blogPosts");
     if (savedPosts) {
       setPosts(JSON.parse(savedPosts));
+    }
+
+    // Carregar contagem de contatos
+    const savedContacts = localStorage.getItem("contactSubmissions");
+    if (savedContacts) {
+      setContactsCount(JSON.parse(savedContacts).length);
     }
   }, [router]);
 
@@ -67,15 +74,53 @@ export default function AdminDashboard() {
       {/* Main Content */}
       <main className="container mx-auto px-6 py-12">
         {/* Page Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-foreground mb-2">
-              Gerenciar Blog
-            </h1>
-            <p className="text-muted-foreground">
-              Crie e gerencie as publicações do blog
-            </p>
-          </div>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-foreground mb-2">
+            Painel Administrativo
+          </h1>
+          <p className="text-muted-foreground">
+            Gerencie o blog e visualize os contatos recebidos
+          </p>
+        </div>
+
+        {/* Quick Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Blog Posts Card */}
+          <Link href="#posts">
+            <div className="bg-white rounded-xl border border-border p-6 hover:shadow-lg transition-shadow cursor-pointer">
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-gold" />
+                </div>
+                <TrendingUp className="w-5 h-5 text-green-500" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-1">{posts.length}</h3>
+              <p className="text-sm text-muted-foreground">Posts Publicados</p>
+            </div>
+          </Link>
+
+          {/* Contacts Card */}
+          <Link href="/admin/contacts">
+            <div className="bg-white rounded-xl border border-border p-6 hover:shadow-lg transition-shadow cursor-pointer">
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-blue-500" />
+                </div>
+                {contactsCount > 0 && (
+                  <span className="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    {contactsCount}
+                  </span>
+                )}
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-1">{contactsCount}</h3>
+              <p className="text-sm text-muted-foreground">Formulários de Contato</p>
+            </div>
+          </Link>
+        </div>
+
+        {/* Posts Section */}
+        <div id="posts" className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold text-foreground">Posts do Blog</h2>
           <Link href="/admin/posts/new">
             <Button variant="gold" size="lg">
               <Plus className="w-5 h-5 mr-2" />
