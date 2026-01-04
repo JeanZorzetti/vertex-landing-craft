@@ -11,6 +11,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,10 +29,13 @@ const Header = () => {
     { href: "/blog", label: "Blog" },
   ];
 
+  // Se não estiver na home, sempre mostra o header com fundo branco
+  const showWhiteBg = !isHomePage || isScrolled;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        showWhiteBg
           ? "bg-white shadow-soft py-4"
           : "bg-transparent py-6"
       }`}
@@ -41,7 +45,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center group relative">
             <Image
-              src={isScrolled ? "/logos/logo-main.png" : "/logos/logo-gold-only.png"}
+              src={showWhiteBg ? "/logos/logo-main.png" : "/logos/logo-gold-only.png"}
               alt="Vértice Marketing"
               width={260}
               height={70}
@@ -58,7 +62,7 @@ const Header = () => {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-gold ${
-                  pathname === link.href ? "text-gold" : (isScrolled ? "text-foreground" : "text-white")
+                  pathname === link.href ? "text-gold" : (showWhiteBg ? "text-foreground" : "text-white")
                 }`}
               >
                 {link.label}
@@ -66,7 +70,7 @@ const Header = () => {
             ))}
             <Link href="/contato">
               <Button
-                variant={isScrolled ? "gold" : "goldOutline"}
+                variant={showWhiteBg ? "gold" : "goldOutline"}
                 size="sm"
               >
                 Contato
@@ -80,9 +84,9 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? "text-foreground" : "text-white"}`} />
+              <X className={`w-6 h-6 ${showWhiteBg ? "text-foreground" : "text-white"}`} />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? "text-foreground" : "text-white"}`} />
+              <Menu className={`w-6 h-6 ${showWhiteBg ? "text-foreground" : "text-white"}`} />
             )}
           </button>
         </div>
@@ -90,7 +94,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <nav className={`md:hidden mt-4 pb-4 border-t pt-4 animate-fade-in ${
-            isScrolled ? "border-border/20 bg-white" : "border-white/20 bg-navy-dark/95 backdrop-blur-md"
+            showWhiteBg ? "border-border/20 bg-white" : "border-white/20 bg-navy-dark/95 backdrop-blur-md"
           }`}>
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -98,7 +102,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-medium transition-colors hover:text-gold ${
-                    pathname === link.href ? "text-gold" : (isScrolled ? "text-foreground" : "text-white")
+                    pathname === link.href ? "text-gold" : (showWhiteBg ? "text-foreground" : "text-white")
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
