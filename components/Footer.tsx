@@ -23,7 +23,7 @@ const Footer = () => {
     contato: [
       { icon: Mail, text: "verticecomp@gmail.com", href: "mailto:verticecomp@gmail.com" },
       { icon: Phone, text: "(62) 99326-5713", href: "tel:+556299326571 3" },
-      { icon: MapPin, text: "São Paulo, SP", href: "#" },
+      { icon: MapPin, text: "Rua Cequeira Cesar nº 60, Zona Sul, São Paulo - SP", href: "#" },
     ],
   };
 
