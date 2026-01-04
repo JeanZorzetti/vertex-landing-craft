@@ -11,10 +11,13 @@ export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showRecovery, setShowRecovery] = useState(false);
+  const [recoveryMessage, setRecoveryMessage] = useState("");
   const router = useRouter();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
 
     // Autenticação simples
     if (email === "verticecomp@gmail.com" && password === "123456") {
@@ -23,6 +26,22 @@ export default function AdminLoginPage() {
       router.push("/admin/dashboard");
     } else {
       setError("Email ou senha incorretos");
+    }
+  };
+
+  const handleRecovery = (e: React.FormEvent) => {
+    e.preventDefault();
+    setRecoveryMessage("");
+
+    if (email === "verticecomp@gmail.com") {
+      // Simular envio de email
+      setRecoveryMessage("Um link de recuperação foi enviado para seu e-mail. Verifique sua caixa de entrada.");
+      setTimeout(() => {
+        setShowRecovery(false);
+        setRecoveryMessage("");
+      }, 5000);
+    } else {
+      setRecoveryMessage("E-mail não encontrado no sistema.");
     }
   };
 
@@ -58,15 +77,17 @@ export default function AdminLoginPage() {
           {/* Title */}
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold text-foreground mb-2">
-              Área Administrativa
+              {showRecovery ? "Recuperar Senha" : "Área Administrativa"}
             </h1>
             <p className="text-muted-foreground text-sm">
-              Faça login para gerenciar o blog
+              {showRecovery
+                ? "Digite seu e-mail para receber o link de recuperação"
+                : "Faça login para gerenciar o blog"}
             </p>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form onSubmit={showRecovery ? handleRecovery : handleLogin} className="space-y-6">
             {/* Email */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
@@ -87,28 +108,37 @@ export default function AdminLoginPage() {
             </div>
 
             {/* Password */}
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
-                Senha
-              </label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="pl-10"
-                  required
-                />
+            {!showRecovery && (
+              <div>
+                <label htmlFor="password" className="block text-sm font-medium text-foreground mb-2">
+                  Senha
+                </label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <Input
+                    id="password"
+                    type="password"
+                    placeholder="••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="pl-10"
+                    required
+                  />
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Error Message */}
             {error && (
               <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg text-sm">
                 {error}
+              </div>
+            )}
+
+            {/* Recovery Message */}
+            {recoveryMessage && (
+              <div className={`${recoveryMessage.includes("enviado") ? "bg-green-50 border-green-200 text-green-600" : "bg-red-50 border-red-200 text-red-600"} border px-4 py-3 rounded-lg text-sm`}>
+                {recoveryMessage}
               </div>
             )}
 
@@ -119,9 +149,24 @@ export default function AdminLoginPage() {
               className="w-full"
               size="lg"
             >
-              Entrar
+              {showRecovery ? "Enviar Link de Recuperação" : "Entrar"}
             </Button>
           </form>
+
+          {/* Recovery Link */}
+          <div className="mt-4 text-center">
+            <button
+              type="button"
+              onClick={() => {
+                setShowRecovery(!showRecovery);
+                setError("");
+                setRecoveryMessage("");
+              }}
+              className="text-sm text-gold hover:text-gold-light transition-colors duration-300"
+            >
+              {showRecovery ? "Voltar ao login" : "Esqueceu sua senha?"}
+            </button>
+          </div>
 
           {/* Info */}
           <div className="mt-6 text-center">
