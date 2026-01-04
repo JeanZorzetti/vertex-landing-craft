@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Save } from "lucide-react";
+import { ArrowLeft, Save, Home } from "lucide-react";
 
 export default function NewPostPage() {
   const router = useRouter();
@@ -199,6 +199,18 @@ export default function NewPostPage() {
           </div>
         </form>
       </main>
+
+      {/* Floating Button to Home */}
+      <Link href="/">
+        <Button
+          className="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+          variant="gold"
+          size="icon"
+          title="Voltar ao site"
+        >
+          <Home className="w-6 h-6" />
+        </Button>
+      </Link>
     </div>
   );
 }

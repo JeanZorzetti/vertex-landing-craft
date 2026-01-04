@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { FileText, Plus, LogOut, Edit, Trash2, Mail, TrendingUp } from "lucide-react";
+import { FileText, Plus, LogOut, Edit, Trash2, Mail, TrendingUp, Home } from "lucide-react";
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -187,6 +187,18 @@ export default function AdminDashboard() {
           )}
         </div>
       </main>
+
+      {/* Floating Button to Home */}
+      <Link href="/">
+        <Button
+          className="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+          variant="gold"
+          size="icon"
+          title="Voltar ao site"
+        >
+          <Home className="w-6 h-6" />
+        </Button>
+      </Link>
     </div>
   );
 }

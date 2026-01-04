@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Building2, DollarSign, MessageSquare, Trash2, ArrowLeft } from "lucide-react";
+import { Mail, Phone, Building2, DollarSign, MessageSquare, Trash2, ArrowLeft, Home } from "lucide-react";
 
 export default function ContactsPage() {
   const router = useRouter();
@@ -211,6 +211,18 @@ export default function ContactsPage() {
           )}
         </div>
       </main>
+
+      {/* Floating Button to Home */}
+      <Link href="/">
+        <Button
+          className="fixed bottom-6 right-6 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+          variant="gold"
+          size="icon"
+          title="Voltar ao site"
+        >
+          <Home className="w-6 h-6" />
+        </Button>
+      </Link>
     </div>
   );
 }
