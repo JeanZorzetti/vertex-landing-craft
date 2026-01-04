@@ -163,12 +163,8 @@ const ServicesSection = () => {
 
                   {/* Botão Saiba Mais */}
                   <Link
-                    href="/#contato"
+                    href="/contato"
                     className="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all duration-300 hover:text-gold-light"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
                   >
                     <span>Saiba mais</span>
                     <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
