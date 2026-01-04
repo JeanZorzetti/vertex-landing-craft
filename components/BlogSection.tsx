@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Link from "next/link";
 
-const blogPosts = [
+const defaultPosts = [
   {
     title: "Como aumentar suas vendas com tráfego pago",
     excerpt: "Descubra as estratégias mais eficazes para converter visitantes em clientes através de campanhas de tráfego pago otimizadas.",
@@ -31,6 +32,27 @@ const blogPosts = [
 ];
 
 const BlogSection = () => {
+  const [blogPosts, setBlogPosts] = useState(defaultPosts);
+
+  useEffect(() => {
+    // Carregar posts do localStorage
+    const savedPosts = localStorage.getItem("blogPosts");
+    if (savedPosts) {
+      const posts = JSON.parse(savedPosts);
+      // Formatar posts para o formato esperado
+      const formattedPosts = posts.map((post: any) => ({
+        title: post.title,
+        excerpt: post.excerpt,
+        date: new Date(post.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
+        readTime: "5 min",
+        category: post.category,
+        image: post.image,
+      }));
+      // Mostrar apenas os 3 posts mais recentes
+      setBlogPosts(formattedPosts.slice(0, 3));
+    }
+  }, []);
+
   return (
     <section id="blog" className="py-24 bg-gradient-to-br from-navy via-navy-dark to-navy relative overflow-hidden">
       {/* Background Pattern V entrelaçado */}
