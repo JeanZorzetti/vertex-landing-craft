@@ -15,10 +15,12 @@ const Footer = () => {
       { name: "Blog", href: "/blog" },
     ],
     servicos: [
-      { name: "Tráfego Pago", href: "/servicos#trafego" },
-      { name: "SEO", href: "/servicos#seo" },
-      { name: "Social Media", href: "/servicos#social" },
-      { name: "Consultoria", href: "/servicos#consultoria" },
+      { name: "Gestão de Tráfego", href: "/servicos#trafego" },
+      { name: "CRM & Tecnologia Própria", href: "/servicos#crm" },
+      { name: "Consultoria de Performance", href: "/servicos#performance" },
+      { name: "Criação de Sites", href: "/servicos#sites" },
+      { name: "Consultoria de SEO", href: "/servicos#seo" },
+      { name: "E-commerce", href: "/servicos#ecommerce" },
     ],
     contato: [
       { icon: Mail, text: "verticecomp@gmail.com", href: "mailto:verticecomp@gmail.com" },
