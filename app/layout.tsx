@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryProvider } from "./providers";
+import StructuredData from "@/components/StructuredData";
 
 const gotham = localFont({
   src: [
@@ -30,27 +31,72 @@ const gotham = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vértice Marketing | Tráfego Pago, CRM e Performance Digital",
-  description: "Sua parceira estratégica em marketing digital. Tráfego pago transparente, CRM proprietário e consultoria de performance para crescimento previsível.",
-  authors: [{ name: "Vértice Marketing" }],
-  keywords: ["marketing digital", "tráfego pago", "gestão de tráfego", "CRM", "consultoria de performance", "agência de marketing", "performance digital", "Google Ads", "Meta Ads"],
+  metadataBase: new URL('https://verticemarketing.com.br'),
+  title: {
+    default: "Vértice Marketing | Agência de Marketing Digital em São Paulo",
+    template: "%s | Vértice Marketing"
+  },
+  description: "Agência de marketing digital em São Paulo especializada em tráfego pago, CRM proprietário, SEO e performance digital. Resultados mensuráveis para seu negócio crescer.",
+  authors: [{ name: "Vértice Marketing", url: "https://verticemarketing.com.br" }],
+  keywords: [
+    "agência de marketing digital são paulo",
+    "tráfego pago",
+    "gestão de tráfego",
+    "CRM marketing",
+    "consultoria de performance",
+    "agência de marketing",
+    "performance digital",
+    "Google Ads",
+    "Meta Ads",
+    "Facebook Ads",
+    "Instagram Ads",
+    "SEO",
+    "consultoria SEO",
+    "criação de sites",
+    "e-commerce",
+    "marketing digital sp"
+  ],
   openGraph: {
-    title: "Vértice Marketing | Tráfego Pago, CRM e Performance Digital",
-    description: "O ponto de encontro entre a sua visão e a nossa tecnologia. Parceria estratégica para crescimento previsível com dados verificados.",
+    title: "Vértice Marketing | Agência de Marketing Digital em São Paulo",
+    description: "Transformamos negócios através de estratégias digitais baseadas em dados. Tráfego pago, CRM proprietário e consultoria de performance para crescimento previsível.",
     type: "website",
     locale: "pt_BR",
+    url: "https://verticemarketing.com.br",
     siteName: "Vértice Marketing",
+    images: [
+      {
+        url: "/logos/logo-main.png",
+        width: 1200,
+        height: 630,
+        alt: "Vértice Marketing - Agência de Marketing Digital"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     site: "@VerticeMarketing",
-    title: "Vértice Marketing | Tráfego Pago e Performance",
-    description: "Sua parceira estratégica em marketing digital com transparência radical e resultados verificados.",
+    title: "Vértice Marketing | Tráfego Pago e Performance Digital",
+    description: "Agência de marketing digital com transparência radical e resultados verificados. Tráfego pago, CRM e consultoria de performance.",
+    images: ["/logos/logo-main.png"]
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  verification: {
+    google: "seu-codigo-google-search-console", // Adicionar código real do Google Search Console
+  },
+  alternates: {
+    canonical: "https://verticemarketing.com.br"
+  },
+  category: "Marketing Digital",
 };
 
 export default function RootLayout({
@@ -60,6 +106,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <StructuredData />
+      </head>
       <body className={`${gotham.variable} font-sans`}>
         <ReactQueryProvider>
           <TooltipProvider>

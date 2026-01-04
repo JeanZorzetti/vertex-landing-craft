@@ -21,7 +21,9 @@
       "Bash(git commit:*)",
       "Bash(npm run dev:*)",
       "Bash(cat:*)",
-      "Bash(timeout 60 npm run build:*)"
+      "Bash(timeout 60 npm run build:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
     ]
   }
 }
