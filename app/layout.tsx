@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ReactQueryProvider } from "./providers";
 import StructuredData from "@/components/StructuredData";
 import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
 
 const gotham = localFont({
   src: [
@@ -107,17 +108,23 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5YF2BNSND"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G5YF2BNSND');
-</script>
+        <StructuredData />
       </head>
       <body className={`${gotham.variable} font-sans`}>
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-G5YF2BNSND"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G5YF2BNSND');
+          `}
+        </Script>
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
