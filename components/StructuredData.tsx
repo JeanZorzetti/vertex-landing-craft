@@ -4,8 +4,8 @@ export default function StructuredData() {
     "@type": "Organization",
     "name": "Vértice Marketing",
     "alternateName": "Vértice",
-    "url": "https://verticemarketing.com.br",
-    "logo": "https://verticemarketing.com.br/logos/logo-main.png",
+    "url": "https://vertice.roilabs.com.br",
+    "logo": "https://vertice.roilabs.com.br/logos/logo-main.png",
     "description": "Agência de marketing digital especializada em tráfego pago, CRM e consultoria de performance.",
     "address": {
       "@type": "PostalAddress",
@@ -30,7 +30,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Vértice Marketing",
-    "image": "https://verticemarketing.com.br/logos/logo-main.png",
+    "image": "https://vertice.roilabs.com.br/logos/logo-main.png",
     "description": "Agência de marketing digital com foco em resultados mensuráveis",
     "address": {
       "@type": "PostalAddress",
@@ -45,7 +45,7 @@ export default function StructuredData() {
       "latitude": "-23.5505",
       "longitude": "-46.6333"
     },
-    "url": "https://verticemarketing.com.br",
+    "url": "https://vertice.roilabs.com.br",
     "telephone": "+55-62-99326-5713",
     "priceRange": "$$",
     "openingHoursSpecification": {
@@ -70,9 +70,9 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Vértice Marketing",
-    "image": "https://verticemarketing.com.br/logos/logo-main.png",
-    "@id": "https://verticemarketing.com.br",
-    "url": "https://verticemarketing.com.br",
+    "image": "https://vertice.roilabs.com.br/logos/logo-main.png",
+    "@id": "https://vertice.roilabs.com.br",
+    "url": "https://vertice.roilabs.com.br",
     "telephone": "+55-62-99326-5713",
     "address": {
       "@type": "PostalAddress",

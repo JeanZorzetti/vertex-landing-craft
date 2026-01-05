@@ -10,7 +10,7 @@ export const metadata = {
   openGraph: {
     title: 'Serviços de Marketing Digital | Vértice Marketing',
     description: 'Gestão de Tráfego, CRM, Performance, SEO e E-commerce para empresas que querem crescer com dados.',
-    url: 'https://verticemarketing.com.br/servicos',
+    url: 'https://vertice.roilabs.com.br/servicos',
   },
 };
 

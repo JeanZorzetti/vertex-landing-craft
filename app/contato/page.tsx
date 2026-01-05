@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Contato | Vértice Marketing',
     description: 'Entre em contato e agende uma conversa gratuita. Estamos em São Paulo para transformar seu negócio.',
-    url: 'https://verticemarketing.com.br/contato',
+    url: 'https://vertice.roilabs.com.br/contato',
   },
 };
 

@@ -32,7 +32,7 @@ const gotham = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://verticemarketing.com.br'),
+  metadataBase: new URL('https://vertice.roilabs.com.br'),
   title: {
     default: "Vértice Marketing | Agência de Marketing Digital em São Paulo",
     template: "%s | Vértice Marketing"
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description: "Transformamos negócios através de estratégias digitais baseadas em dados. Tráfego pago, CRM proprietário e consultoria de performance para crescimento previsível.",
     type: "website",
     locale: "pt_BR",
-    url: "https://verticemarketing.com.br",
+    url: "https://vertice.roilabs.com.br",
     siteName: "Vértice Marketing",
     images: [
       {
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     google: "nlnLBRvQfU8fe6wNqJPzWJojSxK3rvGWedg5d15XdnI",
   },
   alternates: {
-    canonical: "https://verticemarketing.com.br"
+    canonical: "https://vertice.roilabs.com.br"
   },
   category: "Marketing Digital",
 };

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://verticemarketing.com.br' // Altere para seu domínio real
+  const baseUrl = 'https://vertice.roilabs.com.br'
 
   return {
     rules: [

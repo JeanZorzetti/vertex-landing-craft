@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://verticemarketing.com.br' // Altere para seu domínio real
+  const baseUrl = 'https://vertice.roilabs.com.br'
 
   return [
     {
