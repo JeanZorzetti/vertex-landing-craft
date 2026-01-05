@@ -6,7 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ReactQueryProvider } from "./providers";
 import StructuredData from "@/components/StructuredData";
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const gotham = localFont({
   src: [
@@ -110,6 +110,9 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={`${gotham.variable} font-sans`}>
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        )}
         <ReactQueryProvider>
           <TooltipProvider>
             <Toaster />
@@ -117,9 +120,6 @@ export default function RootLayout({
             {children}
           </TooltipProvider>
         </ReactQueryProvider>
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
       </body>
     </html>
   );
