@@ -46,9 +46,39 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 3. Salve o arquivo
 4. Reinicie o servidor de desenvolvimento (`npm run dev`)
 
-✅ **Pronto!** O Google Analytics já está funcionando.
+✅ **Pronto!** O Google Analytics já está instalado.
 
-#### 1.4. Configurar eventos importantes (opcional mas recomendado)
+#### 1.4. Verificar se a tag está funcionando
+
+**IMPORTANTE:** Após instalar a tag, é normal ver este aviso no Google Analytics:
+
+> ⚠️ "A coleta de dados não está ativa no seu site. Se você instalou as tags há mais de 48 horas, verifique se elas estão configuradas corretamente."
+
+**Isso é completamente normal!** Aqui está o que você precisa saber:
+
+1. **Prazo de ativação**: O Google Analytics pode levar de **24 a 48 horas** para começar a mostrar dados
+2. **Verificação da tag**:
+   - Acesse seu site em modo anônimo/privado
+   - Instale a extensão "Google Tag Assistant" no Chrome
+   - Clique no ícone da extensão enquanto está no seu site
+   - Você deve ver: "Tag do Google detectada" com status verde ✅
+
+3. **O que fazer enquanto aguarda**:
+   - ✅ Se a tag aparece no Tag Assistant: **Está tudo certo!** Apenas aguarde 24-48h
+   - ❌ Se a tag NÃO aparece: Verifique se o site foi publicado (deploy) com as alterações
+
+4. **Como saber quando começar a funcionar**:
+   - Vá em "Relatórios" → "Tempo real" no Google Analytics
+   - Se houver visitantes ativos, você verá aparecer em tempo real
+   - Os relatórios históricos levam 24-48h para popular
+
+**Checklist de verificação:**
+- [ ] Tag aparece no Google Tag Assistant (verde)
+- [ ] Site foi publicado com as alterações no layout.tsx
+- [ ] Aguardou pelo menos 24 horas desde a instalação
+- [ ] Testou acessar o site para gerar tráfego
+
+#### 1.5. Configurar eventos importantes (opcional mas recomendado)
 No Google Analytics, configure eventos para rastrear:
 - Envio de formulário de contato
 - Cliques no botão "Saiba mais"
