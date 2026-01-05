@@ -108,12 +108,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <StructuredData />
-      </head>
-      <body className={`${gotham.variable} font-sans`}>
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
+        <StructuredData />
+      </head>
+      <body className={`${gotham.variable} font-sans`}>
         <ReactQueryProvider>
           <TooltipProvider>
             <Toaster />
