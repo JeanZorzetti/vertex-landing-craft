@@ -132,7 +132,7 @@ const BlogSection = () => {
 
                   {/* Read more */}
                   <Link
-                    href="#blog"
+                    href={`/blog/${post.id || 'post'}`}
                     className="inline-flex items-center gap-2 text-gold font-semibold text-sm group-hover:gap-3 transition-all duration-300"
                   >
                     <span>Ler mais</span>
@@ -150,7 +150,7 @@ const BlogSection = () => {
         {/* CTA Button */}
         <div className="text-center">
           <Link
-            href="#blog"
+            href="/blog"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold to-gold-light text-navy font-bold rounded-xl hover:shadow-2xl hover:shadow-gold/50 transition-all duration-300 hover:scale-105"
           >
             Ver todos os artigos
