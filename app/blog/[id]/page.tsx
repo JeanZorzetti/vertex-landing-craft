@@ -8,6 +8,80 @@ import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+const defaultPosts = [
+  {
+    id: "1736105400000",
+    title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
+    excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
+    date: "05 Jan 2026",
+    readTime: "15 min",
+    category: "Tráfego Pago",
+    author: "Vértice Marketing",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    content: `<h1>Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital</h1>
+
+<p>O mercado de tráfego pago está passando pela maior transformação da última década. Com a chegada de 2026, profissionais e empresas precisam dominar não apenas as plataformas tradicionais, mas também entender profundamente como a inteligência artificial, novos custos e mudanças regulatórias impactam diretamente o ROI das campanhas.</p>
+
+<p>Neste guia completo, vamos explorar tudo o que você precisa saber para ter sucesso em tráfego pago em 2026, com dados reais do mercado brasileiro e estratégias práticas.</p>
+
+<h2>📊 O Cenário Atual: Números que Você Precisa Conhecer</h2>
+
+<h3>ROI Médio no Brasil</h3>
+
+<p>Segundo pesquisas recentes, o <strong>ROI médio de tráfego pago no Brasil é de 422%</strong>, mas essa métrica varia drasticamente entre 200% e 1000% dependendo do setor, qualidade da gestão e estratégia implementada.</p>
+
+<p>Para 2026, a métrica de ouro não é mais apenas o ROAS (Return on Ad Spend), mas sim a <strong>relação LTV/CAC</strong> (Lifetime Value dividido pelo Custo de Aquisição de Cliente). Se o cliente não retorna para comprar ou se o serviço não tem recorrência, o custo de aquisição inicial via tráfego pago pode inviabilizar completamente a operação no longo prazo.</p>
+
+<h3>O Impacto dos Novos Custos</h3>
+
+<p>A partir de 1º de janeiro de 2026, <strong>todas as empresas que investem em Meta Ads no Brasil enfrentarão um aumento de 12,15%</strong> no custo final das campanhas. Esse aumento é resultado do repasse direto de PIS/Cofins e ISS aos anunciantes brasileiros.</p>
+
+<h2>🤖 A Revolução da Inteligência Artificial</h2>
+
+<p>A Meta oficializou seu plano mais ambicioso: <strong>automatizar completamente a criação de anúncios usando inteligência artificial até o final de 2026</strong>. Isso significa que sistemas inteligentes farão ajustes automáticos de lances, segmentação, distribuição de orçamento e testes contínuos.</p>
+
+<h2>📈 Google Ads vs Meta Ads: Qual Escolher em 2026?</h2>
+
+<p>A resposta não é "ou/ou", mas "e/e". As agências e empresas que mais crescem em 2026 utilizam Google Ads para capturar demanda imediata (bottom-funnel) e Meta Ads para educação e conscientização (top-funnel).</p>
+
+<h2>🎯 Métricas que Realmente Importam em 2026</h2>
+
+<ol>
+<li><strong>CAC</strong> (Custo de Aquisição de Cliente)</li>
+<li><strong>LTV</strong> (Lifetime Value)</li>
+<li><strong>Relação LTV/CAC</strong> - Ideal: acima de 3:1</li>
+<li><strong>CTR</strong> - Meta: acima de 2% para Search</li>
+<li><strong>Taxa de Conversão</strong> - Meta: acima de 3% para e-commerce</li>
+</ol>
+
+<h2>💰 Quanto Investir?</h2>
+
+<p><strong>Google Ads:</strong> Mínimo R$ 3.000/mês<br>
+<strong>Meta Ads:</strong> Mínimo R$ 2.000/mês<br>
+<strong>Estratégia Integrada:</strong> Ideal R$ 10.000-20.000/mês</p>
+
+<h2>🚀 Estratégias Que Funcionam</h2>
+
+<ol>
+<li><strong>Segmentação por Intenção</strong> - Não por demografia</li>
+<li><strong>First-Party Data</strong> - Dados próprios são ouro</li>
+<li><strong>Criativos de Alta Performance</strong> - UGC performando 3x melhor</li>
+<li><strong>Funil Completo</strong> - Do awareness à conversão</li>
+<li><strong>Remarketing Avançado</strong> - Sequência de anúncios inteligente</li>
+</ol>
+
+<hr>
+
+<p><strong>Quer ajuda profissional?</strong></p>
+
+<p>A Vértice Marketing é especialista em tráfego pago com foco em ROI e resultados mensuráveis.</p>
+
+<p>📞 (62) 99326-5713<br>
+📧 verticecomp@gmail.com<br>
+📍 Rua Cequeira Cesar nº 60, Zona Sul - São Paulo/SP</p>`
+  },
+];
+
 export default function BlogPostPage() {
   const params = useParams();
   const router = useRouter();
@@ -17,16 +91,22 @@ export default function BlogPostPage() {
   useEffect(() => {
     const postId = params.id as string;
 
-    // Buscar post do localStorage
+    // Buscar post do localStorage primeiro
     const savedPosts = localStorage.getItem("blogPosts");
+    let foundPost = null;
 
     if (savedPosts) {
       const posts = JSON.parse(savedPosts);
-      const foundPost = posts.find((p: any) => p.id === postId);
+      foundPost = posts.find((p: any) => p.id === postId);
+    }
 
-      if (foundPost) {
-        setPost(foundPost);
-      }
+    // Se não encontrou no localStorage, buscar nos posts padrão
+    if (!foundPost) {
+      foundPost = defaultPosts.find((p) => p.id === postId);
+    }
+
+    if (foundPost) {
+      setPost(foundPost);
     }
 
     setLoading(false);
