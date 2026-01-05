@@ -4,10 +4,9 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryProvider } from "./providers";
 import StructuredData from "@/components/StructuredData";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const gotham = localFont({
   src: [
@@ -108,9 +107,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
         <StructuredData />
       </head>
       <body className={`${gotham.variable} font-sans`}>
@@ -121,6 +117,9 @@ export default function RootLayout({
             {children}
           </TooltipProvider>
         </ReactQueryProvider>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
