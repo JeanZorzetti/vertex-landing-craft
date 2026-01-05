@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "seu-codigo-google-search-console", // Adicionar código real do Google Search Console
+    google: "nlnLBRvQfU8fe6wNqJPzWJojSxK3rvGWedg5d15XdnI",
   },
   alternates: {
     canonical: "https://verticemarketing.com.br"
