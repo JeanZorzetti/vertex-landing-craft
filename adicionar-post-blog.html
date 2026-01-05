@@ -161,25 +161,14 @@ A Vértice Marketing é especialista em tráfego pago com foco em ROI e resultad
 
         function adicionarPost() {
             try {
-                // Obter posts existentes
-                let posts = localStorage.getItem('blogPosts');
-                posts = posts ? JSON.parse(posts) : [];
-
-                // Verificar se o post já existe
-                const jaExiste = posts.some(p => p.id === novoPost.id);
-
-                if (jaExiste) {
-                    mostrarMensagem('⚠️ Este post já foi adicionado anteriormente!', '#ff9800');
-                    return;
-                }
-
-                // Adicionar novo post no início
-                posts.unshift(novoPost);
+                // REMOVER todos os posts antigos e adicionar APENAS o novo
+                // Isso garante que os posts padrão sejam removidos
+                const posts = [novoPost];
 
                 // Salvar no localStorage
                 localStorage.setItem('blogPosts', JSON.stringify(posts));
 
-                mostrarMensagem('✅ Post adicionado com sucesso! Recarregue a página do blog para ver o novo post.', '#4caf50');
+                mostrarMensagem('✅ Post adicionado com sucesso! Posts antigos foram removidos. Recarregue a página do blog para ver o novo post.', '#4caf50');
             } catch (error) {
                 mostrarMensagem('❌ Erro ao adicionar post: ' + error.message, '#f44336');
             }
