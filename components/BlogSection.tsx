@@ -6,28 +6,13 @@ import Link from "next/link";
 
 const defaultPosts = [
   {
-    title: "Como aumentar suas vendas com tráfego pago",
-    excerpt: "Descubra as estratégias mais eficazes para converter visitantes em clientes através de campanhas de tráfego pago otimizadas.",
-    date: "15 Dez 2024",
-    readTime: "5 min",
+    id: "1736105400000",
+    title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
+    excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
+    date: "05 Jan 2026",
+    readTime: "15 min",
     category: "Tráfego Pago",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "O poder do CRM para seu negócio",
-    excerpt: "Entenda como um sistema de CRM bem implementado pode revolucionar a gestão de leads e aumentar suas taxas de conversão.",
-    date: "10 Dez 2024",
-    readTime: "7 min",
-    category: "Tecnologia",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Tendências de marketing digital para 2025",
-    excerpt: "Fique por dentro das principais tendências que vão dominar o marketing digital no próximo ano e prepare-se para se destacar.",
-    date: "05 Dez 2024",
-    readTime: "6 min",
-    category: "Estratégia",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
