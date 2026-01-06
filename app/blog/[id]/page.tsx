@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowLeft, Share2, TrendingUp, Target, DollarSign, Zap } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2, Zap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -259,51 +259,42 @@ export default function BlogPostPage() {
             </Button>
           </div>
 
-          {/* Key Highlights Section */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl p-6 border border-gold/20 hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-gold/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <TrendingUp className="w-6 h-6 text-gold" />
-              </div>
-              <h3 className="font-bold text-navy text-lg mb-2">ROI Médio</h3>
-              <p className="text-3xl font-bold text-gold mb-1">422%</p>
-              <p className="text-sm text-muted-foreground">No mercado brasileiro</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-navy/10 to-navy/5 rounded-2xl p-6 border border-navy/20 hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-navy/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Target className="w-6 h-6 text-navy" />
-              </div>
-              <h3 className="font-bold text-navy text-lg mb-2">Taxa de Conversão</h3>
-              <p className="text-3xl font-bold text-navy mb-1">3%+</p>
-              <p className="text-sm text-muted-foreground">Meta para e-commerce</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-green-200 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <DollarSign className="w-6 h-6 text-green-700" />
-              </div>
-              <h3 className="font-bold text-navy text-lg mb-2">Investimento Ideal</h3>
-              <p className="text-3xl font-bold text-green-700 mb-1">R$ 10k+</p>
-              <p className="text-sm text-muted-foreground">Estratégia integrada/mês</p>
-            </div>
-          </div>
-
           {/* Post Content */}
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl mb-12">
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl mb-12 relative overflow-hidden">
+            {/* Decorative gradient accent */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gold/10 to-transparent rounded-bl-full"></div>
             <div
-              className="prose prose-lg max-w-none
-                prose-headings:text-navy prose-headings:font-bold
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-                prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-6
-                prose-strong:text-navy prose-strong:font-bold
-                prose-ul:my-6 prose-li:mb-2
-                prose-a:text-gold prose-a:no-underline hover:prose-a:underline
-                prose-blockquote:border-l-gold prose-blockquote:bg-gold/5 prose-blockquote:py-4
-                prose-code:bg-navy/5 prose-code:px-2 prose-code:py-1 prose-code:rounded
-                prose-table:border prose-th:bg-navy/5 prose-th:p-3
-                prose-img:rounded-xl prose-img:shadow-lg"
+              className="prose prose-xl max-w-none relative z-10
+                prose-headings:text-navy prose-headings:font-bold prose-headings:tracking-tight
+                prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:mb-8 prose-h1:leading-tight
+                prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:mt-16 prose-h2:mb-8
+                prose-h2:pb-4 prose-h2:border-b-2 prose-h2:border-gold/30
+                prose-h2:bg-gradient-to-r prose-h2:from-navy prose-h2:to-navy/80
+                prose-h2:bg-clip-text prose-h2:text-transparent
+                prose-h3:text-2xl prose-h3:md:text-3xl prose-h3:mt-12 prose-h3:mb-6
+                prose-h3:text-navy/90
+                prose-p:text-foreground/90 prose-p:leading-[1.8] prose-p:mb-6
+                prose-p:text-lg prose-p:tracking-wide
+                prose-strong:text-navy prose-strong:font-bold prose-strong:text-xl
+                prose-ol:my-8 prose-ol:space-y-4
+                prose-ul:my-8 prose-ul:space-y-4
+                prose-li:text-lg prose-li:leading-relaxed prose-li:pl-2
+                prose-li:marker:text-gold prose-li:marker:font-bold
+                prose-a:text-gold prose-a:font-semibold prose-a:no-underline
+                prose-a:underline-offset-4 hover:prose-a:underline hover:prose-a:text-gold-light
+                prose-blockquote:border-l-4 prose-blockquote:border-gold
+                prose-blockquote:bg-gradient-to-r prose-blockquote:from-gold/5 prose-blockquote:to-transparent
+                prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:italic
+                prose-blockquote:rounded-r-lg prose-blockquote:my-8
+                prose-code:bg-navy/10 prose-code:text-navy prose-code:px-2
+                prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-base
+                prose-pre:bg-navy/95 prose-pre:text-white prose-pre:rounded-xl
+                prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:shadow-lg
+                prose-hr:border-gold/20 prose-hr:my-12
+                prose-table:border prose-table:border-navy/20 prose-table:rounded-lg
+                prose-th:bg-navy/5 prose-th:p-4 prose-th:font-bold
+                prose-td:p-4 prose-td:border prose-td:border-navy/10
+                prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-8"
               dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
             />
           </div>
