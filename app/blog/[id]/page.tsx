@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2, Heart, Bookmark, TrendingUp, Target, DollarSign, Zap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -74,11 +74,12 @@ const defaultPosts = [
 
 <p><strong>Quer ajuda profissional?</strong></p>
 
-<p>A Vértice Marketing é especialista em tráfego pago com foco em ROI e resultados mensuráveis.</p>
+<p>Entre em contato com a <strong>Maria Eduarda</strong>, especialista em tráfego pago da Vértice Marketing, e descubra como triplicar seu ROI com estratégias personalizadas.</p>
 
 <p>📞 (62) 99326-5713<br>
-📧 verticecomp@gmail.com<br>
-📍 Rua Cequeira Cesar nº 60, Zona Sul - São Paulo/SP</p>`
+📧 verticecomp@gmail.com</p>
+
+<p><em>Resposta em até 24 horas • Consultoria gratuita</em></p>`
   },
 ];
 
@@ -87,6 +88,10 @@ export default function BlogPostPage() {
   const router = useRouter();
   const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [readProgress, setReadProgress] = useState(0);
+  const [liked, setLiked] = useState(false);
+  const [bookmarked, setBookmarked] = useState(false);
+  const [likes, setLikes] = useState(0);
 
   useEffect(() => {
     const postId = params.id as string;
@@ -107,10 +112,39 @@ export default function BlogPostPage() {
 
     if (foundPost) {
       setPost(foundPost);
+      // Carregar likes do localStorage
+      const savedLikes = localStorage.getItem(`post-likes-${postId}`);
+      setLikes(savedLikes ? parseInt(savedLikes) : 42);
     }
 
     setLoading(false);
   }, [params.id]);
+
+  // Scroll progress tracker
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+      setReadProgress(Math.min(scrollPercent, 100));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleLike = () => {
+    if (!liked) {
+      setLikes(prev => prev + 1);
+      setLiked(true);
+      localStorage.setItem(`post-likes-${params.id}`, String(likes + 1));
+    }
+  };
+
+  const handleBookmark = () => {
+    setBookmarked(!bookmarked);
+  };
 
   if (loading) {
     return (
@@ -158,7 +192,53 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
+        <div
+          className="h-full bg-gradient-to-r from-gold via-gold-light to-gold transition-all duration-300"
+          style={{ width: `${readProgress}%` }}
+        />
+      </div>
+
       <Header />
+
+      {/* Floating Action Buttons */}
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3">
+        <button
+          onClick={handleLike}
+          className={`group relative p-3 rounded-full transition-all duration-300 shadow-lg ${
+            liked
+              ? 'bg-gold text-white'
+              : 'bg-white text-navy hover:bg-gold hover:text-white'
+          }`}
+          title="Curtir"
+        >
+          <Heart className={`w-5 h-5 ${liked ? 'fill-current' : ''}`} />
+          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+            {likes}
+          </span>
+        </button>
+
+        <button
+          onClick={handleBookmark}
+          className={`group p-3 rounded-full transition-all duration-300 shadow-lg ${
+            bookmarked
+              ? 'bg-gold text-white'
+              : 'bg-white text-navy hover:bg-gold hover:text-white'
+          }`}
+          title="Salvar para ler depois"
+        >
+          <Bookmark className={`w-5 h-5 ${bookmarked ? 'fill-current' : ''}`} />
+        </button>
+
+        <button
+          onClick={sharePost}
+          className="group p-3 bg-white text-navy hover:bg-gold hover:text-white rounded-full transition-all duration-300 shadow-lg"
+          title="Compartilhar"
+        >
+          <Share2 className="w-5 h-5" />
+        </button>
+      </div>
 
       <main className="py-12">
         {/* Hero Image */}
@@ -213,15 +293,65 @@ export default function BlogPostPage() {
               {post.excerpt}
             </p>
 
-            {/* Share button */}
-            <Button
-              onClick={sharePost}
-              variant="outline"
-              className="gap-2"
-            >
-              <Share2 className="w-4 h-4" />
-              Compartilhar
-            </Button>
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-3">
+              <Button
+                onClick={handleLike}
+                variant={liked ? "default" : "outline"}
+                className={`gap-2 ${liked ? 'bg-gold hover:bg-gold-light' : ''}`}
+              >
+                <Heart className={`w-4 h-4 ${liked ? 'fill-current' : ''}`} />
+                {liked ? 'Curtido' : 'Curtir'} ({likes})
+              </Button>
+
+              <Button
+                onClick={handleBookmark}
+                variant={bookmarked ? "default" : "outline"}
+                className={`gap-2 ${bookmarked ? 'bg-gold hover:bg-gold-light' : ''}`}
+              >
+                <Bookmark className={`w-4 h-4 ${bookmarked ? 'fill-current' : ''}`} />
+                {bookmarked ? 'Salvo' : 'Salvar'}
+              </Button>
+
+              <Button
+                onClick={sharePost}
+                variant="outline"
+                className="gap-2"
+              >
+                <Share2 className="w-4 h-4" />
+                Compartilhar
+              </Button>
+            </div>
+          </div>
+
+          {/* Key Highlights Section */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl p-6 border border-gold/20 hover:shadow-lg transition-all duration-300 group">
+              <div className="bg-gold/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-6 h-6 text-gold" />
+              </div>
+              <h3 className="font-bold text-navy text-lg mb-2">ROI Médio</h3>
+              <p className="text-3xl font-bold text-gold mb-1">422%</p>
+              <p className="text-sm text-muted-foreground">No mercado brasileiro</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-navy/10 to-navy/5 rounded-2xl p-6 border border-navy/20 hover:shadow-lg transition-all duration-300 group">
+              <div className="bg-navy/20 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <Target className="w-6 h-6 text-navy" />
+              </div>
+              <h3 className="font-bold text-navy text-lg mb-2">Taxa de Conversão</h3>
+              <p className="text-3xl font-bold text-navy mb-1">3%+</p>
+              <p className="text-sm text-muted-foreground">Meta para e-commerce</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300 group">
+              <div className="bg-green-200 w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <DollarSign className="w-6 h-6 text-green-700" />
+              </div>
+              <h3 className="font-bold text-navy text-lg mb-2">Investimento Ideal</h3>
+              <p className="text-3xl font-bold text-green-700 mb-1">R$ 10k+</p>
+              <p className="text-sm text-muted-foreground">Estratégia integrada/mês</p>
+            </div>
           </div>
 
           {/* Post Content */}
@@ -243,22 +373,113 @@ export default function BlogPostPage() {
             />
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-br from-navy via-navy-dark to-navy rounded-3xl p-8 md:p-12 text-center shadow-2xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Gostou do conteúdo?
-            </h2>
-            <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-              Entre em contato com a Vértice Marketing e descubra como podemos ajudar seu negócio a crescer com estratégias de tráfego pago personalizadas.
-            </p>
-            <Link href="/contato">
-              <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-bold">
-                Fale Conosco
-              </Button>
-            </Link>
+          {/* CTA Section with Specialist */}
+          <div className="bg-gradient-to-br from-navy via-navy-dark to-navy rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden relative">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-gold mr-3 animate-pulse" />
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  Pronto para Transformar Seus Resultados?
+                </h2>
+              </div>
+
+              <p className="text-white/90 text-lg mb-8 max-w-3xl mx-auto text-center leading-relaxed">
+                Entre em contato e descubra como podemos <span className="text-gold font-bold">triplicar seu ROI</span> com estratégias de tráfego pago personalizadas e baseadas em dados reais do mercado.
+              </p>
+
+              {/* Specialist Card */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-8 max-w-2xl mx-auto border border-white/20">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="bg-gradient-to-br from-gold to-gold-light rounded-full p-1 flex-shrink-0">
+                    <div className="bg-navy rounded-full w-24 h-24 flex items-center justify-center">
+                      <span className="text-4xl font-bold text-gold">ME</span>
+                    </div>
+                  </div>
+
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                      <h3 className="text-2xl font-bold text-white">Maria Eduarda</h3>
+                      <div className="bg-gold/20 px-3 py-1 rounded-full">
+                        <span className="text-gold text-xs font-bold">ESPECIALISTA</span>
+                      </div>
+                    </div>
+                    <p className="text-gold font-semibold mb-2">Estrategista em Tráfego Pago</p>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      Especializada em Google Ads e Meta Ads com foco em ROI e resultados mensuráveis.
+                      Ajudo empresas a escalarem suas vendas através de campanhas otimizadas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto">
+                <a
+                  href="tel:+5562993265713"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gold/20 p-3 rounded-lg group-hover:bg-gold/30 transition-colors">
+                      <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white/60 text-xs mb-1">Telefone/WhatsApp</p>
+                      <p className="text-white font-semibold">(62) 99326-5713</p>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:verticecomp@gmail.com"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gold/20 p-3 rounded-lg group-hover:bg-gold/30 transition-colors">
+                      <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white/60 text-xs mb-1">E-mail</p>
+                      <p className="text-white font-semibold text-sm">verticecomp@gmail.com</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              {/* CTA Button */}
+              <div className="text-center">
+                <Link href="/contato">
+                  <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-bold text-lg px-8 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    Quero Aumentar Minhas Vendas Agora
+                    <Zap className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+                <p className="text-white/60 text-sm mt-4">
+                  Resposta em até 24 horas • Consultoria gratuita
+                </p>
+              </div>
+            </div>
           </div>
         </article>
       </main>
+
+      {/* Mobile Floating Action Button */}
+      <div className="lg:hidden fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <Link href="/contato">
+          <button className="bg-gold hover:bg-gold-light text-navy font-bold px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 flex items-center gap-2">
+            <Zap className="w-5 h-5" />
+            Falar com Especialista
+          </button>
+        </Link>
+      </div>
 
       <Footer />
     </div>
