@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowLeft, Share2, Heart, Bookmark, TrendingUp, Target, DollarSign, Zap } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2, TrendingUp, Target, DollarSign, Zap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -89,9 +89,6 @@ export default function BlogPostPage() {
   const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [readProgress, setReadProgress] = useState(0);
-  const [liked, setLiked] = useState(false);
-  const [bookmarked, setBookmarked] = useState(false);
-  const [likes, setLikes] = useState(0);
 
   useEffect(() => {
     const postId = params.id as string;
@@ -112,9 +109,6 @@ export default function BlogPostPage() {
 
     if (foundPost) {
       setPost(foundPost);
-      // Carregar likes do localStorage
-      const savedLikes = localStorage.getItem(`post-likes-${postId}`);
-      setLikes(savedLikes ? parseInt(savedLikes) : 42);
     }
 
     setLoading(false);
@@ -133,18 +127,6 @@ export default function BlogPostPage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleLike = () => {
-    if (!liked) {
-      setLikes(prev => prev + 1);
-      setLiked(true);
-      localStorage.setItem(`post-likes-${params.id}`, String(likes + 1));
-    }
-  };
-
-  const handleBookmark = () => {
-    setBookmarked(!bookmarked);
-  };
 
   if (loading) {
     return (
@@ -202,35 +184,8 @@ export default function BlogPostPage() {
 
       <Header />
 
-      {/* Floating Action Buttons */}
+      {/* Floating Share Button */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-3">
-        <button
-          onClick={handleLike}
-          className={`group relative p-3 rounded-full transition-all duration-300 shadow-lg ${
-            liked
-              ? 'bg-gold text-white'
-              : 'bg-white text-navy hover:bg-gold hover:text-white'
-          }`}
-          title="Curtir"
-        >
-          <Heart className={`w-5 h-5 ${liked ? 'fill-current' : ''}`} />
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-            {likes}
-          </span>
-        </button>
-
-        <button
-          onClick={handleBookmark}
-          className={`group p-3 rounded-full transition-all duration-300 shadow-lg ${
-            bookmarked
-              ? 'bg-gold text-white'
-              : 'bg-white text-navy hover:bg-gold hover:text-white'
-          }`}
-          title="Salvar para ler depois"
-        >
-          <Bookmark className={`w-5 h-5 ${bookmarked ? 'fill-current' : ''}`} />
-        </button>
-
         <button
           onClick={sharePost}
           className="group p-3 bg-white text-navy hover:bg-gold hover:text-white rounded-full transition-all duration-300 shadow-lg"
@@ -293,35 +248,15 @@ export default function BlogPostPage() {
               {post.excerpt}
             </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-3">
-              <Button
-                onClick={handleLike}
-                variant={liked ? "default" : "outline"}
-                className={`gap-2 ${liked ? 'bg-gold hover:bg-gold-light' : ''}`}
-              >
-                <Heart className={`w-4 h-4 ${liked ? 'fill-current' : ''}`} />
-                {liked ? 'Curtido' : 'Curtir'} ({likes})
-              </Button>
-
-              <Button
-                onClick={handleBookmark}
-                variant={bookmarked ? "default" : "outline"}
-                className={`gap-2 ${bookmarked ? 'bg-gold hover:bg-gold-light' : ''}`}
-              >
-                <Bookmark className={`w-4 h-4 ${bookmarked ? 'fill-current' : ''}`} />
-                {bookmarked ? 'Salvo' : 'Salvar'}
-              </Button>
-
-              <Button
-                onClick={sharePost}
-                variant="outline"
-                className="gap-2"
-              >
-                <Share2 className="w-4 h-4" />
-                Compartilhar
-              </Button>
-            </div>
+            {/* Share Button */}
+            <Button
+              onClick={sharePost}
+              variant="outline"
+              className="gap-2"
+            >
+              <Share2 className="w-4 h-4" />
+              Compartilhar
+            </Button>
           </div>
 
           {/* Key Highlights Section */}
