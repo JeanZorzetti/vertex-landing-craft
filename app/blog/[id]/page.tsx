@@ -408,14 +408,14 @@ export default function BlogPostPage() {
 
               <div
                 className="prose prose-xl max-w-none relative z-10
-                [&>h2]:text-3xl [&>h2]:md:text-4xl [&>h2]:font-bold [&>h2]:mt-16 [&>h2]:mb-8
-                [&>h2]:pb-6 [&>h2]:border-b-4 [&>h2]:border-gold/40 [&>h2]:text-navy
+                [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6
+                [&>h2]:pb-4 [&>h2]:border-b-4 [&>h2]:border-gold/40 [&>h2]:text-navy
                 [&>h2]:tracking-wide
 
-                [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:font-bold [&>h3]:mt-8 [&>h3]:mb-4
+                [&>h3]:text-xl [&>h3]:md:text-2xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3
                 [&>h3]:text-navy/90
 
-                [&>h4]:text-xl [&>h4]:md:text-2xl [&>h4]:font-bold [&>h4]:text-navy [&>h4]:mb-3
+                [&>h4]:text-lg [&>h4]:md:text-xl [&>h4]:font-bold [&>h4]:text-navy [&>h4]:mb-2
 
                 [&>p]:text-base [&>p]:md:text-lg [&>p]:leading-relaxed [&>p]:mb-6
                 [&>p]:text-zinc-700
@@ -438,12 +438,13 @@ export default function BlogPostPage() {
                 [&_.section-divider]:h-px [&_.section-divider]:bg-gradient-to-r [&_.section-divider]:from-transparent
                 [&_.section-divider]:via-gold/30 [&_.section-divider]:to-transparent [&_.section-divider]:my-12
 
-                [&_.stats-grid]:grid [&_.stats-grid]:grid-cols-1 [&_.stats-grid]:md:grid-cols-3
-                [&_.stats-grid]:gap-6 [&_.stats-grid]:my-10 [&_.stats-grid]:max-w-5xl [&_.stats-grid]:mx-auto
+                [&_.stats-grid]:flex [&_.stats-grid]:flex-wrap [&_.stats-grid]:justify-center
+                [&_.stats-grid]:gap-4 [&_.stats-grid]:my-10 [&_.stats-grid]:max-w-6xl [&_.stats-grid]:mx-auto
 
                 [&_.stat-card]:rounded-2xl [&_.stat-card]:p-6 [&_.stat-card]:text-center
                 [&_.stat-card]:shadow-xl [&_.stat-card]:transform [&_.stat-card]:transition-transform
                 [&_.stat-card]:duration-300 hover:[&_.stat-card]:scale-105
+                [&_.stat-card]:flex-shrink-0 [&_.stat-card]:w-[280px]
 
                 [&_.stat-card.gold-gradient]:bg-gradient-to-br [&_.stat-card.gold-gradient]:from-amber-50
                 [&_.stat-card.gold-gradient]:to-yellow-100 [&_.stat-card.gold-gradient]:border-2
