@@ -18,208 +18,55 @@ const defaultPosts = [
     category: "Tráfego Pago",
     author: "Vértice Marketing",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    content: `
-<div class="intro-highlight">
-  <p class="lead-text">O mercado de tráfego pago está passando pela maior transformação da última década. Com a chegada de 2026, profissionais e empresas precisam dominar não apenas as plataformas tradicionais, mas também entender profundamente como a inteligência artificial, novos custos e mudanças regulatórias impactam diretamente o ROI das campanhas.</p>
-</div>
+    content: `<p>O mercado de tráfego pago está passando pela maior transformação da última década. Com a chegada de 2026, profissionais e empresas precisam dominar não apenas as plataformas tradicionais, mas também entender profundamente como a inteligência artificial, novos custos e mudanças regulatórias impactam diretamente o ROI das campanhas.</p>
 
-<p class="text-highlight">Neste guia completo, vamos explorar tudo o que você precisa saber para ter sucesso em tráfego pago em 2026, com dados reais do mercado brasileiro e estratégias práticas.</p>
-
-<div class="section-divider"></div>
+<p>Neste guia completo, vamos explorar tudo o que você precisa saber para ter sucesso em tráfego pago em 2026, com dados reais do mercado brasileiro e estratégias práticas.</p>
 
 <h2>📊 O Cenário Atual: Números que Você Precisa Conhecer</h2>
 
-<div class="stats-grid">
-  <div class="stat-card gold-gradient">
-    <div class="stat-number">422%</div>
-    <div class="stat-label">ROI Médio no Brasil</div>
-    <div class="stat-desc">Varia entre 200% e 1000% dependendo do setor</div>
-  </div>
+<h3>ROI Médio no Brasil</h3>
 
-  <div class="stat-card blue-gradient">
-    <div class="stat-number">12,15%</div>
-    <div class="stat-label">Aumento de Custos</div>
-    <div class="stat-desc">No Meta Ads a partir de janeiro/2026</div>
-  </div>
+<p>Segundo pesquisas recentes, o <strong>ROI médio de tráfego pago no Brasil é de 422%</strong>, mas essa métrica varia drasticamente entre 200% e 1000% dependendo do setor, qualidade da gestão e estratégia implementada.</p>
 
-  <div class="stat-card purple-gradient">
-    <div class="stat-number">3:1</div>
-    <div class="stat-label">LTV/CAC Ideal</div>
-    <div class="stat-desc">Métrica de ouro para 2026</div>
-  </div>
-</div>
+<p>Para 2026, a métrica de ouro não é mais apenas o ROAS (Return on Ad Spend), mas sim a <strong>relação LTV/CAC</strong> (Lifetime Value dividido pelo Custo de Aquisição de Cliente). Se o cliente não retorna para comprar ou se o serviço não tem recorrência, o custo de aquisição inicial via tráfego pago pode inviabilizar completamente a operação no longo prazo.</p>
 
-<div class="alert-box warning">
-  <div class="alert-icon">⚠️</div>
-  <div class="alert-content">
-    <h3>ATENÇÃO: Mudança Importante para 2026</h3>
-    <p>A partir de 1º de janeiro de 2026, <strong>todas as empresas que investem em Meta Ads no Brasil enfrentarão um aumento de 12,15%</strong> no custo final das campanhas. Esse aumento é resultado do repasse direto de PIS/Cofins e ISS aos anunciantes brasileiros.</p>
-  </div>
-</div>
+<h3>O Impacto dos Novos Custos</h3>
 
-<div class="insight-box">
-  <h3>💡 Insight Estratégico</h3>
-  <p>Para 2026, a métrica de ouro não é mais apenas o ROAS (Return on Ad Spend), mas sim a <strong>relação LTV/CAC</strong> (Lifetime Value dividido pelo Custo de Aquisição de Cliente). Se o cliente não retorna para comprar ou se o serviço não tem recorrência, o custo de aquisição inicial via tráfego pago pode inviabilizar completamente a operação no longo prazo.</p>
-</div>
-
-<div class="section-divider"></div>
+<p>A partir de 1º de janeiro de 2026, <strong>todas as empresas que investem em Meta Ads no Brasil enfrentarão um aumento de 12,15%</strong> no custo final das campanhas. Esse aumento é resultado do repasse direto de PIS/Cofins e ISS aos anunciantes brasileiros.</p>
 
 <h2>🤖 A Revolução da Inteligência Artificial</h2>
 
-<div class="feature-card ai-card">
-  <div class="feature-header">
-    <span class="feature-badge">TENDÊNCIA 2026</span>
-    <h3>Automação Completa de Anúncios</h3>
-  </div>
-  <p>A Meta oficializou seu plano mais ambicioso: <strong>automatizar completamente a criação de anúncios usando inteligência artificial até o final de 2026</strong>.</p>
-  <ul class="feature-list">
-    <li>✅ Ajustes automáticos de lances</li>
-    <li>✅ Segmentação inteligente</li>
-    <li>✅ Distribuição otimizada de orçamento</li>
-    <li>✅ Testes A/B contínuos</li>
-  </ul>
-</div>
-
-<div class="section-divider"></div>
+<p>A Meta oficializou seu plano mais ambicioso: <strong>automatizar completamente a criação de anúncios usando inteligência artificial até o final de 2026</strong>. Isso significa que sistemas inteligentes farão ajustes automáticos de lances, segmentação, distribuição de orçamento e testes contínuos.</p>
 
 <h2>📈 Google Ads vs Meta Ads: Qual Escolher em 2026?</h2>
 
-<div class="comparison-grid">
-  <div class="platform-card google-card">
-    <div class="platform-logo">G</div>
-    <h3>Google Ads</h3>
-    <div class="platform-badge">Bottom-Funnel</div>
-    <p class="platform-desc">Captura demanda imediata de quem já está buscando sua solução</p>
-    <ul class="platform-features">
-      <li>🎯 Alta intenção de compra</li>
-      <li>📊 Conversão rápida</li>
-      <li>💰 ROI mensurável</li>
-    </ul>
-  </div>
-
-  <div class="platform-card meta-card">
-    <div class="platform-logo">M</div>
-    <h3>Meta Ads</h3>
-    <div class="platform-badge">Top-Funnel</div>
-    <p class="platform-desc">Educa e conscientiza seu público sobre problemas e soluções</p>
-    <ul class="platform-features">
-      <li>👥 Segmentação avançada</li>
-      <li>📱 Engajamento social</li>
-      <li>🎨 Criativos visuais</li>
-    </ul>
-  </div>
-</div>
-
-<div class="tip-box success">
-  <strong>💡 Estratégia Vencedora:</strong> A resposta não é "ou/ou", mas "e/e". As agências e empresas que mais crescem em 2026 utilizam ambas plataformas de forma integrada no funil completo.
-</div>
-
-<div class="section-divider"></div>
+<p>A resposta não é "ou/ou", mas "e/e". As agências e empresas que mais crescem em 2026 utilizam Google Ads para capturar demanda imediata (bottom-funnel) e Meta Ads para educação e conscientização (top-funnel).</p>
 
 <h2>🎯 Métricas que Realmente Importam em 2026</h2>
 
-<div class="metrics-list">
-  <div class="metric-item">
-    <div class="metric-icon">1</div>
-    <div class="metric-content">
-      <h4>CAC (Custo de Aquisição de Cliente)</h4>
-      <p>Quanto você gasta para conquistar cada novo cliente</p>
-    </div>
-  </div>
+<ol>
+<li><strong>CAC</strong> (Custo de Aquisição de Cliente)</li>
+<li><strong>LTV</strong> (Lifetime Value)</li>
+<li><strong>Relação LTV/CAC</strong> - Ideal: acima de 3:1</li>
+<li><strong>CTR</strong> - Meta: acima de 2% para Search</li>
+<li><strong>Taxa de Conversão</strong> - Meta: acima de 3% para e-commerce</li>
+</ol>
 
-  <div class="metric-item">
-    <div class="metric-icon">2</div>
-    <div class="metric-content">
-      <h4>LTV (Lifetime Value)</h4>
-      <p>Valor total que um cliente gera durante seu relacionamento com sua empresa</p>
-    </div>
-  </div>
+<h2>💰 Quanto Investir?</h2>
 
-  <div class="metric-item highlight">
-    <div class="metric-icon">3</div>
-    <div class="metric-content">
-      <h4>Relação LTV/CAC</h4>
-      <p><strong>Meta Ideal: Acima de 3:1</strong> - Para cada R$1 gasto em aquisição, retorno de R$3 em valor</p>
-    </div>
-  </div>
+<p><strong>Google Ads:</strong> Mínimo R$ 3.000/mês<br>
+<strong>Meta Ads:</strong> Mínimo R$ 2.000/mês<br>
+<strong>Estratégia Integrada:</strong> Ideal R$ 10.000-20.000/mês</p>
 
-  <div class="metric-item">
-    <div class="metric-icon">4</div>
-    <div class="metric-content">
-      <h4>CTR (Taxa de Cliques)</h4>
-      <p>Meta: Acima de 2% para campanhas de Search</p>
-    </div>
-  </div>
+<h2>🚀 Estratégias Que Funcionam</h2>
 
-  <div class="metric-item">
-    <div class="metric-icon">5</div>
-    <div class="metric-content">
-      <h4>Taxa de Conversão</h4>
-      <p>Meta: Acima de 3% para e-commerce</p>
-    </div>
-  </div>
-</div>
-
-<div class="section-divider"></div>
-
-<h2>💰 Quanto Investir em Tráfego Pago?</h2>
-
-<div class="investment-grid">
-  <div class="investment-card">
-    <div class="investment-platform">Google Ads</div>
-    <div class="investment-amount">R$ 3.000<span>/mês</span></div>
-    <div class="investment-label">Investimento Mínimo</div>
-  </div>
-
-  <div class="investment-card">
-    <div class="investment-platform">Meta Ads</div>
-    <div class="investment-amount">R$ 2.000<span>/mês</span></div>
-    <div class="investment-label">Investimento Mínimo</div>
-  </div>
-
-  <div class="investment-card featured">
-    <div class="investment-badge">RECOMENDADO</div>
-    <div class="investment-platform">Estratégia Integrada</div>
-    <div class="investment-amount">R$ 10-20k<span>/mês</span></div>
-    <div class="investment-label">Investimento Ideal</div>
-  </div>
-</div>
-
-<div class="section-divider"></div>
-
-<h2>🚀 Estratégias Que Funcionam em 2026</h2>
-
-<div class="strategies-grid">
-  <div class="strategy-card">
-    <div class="strategy-number">01</div>
-    <h4>Segmentação por Intenção</h4>
-    <p>Não por demografia - Foque no comportamento e intenção real de compra</p>
-  </div>
-
-  <div class="strategy-card">
-    <div class="strategy-number">02</div>
-    <h4>First-Party Data</h4>
-    <p>Dados próprios são ouro - Construa sua base e não dependa de third-party cookies</p>
-  </div>
-
-  <div class="strategy-card">
-    <div class="strategy-number">03</div>
-    <h4>Criativos de Alta Performance</h4>
-    <p>UGC performando 3x melhor - Conte histórias reais de clientes</p>
-  </div>
-
-  <div class="strategy-card">
-    <div class="strategy-number">04</div>
-    <h4>Funil Completo</h4>
-    <p>Do awareness à conversão - Trabalhe todas as etapas da jornada</p>
-  </div>
-
-  <div class="strategy-card">
-    <div class="strategy-number">05</div>
-    <h4>Remarketing Avançado</h4>
-    <p>Sequência de anúncios inteligente - Reforce mensagens em momentos estratégicos</p>
-  </div>
-</div>`
+<ol>
+<li><strong>Segmentação por Intenção</strong> - Não por demografia</li>
+<li><strong>First-Party Data</strong> - Dados próprios são ouro</li>
+<li><strong>Criativos de Alta Performance</strong> - UGC performando 3x melhor</li>
+<li><strong>Funil Completo</strong> - Do awareness à conversão</li>
+<li><strong>Remarketing Avançado</strong> - Sequência de anúncios inteligente</li>
+</ol>`
   },
 ];
 
