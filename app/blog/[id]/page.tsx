@@ -255,11 +255,11 @@ export default function BlogPostPage() {
 
               <div
                 className="prose prose-xl max-w-none relative z-10
-                [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-6
-                [&>h2]:pb-4 [&>h2]:border-b-4 [&>h2]:border-gold/40 [&>h2]:text-navy
+                [&>h2]:text-xl [&>h2]:md:text-2xl [&>h2]:font-bold [&>h2]:mt-10 [&>h2]:mb-5
+                [&>h2]:pb-3 [&>h2]:border-b-2 [&>h2]:border-gold/40 [&>h2]:text-navy
                 [&>h2]:tracking-wide
 
-                [&>h3]:text-xl [&>h3]:md:text-2xl [&>h3]:font-bold [&>h3]:mt-6 [&>h3]:mb-3
+                [&>h3]:text-lg [&>h3]:md:text-xl [&>h3]:font-bold [&>h3]:mt-5 [&>h3]:mb-3
                 [&>h3]:text-navy/90
 
                 [&>h4]:text-lg [&>h4]:md:text-xl [&>h4]:font-bold [&>h4]:text-navy [&>h4]:mb-2
