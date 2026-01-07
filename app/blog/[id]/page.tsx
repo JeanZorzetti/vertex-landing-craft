@@ -249,11 +249,14 @@ export default function BlogPostPage() {
           </div>
 
           {/* Post Content */}
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl mb-12 relative overflow-hidden">
-            {/* Decorative gradient accent */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gold/10 to-transparent rounded-bl-full"></div>
-            <div
-              className="prose prose-xl max-w-none relative z-10
+          <div className="space-y-8 mb-12">
+            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gold/10 to-transparent rounded-bl-full"></div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-navy/5 rounded-full blur-2xl"></div>
+
+              <div
+                className="prose prose-xl max-w-none relative z-10
                 prose-headings:text-navy prose-headings:font-bold prose-headings:tracking-tight
                 prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:mb-8 prose-h1:leading-tight
                 prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:mt-16 prose-h2:mb-8
@@ -284,8 +287,9 @@ export default function BlogPostPage() {
                 prose-th:bg-navy/5 prose-th:p-4 prose-th:font-bold
                 prose-td:p-4 prose-td:border prose-td:border-navy/10
                 prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-8"
-              dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
-            />
+                dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
+              />
+            </div>
           </div>
 
           {/* CTA Section */}
@@ -295,8 +299,10 @@ export default function BlogPostPage() {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
 
             <div className="relative z-10">
-              <div className="flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-gold mr-3 animate-pulse" />
+              <div className="text-center mb-6">
+                <div className="flex items-center justify-center mb-2">
+                  <Zap className="w-8 h-8 text-gold animate-pulse" />
+                </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-white">
                   Gostou do Conteúdo? Fale com nossos especialistas
                 </h2>
