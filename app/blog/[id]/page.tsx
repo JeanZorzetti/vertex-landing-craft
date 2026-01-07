@@ -10,6 +10,189 @@ import { Button } from "@/components/ui/button";
 
 const defaultPosts = [
   {
+    id: "1736278800000",
+    title: "Marketing de Conteúdo em 2026: Como Criar Estratégias que Convertem e Geram Resultados Reais",
+    excerpt: "Descubra as melhores práticas, formatos que mais engajam e estratégias de SEO para criar conteúdo que atrai, educa e converte seu público em clientes fiéis.",
+    date: "07 Jan 2026",
+    readTime: "12 min",
+    category: "Marketing de Conteúdo",
+    author: "Vértice Marketing",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    content: `<p>O marketing de conteúdo deixou de ser uma tendência para se tornar a espinha dorsal de qualquer estratégia digital bem-sucedida. Em 2026, empresas que investem em conteúdo relevante e estratégico estão gerando <strong>3x mais leads</strong> e gastando <strong>62% menos</strong> do que com marketing tradicional.</p>
+
+<p>Neste guia completo, você vai descobrir como criar uma estratégia de marketing de conteúdo que realmente funciona, com exemplos práticos e métricas comprovadas do mercado brasileiro.</p>
+
+<h2>📌 Por Que Marketing de Conteúdo é Essencial em 2026?</h2>
+
+<p>O comportamento do consumidor mudou radicalmente. Hoje, <strong>70% das pessoas preferem conhecer uma empresa através de artigos</strong> do que de anúncios tradicionais. Além disso, empresas que mantêm blogs recebem <strong>97% mais links</strong> para seus sites.</p>
+
+<h3>Os Números que Comprovam</h3>
+
+<p>Dados recentes do mercado brasileiro mostram que:</p>
+
+<ol>
+<li><strong>82%</strong> dos consumidores se sentem mais positivos sobre uma marca após ler conteúdo personalizado</li>
+<li><strong>60%</strong> das pessoas são inspiradas a procurar um produto após ler sobre ele</li>
+<li><strong>Empresas com blog geram 67% mais leads</strong> por mês do que aquelas que não possuem</li>
+</ol>
+
+<h2>🎯 Os 5 Pilares de uma Estratégia de Conteúdo Vencedora</h2>
+
+<h3>1. Conheça Profundamente seu Público</h3>
+
+<p>Antes de criar qualquer conteúdo, você precisa entender quem é seu público-alvo. Crie <strong>personas detalhadas</strong> com:</p>
+
+<ol>
+<li>Dados demográficos (idade, localização, cargo)</li>
+<li>Dores e desafios específicos</li>
+<li>Objetivos e aspirações</li>
+<li>Canais de comunicação preferidos</li>
+<li>Jornada de compra</li>
+</ol>
+
+<h3>2. Planeje seu Calendário Editorial</h3>
+
+<p>Um calendário editorial bem estruturado garante consistência e permite que você:</p>
+
+<ol>
+<li>Publique regularmente (mínimo 2-3 vezes por semana)</li>
+<li>Cubra todos os estágios do funil de vendas</li>
+<li>Aproveite datas sazonais e tendências</li>
+<li>Mantenha variedade de formatos</li>
+</ol>
+
+<h3>3. Crie Conteúdo de Valor Real</h3>
+
+<p>Seu conteúdo precisa resolver problemas reais. Invista em:</p>
+
+<ol>
+<li><strong>Guias completos</strong> - Artigos longos (2000+ palavras) sobre temas específicos</li>
+<li><strong>Estudos de caso</strong> - Mostre resultados reais de clientes</li>
+<li><strong>Infográficos</strong> - Visual atrai 3x mais engajamento</li>
+<li><strong>Vídeos tutoriais</strong> - 88% querem ver mais conteúdo em vídeo</li>
+<li><strong>Checklists e templates</strong> - Materiais práticos e acionáveis</li>
+</ol>
+
+<h3>4. Otimize para SEO</h3>
+
+<p>Sem SEO, seu conteúdo não será encontrado. Garanta que cada artigo tenha:</p>
+
+<ol>
+<li><strong>Palavra-chave principal</strong> no título, H1 e primeiros 100 caracteres</li>
+<li><strong>Palavras-chave secundárias</strong> distribuídas naturalmente</li>
+<li><strong>Meta description</strong> atraente (150-160 caracteres)</li>
+<li><strong>URLs amigáveis</strong> e descritivas</li>
+<li><strong>Links internos</strong> para outros conteúdos relevantes</li>
+<li><strong>Alt text</strong> em todas as imagens</li>
+</ol>
+
+<h3>5. Distribua Estrategicamente</h3>
+
+<p>Criar conteúdo é só o começo. Você precisa distribuí-lo nos canais certos:</p>
+
+<ol>
+<li><strong>Redes sociais</strong> - Adapte o formato para cada plataforma</li>
+<li><strong>Email marketing</strong> - Newsletter semanal com seus melhores conteúdos</li>
+<li><strong>LinkedIn</strong> - Ideal para B2B e conteúdo profissional</li>
+<li><strong>WhatsApp Business</strong> - Grupos segmentados por interesse</li>
+<li><strong>Parcerias</strong> - Guest posts em blogs relevantes</li>
+</ol>
+
+<h2>📊 Métricas que Importam</h2>
+
+<p>Para saber se sua estratégia está funcionando, acompanhe:</p>
+
+<h3>Métricas de Alcance</h3>
+
+<ol>
+<li><strong>Tráfego orgânico</strong> - Visitantes vindos de busca</li>
+<li><strong>Pageviews</strong> - Visualizações de página</li>
+<li><strong>Tempo médio na página</strong> - Quanto maior, melhor</li>
+<li><strong>Taxa de rejeição</strong> - Ideal abaixo de 60%</li>
+</ol>
+
+<h3>Métricas de Engajamento</h3>
+
+<ol>
+<li><strong>Comentários e compartilhamentos</strong></li>
+<li><strong>Taxa de cliques (CTR)</strong></li>
+<li><strong>Leads gerados</strong></li>
+<li><strong>Downloads de materiais</strong></li>
+</ol>
+
+<h3>Métricas de Conversão</h3>
+
+<ol>
+<li><strong>Leads qualificados (MQL)</strong></li>
+<li><strong>Taxa de conversão</strong> - Visitante para lead</li>
+<li><strong>Custo por lead (CPL)</strong></li>
+<li><strong>ROI do conteúdo</strong></li>
+</ol>
+
+<h2>🚀 Formatos de Conteúdo que Mais Convertem</h2>
+
+<h3>1. Blog Posts Otimizados</h3>
+
+<p>Artigos entre <strong>1500-2500 palavras</strong> têm melhor performance no Google. Foque em:</p>
+
+<ol>
+<li>Títulos chamativos com números</li>
+<li>Subtítulos escaneáveis</li>
+<li>Listas e bullet points</li>
+<li>Imagens e infográficos</li>
+<li>CTAs estratégicos</li>
+</ol>
+
+<h3>2. Ebooks e Whitepapers</h3>
+
+<p>Materiais ricos são ótimos para capturar leads qualificados. Características:</p>
+
+<ol>
+<li>Conteúdo aprofundado (15-30 páginas)</li>
+<li>Design profissional</li>
+<li>Dados e estatísticas atualizadas</li>
+<li>Exemplos práticos</li>
+<li>Landing page dedicada</li>
+</ol>
+
+<h3>3. Vídeos e Webinars</h3>
+
+<p>Vídeo marketing cresce <strong>49% ano a ano</strong>. Invista em:</p>
+
+<ol>
+<li>Tutoriais e how-tos</li>
+<li>Entrevistas com especialistas</li>
+<li>Demonstrações de produto</li>
+<li>Webinars ao vivo com Q&A</li>
+<li>Stories e reels para redes sociais</li>
+</ol>
+
+<h2>💡 Erros Comuns a Evitar</h2>
+
+<ol>
+<li><strong>Inconsistência</strong> - Postar esporadicamente mata o engajamento</li>
+<li><strong>Foco em vendas</strong> - Regra 80/20: 80% educação, 20% promocional</li>
+<li><strong>Ignorar SEO</strong> - Sem otimização, ninguém encontra seu conteúdo</li>
+<li><strong>Não reutilizar</strong> - Um artigo pode virar vídeo, infográfico, posts sociais</li>
+<li><strong>Não medir resultados</strong> - O que não é medido, não pode ser melhorado</li>
+</ol>
+
+<h2>🎯 Próximos Passos</h2>
+
+<p>Para começar sua estratégia de marketing de conteúdo:</p>
+
+<ol>
+<li><strong>Defina seus objetivos</strong> - Leads? Tráfego? Autoridade?</li>
+<li><strong>Pesquise palavras-chave</strong> - Use ferramentas como SEMrush ou Ubersuggest</li>
+<li><strong>Crie seu calendário</strong> - Planeje 3 meses à frente</li>
+<li><strong>Produza conteúdo piloto</strong> - Comece com 5-10 artigos base</li>
+<li><strong>Distribua massivamente</strong> - Use todos os canais disponíveis</li>
+<li><strong>Analise e otimize</strong> - Revise métricas mensalmente</li>
+</ol>
+
+<p>Lembre-se: marketing de conteúdo é uma maratona, não uma corrida de velocidade. Consistência e qualidade sempre vencem quantidade.</p>`
+  },
+  {
     id: "1736105400000",
     title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
     excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
