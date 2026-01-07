@@ -439,7 +439,7 @@ export default function BlogPostPage() {
                 [&_.section-divider]:via-gold/30 [&_.section-divider]:to-transparent [&_.section-divider]:my-12
 
                 [&_.stats-grid]:grid [&_.stats-grid]:grid-cols-1 [&_.stats-grid]:md:grid-cols-3
-                [&_.stats-grid]:gap-6 [&_.stats-grid]:my-10
+                [&_.stats-grid]:gap-6 [&_.stats-grid]:my-10 [&_.stats-grid]:max-w-5xl [&_.stats-grid]:mx-auto
 
                 [&_.stat-card]:rounded-2xl [&_.stat-card]:p-6 [&_.stat-card]:text-center
                 [&_.stat-card]:shadow-xl [&_.stat-card]:transform [&_.stat-card]:transition-transform
@@ -457,59 +457,63 @@ export default function BlogPostPage() {
                 [&_.stat-card.purple-gradient]:to-pink-100 [&_.stat-card.purple-gradient]:border-2
                 [&_.stat-card.purple-gradient]:border-purple-300
 
-                [&_.stat-number]:text-5xl [&_.stat-number]:md:text-6xl [&_.stat-number]:font-black
-                [&_.stat-number]:text-navy [&_.stat-number]:mb-3
+                [&_.stat-number]:text-4xl [&_.stat-number]:md:text-5xl [&_.stat-number]:font-black
+                [&_.stat-number]:text-navy [&_.stat-number]:mb-2
 
-                [&_.stat-label]:text-lg [&_.stat-label]:font-bold [&_.stat-label]:text-navy/80 [&_.stat-label]:mb-2
+                [&_.stat-label]:text-base [&_.stat-label]:font-bold [&_.stat-label]:text-navy/80 [&_.stat-label]:mb-2
 
-                [&_.stat-desc]:text-sm [&_.stat-desc]:text-zinc-600
+                [&_.stat-desc]:text-xs [&_.stat-desc]:text-zinc-600
 
                 [&_.alert-box]:rounded-2xl [&_.alert-box]:p-6 [&_.alert-box]:my-10 [&_.alert-box]:flex
                 [&_.alert-box]:gap-4 [&_.alert-box]:shadow-xl [&_.alert-box]:border-2
+                [&_.alert-box]:max-w-4xl [&_.alert-box]:mx-auto
 
                 [&_.alert-box.warning]:bg-gradient-to-br [&_.alert-box.warning]:from-orange-50
                 [&_.alert-box.warning]:to-red-50 [&_.alert-box.warning]:border-orange-300
 
-                [&_.alert-icon]:text-4xl [&_.alert-icon]:flex-shrink-0
+                [&_.alert-icon]:text-3xl [&_.alert-icon]:flex-shrink-0
 
-                [&_.alert-content>h3]:text-xl [&_.alert-content>h3]:font-bold [&_.alert-content>h3]:text-orange-900
+                [&_.alert-content>h3]:text-lg [&_.alert-content>h3]:font-bold [&_.alert-content>h3]:text-orange-900
                 [&_.alert-content>h3]:mb-2 [&_.alert-content>h3]:mt-0
 
-                [&_.alert-content>p]:text-base [&_.alert-content>p]:text-orange-800 [&_.alert-content>p]:mb-0
+                [&_.alert-content>p]:text-sm [&_.alert-content>p]:text-orange-800 [&_.alert-content>p]:mb-0
 
                 [&_.insight-box]:bg-gradient-to-br [&_.insight-box]:from-emerald-50 [&_.insight-box]:to-teal-100
-                [&_.insight-box]:rounded-2xl [&_.insight-box]:p-8 [&_.insight-box]:my-10 [&_.insight-box]:border-2
+                [&_.insight-box]:rounded-2xl [&_.insight-box]:p-6 [&_.insight-box]:my-10 [&_.insight-box]:border-2
                 [&_.insight-box]:border-emerald-300 [&_.insight-box]:shadow-xl
+                [&_.insight-box]:max-w-4xl [&_.insight-box]:mx-auto
 
-                [&_.insight-box>h3]:text-2xl [&_.insight-box>h3]:font-bold [&_.insight-box>h3]:text-emerald-900
-                [&_.insight-box>h3]:mb-4 [&_.insight-box>h3]:mt-0
+                [&_.insight-box>h3]:text-lg [&_.insight-box>h3]:font-bold [&_.insight-box>h3]:text-emerald-900
+                [&_.insight-box>h3]:mb-3 [&_.insight-box>h3]:mt-0
 
-                [&_.insight-box>p]:text-base [&_.insight-box>p]:md:text-lg [&_.insight-box>p]:text-emerald-800 [&_.insight-box>p]:mb-0
+                [&_.insight-box>p]:text-sm [&_.insight-box>p]:text-emerald-800 [&_.insight-box>p]:mb-0
+                [&_.insight-box>p]:leading-relaxed
 
                 [&_.feature-card]:bg-gradient-to-br [&_.feature-card]:from-indigo-50 [&_.feature-card]:to-purple-100
-                [&_.feature-card]:rounded-2xl [&_.feature-card]:p-8 [&_.feature-card]:my-10 [&_.feature-card]:border-2
+                [&_.feature-card]:rounded-2xl [&_.feature-card]:p-6 [&_.feature-card]:my-10 [&_.feature-card]:border-2
                 [&_.feature-card]:border-indigo-300 [&_.feature-card]:shadow-xl
+                [&_.feature-card]:max-w-4xl [&_.feature-card]:mx-auto
 
-                [&_.feature-header]:mb-6
+                [&_.feature-header]:mb-4
 
                 [&_.feature-badge]:inline-block [&_.feature-badge]:bg-indigo-600 [&_.feature-badge]:text-white
-                [&_.feature-badge]:px-4 [&_.feature-badge]:py-2 [&_.feature-badge]:rounded-full [&_.feature-badge]:text-xs
-                [&_.feature-badge]:font-bold [&_.feature-badge]:uppercase [&_.feature-badge]:tracking-wider [&_.feature-badge]:mb-3
+                [&_.feature-badge]:px-3 [&_.feature-badge]:py-1 [&_.feature-badge]:rounded-full [&_.feature-badge]:text-xs
+                [&_.feature-badge]:font-bold [&_.feature-badge]:uppercase [&_.feature-badge]:tracking-wider [&_.feature-badge]:mb-2
 
-                [&_.feature-header>h3]:text-2xl [&_.feature-header>h3]:font-bold [&_.feature-header>h3]:text-indigo-900
+                [&_.feature-header>h3]:text-xl [&_.feature-header>h3]:font-bold [&_.feature-header>h3]:text-indigo-900
                 [&_.feature-header>h3]:mt-0 [&_.feature-header>h3]:mb-0
 
-                [&_.feature-card>p]:text-base [&_.feature-card>p]:md:text-lg [&_.feature-card>p]:text-indigo-800
+                [&_.feature-card>p]:text-sm [&_.feature-card>p]:text-indigo-800 [&_.feature-card>p]:leading-relaxed
 
-                [&_.feature-list]:space-y-3 [&_.feature-list]:mt-6 [&_.feature-list]:mb-0
+                [&_.feature-list]:space-y-2 [&_.feature-list]:mt-4 [&_.feature-list]:mb-0
 
-                [&_.feature-list>li]:text-base [&_.feature-list>li]:md:text-lg [&_.feature-list>li]:text-indigo-900
+                [&_.feature-list>li]:text-sm [&_.feature-list>li]:text-indigo-900
                 [&_.feature-list>li]:font-medium [&_.feature-list>li]:list-none
 
                 [&_.comparison-grid]:grid [&_.comparison-grid]:grid-cols-1 [&_.comparison-grid]:md:grid-cols-2
-                [&_.comparison-grid]:gap-6 [&_.comparison-grid]:my-10
+                [&_.comparison-grid]:gap-6 [&_.comparison-grid]:my-10 [&_.comparison-grid]:max-w-4xl [&_.comparison-grid]:mx-auto
 
-                [&_.platform-card]:rounded-2xl [&_.platform-card]:p-8 [&_.platform-card]:shadow-xl
+                [&_.platform-card]:rounded-2xl [&_.platform-card]:p-6 [&_.platform-card]:shadow-xl
                 [&_.platform-card]:transform [&_.platform-card]:transition-all [&_.platform-card]:duration-300
                 hover:[&_.platform-card]:scale-105 hover:[&_.platform-card]:shadow-2xl
 
@@ -521,35 +525,36 @@ export default function BlogPostPage() {
                 [&_.platform-card.meta-card]:to-indigo-100 [&_.platform-card.meta-card]:border-2
                 [&_.platform-card.meta-card]:border-blue-400
 
-                [&_.platform-logo]:w-16 [&_.platform-logo]:h-16 [&_.platform-logo]:rounded-full
+                [&_.platform-logo]:w-14 [&_.platform-logo]:h-14 [&_.platform-logo]:rounded-full
                 [&_.platform-logo]:bg-white [&_.platform-logo]:flex [&_.platform-logo]:items-center
-                [&_.platform-logo]:justify-center [&_.platform-logo]:text-3xl [&_.platform-logo]:font-black
-                [&_.platform-logo]:text-navy [&_.platform-logo]:mb-4 [&_.platform-logo]:shadow-lg
+                [&_.platform-logo]:justify-center [&_.platform-logo]:text-2xl [&_.platform-logo]:font-black
+                [&_.platform-logo]:text-navy [&_.platform-logo]:mb-3 [&_.platform-logo]:shadow-lg
 
-                [&_.platform-card>h3]:text-2xl [&_.platform-card>h3]:font-bold [&_.platform-card>h3]:text-navy
-                [&_.platform-card>h3]:mb-3 [&_.platform-card>h3]:mt-0
+                [&_.platform-card>h3]:text-xl [&_.platform-card>h3]:font-bold [&_.platform-card>h3]:text-navy
+                [&_.platform-card>h3]:mb-2 [&_.platform-card>h3]:mt-0
 
                 [&_.platform-badge]:inline-block [&_.platform-badge]:bg-navy [&_.platform-badge]:text-gold
-                [&_.platform-badge]:px-4 [&_.platform-badge]:py-1 [&_.platform-badge]:rounded-full
-                [&_.platform-badge]:text-xs [&_.platform-badge]:font-bold [&_.platform-badge]:uppercase [&_.platform-badge]:mb-4
+                [&_.platform-badge]:px-3 [&_.platform-badge]:py-1 [&_.platform-badge]:rounded-full
+                [&_.platform-badge]:text-xs [&_.platform-badge]:font-bold [&_.platform-badge]:uppercase [&_.platform-badge]:mb-3
 
-                [&_.platform-desc]:text-base [&_.platform-desc]:text-zinc-700 [&_.platform-desc]:mb-6
+                [&_.platform-desc]:text-sm [&_.platform-desc]:text-zinc-700 [&_.platform-desc]:mb-4
 
                 [&_.platform-features]:space-y-2 [&_.platform-features]:mb-0
 
-                [&_.platform-features>li]:text-base [&_.platform-features>li]:font-medium
+                [&_.platform-features>li]:text-sm [&_.platform-features>li]:font-medium
                 [&_.platform-features>li]:text-navy [&_.platform-features>li]:list-none
 
                 [&_.tip-box]:bg-gradient-to-r [&_.tip-box]:from-green-50 [&_.tip-box]:to-emerald-100
-                [&_.tip-box]:rounded-2xl [&_.tip-box]:p-6 [&_.tip-box]:my-8 [&_.tip-box]:border-2
+                [&_.tip-box]:rounded-2xl [&_.tip-box]:p-5 [&_.tip-box]:my-8 [&_.tip-box]:border-2
                 [&_.tip-box]:border-green-300 [&_.tip-box]:shadow-lg [&_.tip-box]:text-center
+                [&_.tip-box]:max-w-4xl [&_.tip-box]:mx-auto
 
-                [&_.tip-box]:text-base [&_.tip-box]:md:text-lg [&_.tip-box]:text-green-900
+                [&_.tip-box]:text-sm [&_.tip-box]:text-green-900 [&_.tip-box]:leading-relaxed
 
-                [&_.metrics-list]:space-y-4 [&_.metrics-list]:my-10
+                [&_.metrics-list]:space-y-3 [&_.metrics-list]:my-10 [&_.metrics-list]:max-w-3xl [&_.metrics-list]:mx-auto
 
-                [&_.metric-item]:bg-white [&_.metric-item]:rounded-2xl [&_.metric-item]:p-6
-                [&_.metric-item]:flex [&_.metric-item]:items-start [&_.metric-item]:gap-6
+                [&_.metric-item]:bg-white [&_.metric-item]:rounded-xl [&_.metric-item]:p-4
+                [&_.metric-item]:flex [&_.metric-item]:items-start [&_.metric-item]:gap-4
                 [&_.metric-item]:shadow-lg [&_.metric-item]:border-2 [&_.metric-item]:border-gray-200
                 [&_.metric-item]:transform [&_.metric-item]:transition-all [&_.metric-item]:duration-300
                 hover:[&_.metric-item]:shadow-xl hover:[&_.metric-item]:scale-[1.02]
@@ -557,22 +562,22 @@ export default function BlogPostPage() {
                 [&_.metric-item.highlight]:bg-gradient-to-br [&_.metric-item.highlight]:from-amber-50
                 [&_.metric-item.highlight]:to-yellow-100 [&_.metric-item.highlight]:border-gold
 
-                [&_.metric-icon]:w-12 [&_.metric-icon]:h-12 [&_.metric-icon]:rounded-full
+                [&_.metric-icon]:w-10 [&_.metric-icon]:h-10 [&_.metric-icon]:rounded-full
                 [&_.metric-icon]:bg-gradient-to-br [&_.metric-icon]:from-gold [&_.metric-icon]:to-yellow-600
                 [&_.metric-icon]:flex [&_.metric-icon]:items-center [&_.metric-icon]:justify-center
-                [&_.metric-icon]:text-xl [&_.metric-icon]:font-black [&_.metric-icon]:text-white
+                [&_.metric-icon]:text-base [&_.metric-icon]:font-black [&_.metric-icon]:text-white
                 [&_.metric-icon]:flex-shrink-0 [&_.metric-icon]:shadow-lg
 
-                [&_.metric-content>h4]:text-xl [&_.metric-content>h4]:font-bold [&_.metric-content>h4]:text-navy
-                [&_.metric-content>h4]:mb-2 [&_.metric-content>h4]:mt-0
+                [&_.metric-content>h4]:text-base [&_.metric-content>h4]:font-bold [&_.metric-content>h4]:text-navy
+                [&_.metric-content>h4]:mb-1 [&_.metric-content>h4]:mt-0
 
-                [&_.metric-content>p]:text-base [&_.metric-content>p]:text-zinc-600 [&_.metric-content>p]:mb-0
+                [&_.metric-content>p]:text-sm [&_.metric-content>p]:text-zinc-600 [&_.metric-content>p]:mb-0
 
                 [&_.investment-grid]:grid [&_.investment-grid]:grid-cols-1 [&_.investment-grid]:md:grid-cols-3
-                [&_.investment-grid]:gap-6 [&_.investment-grid]:my-10
+                [&_.investment-grid]:gap-4 [&_.investment-grid]:my-10 [&_.investment-grid]:max-w-4xl [&_.investment-grid]:mx-auto
 
                 [&_.investment-card]:bg-gradient-to-br [&_.investment-card]:from-gray-50 [&_.investment-card]:to-gray-100
-                [&_.investment-card]:rounded-2xl [&_.investment-card]:p-8 [&_.investment-card]:text-center
+                [&_.investment-card]:rounded-2xl [&_.investment-card]:p-6 [&_.investment-card]:text-center
                 [&_.investment-card]:shadow-xl [&_.investment-card]:border-2 [&_.investment-card]:border-gray-300
                 [&_.investment-card]:transform [&_.investment-card]:transition-all [&_.investment-card]:duration-300
                 hover:[&_.investment-card]:scale-105
@@ -581,39 +586,40 @@ export default function BlogPostPage() {
                 [&_.investment-card.featured]:to-yellow-100 [&_.investment-card.featured]:border-gold
                 [&_.investment-card.featured]:shadow-2xl [&_.investment-card.featured]:relative
 
-                [&_.investment-badge]:absolute [&_.investment-badge]:-top-3 [&_.investment-badge]:left-1/2
+                [&_.investment-badge]:absolute [&_.investment-badge]:-top-2 [&_.investment-badge]:left-1/2
                 [&_.investment-badge]:-translate-x-1/2 [&_.investment-badge]:bg-navy [&_.investment-badge]:text-gold
-                [&_.investment-badge]:px-6 [&_.investment-badge]:py-2 [&_.investment-badge]:rounded-full
+                [&_.investment-badge]:px-4 [&_.investment-badge]:py-1 [&_.investment-badge]:rounded-full
                 [&_.investment-badge]:text-xs [&_.investment-badge]:font-bold [&_.investment-badge]:uppercase
                 [&_.investment-badge]:shadow-lg
 
-                [&_.investment-platform]:text-lg [&_.investment-platform]:font-bold [&_.investment-platform]:text-navy/80
-                [&_.investment-platform]:mb-4
+                [&_.investment-platform]:text-base [&_.investment-platform]:font-bold [&_.investment-platform]:text-navy/80
+                [&_.investment-platform]:mb-3
 
-                [&_.investment-amount]:text-5xl [&_.investment-amount]:md:text-6xl [&_.investment-amount]:font-black
+                [&_.investment-amount]:text-4xl [&_.investment-amount]:md:text-5xl [&_.investment-amount]:font-black
                 [&_.investment-amount]:text-navy [&_.investment-amount]:mb-2
 
-                [&_.investment-amount>span]:text-2xl [&_.investment-amount>span]:text-navy/60 [&_.investment-amount>span]:font-medium
+                [&_.investment-amount>span]:text-xl [&_.investment-amount>span]:text-navy/60 [&_.investment-amount>span]:font-medium
 
-                [&_.investment-label]:text-sm [&_.investment-label]:text-zinc-600 [&_.investment-label]:uppercase
+                [&_.investment-label]:text-xs [&_.investment-label]:text-zinc-600 [&_.investment-label]:uppercase
                 [&_.investment-label]:tracking-wider [&_.investment-label]:font-semibold
 
                 [&_.strategies-grid]:grid [&_.strategies-grid]:grid-cols-1 [&_.strategies-grid]:md:grid-cols-2
-                [&_.strategies-grid]:lg:grid-cols-3 [&_.strategies-grid]:gap-6 [&_.strategies-grid]:my-10
+                [&_.strategies-grid]:lg:grid-cols-3 [&_.strategies-grid]:gap-4 [&_.strategies-grid]:my-10
+                [&_.strategies-grid]:max-w-5xl [&_.strategies-grid]:mx-auto
 
-                [&_.strategy-card]:bg-white [&_.strategy-card]:rounded-2xl [&_.strategy-card]:p-6
+                [&_.strategy-card]:bg-white [&_.strategy-card]:rounded-xl [&_.strategy-card]:p-5
                 [&_.strategy-card]:shadow-xl [&_.strategy-card]:border-2 [&_.strategy-card]:border-gray-200
                 [&_.strategy-card]:transform [&_.strategy-card]:transition-all [&_.strategy-card]:duration-300
                 hover:[&_.strategy-card]:shadow-2xl hover:[&_.strategy-card]:scale-105
                 hover:[&_.strategy-card]:border-gold
 
-                [&_.strategy-number]:text-6xl [&_.strategy-number]:font-black [&_.strategy-number]:text-gold/20
-                [&_.strategy-number]:mb-4 [&_.strategy-number]:leading-none
+                [&_.strategy-number]:text-5xl [&_.strategy-number]:font-black [&_.strategy-number]:text-gold/20
+                [&_.strategy-number]:mb-3 [&_.strategy-number]:leading-none
 
-                [&_.strategy-card>h4]:text-xl [&_.strategy-card>h4]:font-bold [&_.strategy-card>h4]:text-navy
-                [&_.strategy-card>h4]:mb-3 [&_.strategy-card>h4]:mt-0
+                [&_.strategy-card>h4]:text-base [&_.strategy-card>h4]:font-bold [&_.strategy-card>h4]:text-navy
+                [&_.strategy-card>h4]:mb-2 [&_.strategy-card>h4]:mt-0
 
-                [&_.strategy-card>p]:text-base [&_.strategy-card>p]:text-zinc-600 [&_.strategy-card>p]:mb-0"
+                [&_.strategy-card>p]:text-sm [&_.strategy-card>p]:text-zinc-600 [&_.strategy-card>p]:mb-0"
                 dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
               />
             </div>
