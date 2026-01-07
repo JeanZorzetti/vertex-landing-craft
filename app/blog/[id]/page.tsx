@@ -10,6 +10,293 @@ import { Button } from "@/components/ui/button";
 
 const defaultPosts = [
   {
+    id: "1736365200000",
+    title: "SEO em 2026: O Guia Definitivo para Rankear no Google e Dominar as Buscas Orgânicas",
+    excerpt: "Aprenda as técnicas mais avançadas de SEO, algoritmos atualizados do Google, estratégias de palavras-chave e como conquistar a primeira página dos resultados de busca.",
+    date: "08 Jan 2026",
+    readTime: "14 min",
+    category: "SEO",
+    author: "Vértice Marketing",
+    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?auto=format&fit=crop&w=1200&q=80",
+    content: `<p>SEO (Search Engine Optimization) continua sendo o canal de marketing digital com <strong>melhor ROI a longo prazo</strong>. Em 2026, empresas que investem em SEO estratégico recebem <strong>14,6x mais tráfego</strong> do que aquelas que dependem apenas de anúncios pagos, com um custo por aquisição <strong>61% menor</strong>.</p>
+
+<p>Neste guia completo, você vai descobrir as estratégias de SEO mais eficazes para 2026, desde fundamentos até técnicas avançadas que vão colocar seu site no topo do Google.</p>
+
+<h2>🔍 Por Que SEO é Mais Importante do Que Nunca em 2026?</h2>
+
+<p>O comportamento de busca evoluiu drasticamente. Hoje, <strong>93% das experiências online começam com um mecanismo de busca</strong>, e <strong>75% dos usuários nunca passam da primeira página</strong> do Google. Estar bem posicionado não é mais opcional — é essencial para a sobrevivência digital.</p>
+
+<h3>Os Números que Comprovam o Poder do SEO</h3>
+
+<p>Dados recentes do mercado brasileiro mostram que:</p>
+
+<ol>
+<li><strong>70-80%</strong> dos usuários ignoram anúncios pagos e clicam apenas em resultados orgânicos</li>
+<li>O <strong>primeiro resultado no Google recebe 28,5%</strong> de todos os cliques</li>
+<li>Sites na primeira posição têm <strong>10x mais tráfego</strong> do que sites na décima posição</li>
+<li>SEO gera <strong>leads 14,6x mais qualificados</strong> do que outbound marketing</li>
+<li>O ROI médio de SEO é de <strong>122,8%</strong> ao ano</li>
+</ol>
+
+<h2>🎯 Os 7 Pilares do SEO Moderno em 2026</h2>
+
+<h3>1. Pesquisa e Estratégia de Palavras-Chave</h3>
+
+<p>Tudo começa com palavras-chave certas. Em 2026, a estratégia evoluiu para três camadas:</p>
+
+<ol>
+<li><strong>Keywords de cauda curta</strong> (1-2 palavras) - Alto volume, alta concorrência</li>
+<li><strong>Keywords de cauda média</strong> (3-4 palavras) - Equilíbrio entre volume e conversão</li>
+<li><strong>Keywords de cauda longa</strong> (5+ palavras) - Baixo volume, alta intenção de compra</li>
+</ol>
+
+<p><strong>Ferramentas essenciais para 2026:</strong></p>
+
+<ol>
+<li>Google Keyword Planner (gratuito)</li>
+<li>SEMrush ou Ahrefs (profissional)</li>
+<li>Answer The Public (perguntas reais dos usuários)</li>
+<li>Google Search Console (dados reais do seu site)</li>
+<li>Ubersuggest (alternativa gratuita)</li>
+</ol>
+
+<h3>2. SEO On-Page: Otimizando Cada Elemento</h3>
+
+<p>A otimização on-page continua sendo fundamental. Cada página deve ter:</p>
+
+<ol>
+<li><strong>Title Tag otimizada</strong> - Palavra-chave no início, 50-60 caracteres, atrativa</li>
+<li><strong>Meta Description persuasiva</strong> - CTA claro, 150-160 caracteres</li>
+<li><strong>URL amigável</strong> - Curta, descritiva, com palavra-chave</li>
+<li><strong>H1 único</strong> - Uma única tag H1 por página com palavra-chave principal</li>
+<li><strong>Estrutura de headings</strong> - H2, H3, H4 organizados logicamente</li>
+<li><strong>Conteúdo rico</strong> - Mínimo 1500 palavras para tópicos competitivos</li>
+<li><strong>Imagens otimizadas</strong> - Alt text descritivo, compressão, formato WebP</li>
+<li><strong>Links internos</strong> - Mínimo 3-5 links relevantes por artigo</li>
+</ol>
+
+<h3>3. Conteúdo de Qualidade: O Rei Absoluto</h3>
+
+<p>O algoritmo do Google em 2026 prioriza conteúdo que demonstra E-E-A-T:</p>
+
+<ol>
+<li><strong>Experience (Experiência)</strong> - Conteúdo baseado em experiência real</li>
+<li><strong>Expertise (Especialização)</strong> - Autor com conhecimento comprovado</li>
+<li><strong>Authoritativeness (Autoridade)</strong> - Reconhecimento no nicho</li>
+<li><strong>Trustworthiness (Confiabilidade)</strong> - Informações precisas e atualizadas</li>
+</ol>
+
+<p><strong>Formatos de conteúdo que rankeiam melhor:</strong></p>
+
+<ol>
+<li>Guias completos (2000-5000 palavras)</li>
+<li>Estudos de caso com dados reais</li>
+<li>Comparativos detalhados</li>
+<li>Tutoriais passo a passo</li>
+<li>Listas práticas e acionáveis</li>
+<li>Análises aprofundadas</li>
+</ol>
+
+<h3>4. SEO Técnico: A Base Invisível</h3>
+
+<p>Aspectos técnicos que o Google avalia em 2026:</p>
+
+<ol>
+<li><strong>Core Web Vitals</strong> - LCP, FID, CLS (métricas de experiência)</li>
+<li><strong>Mobile-First</strong> - Site 100% responsivo e rápido no mobile</li>
+<li><strong>Velocidade de carregamento</strong> - Ideal abaixo de 2 segundos</li>
+<li><strong>HTTPS</strong> - Certificado SSL obrigatório</li>
+<li><strong>XML Sitemap</strong> - Atualizado e submetido ao Google</li>
+<li><strong>Robots.txt</strong> - Configurado corretamente</li>
+<li><strong>Dados estruturados</strong> - Schema markup implementado</li>
+<li><strong>Arquitetura do site</strong> - Máximo 3 cliques para qualquer página</li>
+</ol>
+
+<h3>5. Link Building: Construindo Autoridade</h3>
+
+<p>Backlinks continuam sendo um dos <strong>3 principais fatores de rankeamento</strong>. Estratégias eficazes:</p>
+
+<ol>
+<li><strong>Guest posts</strong> em sites relevantes do seu nicho</li>
+<li><strong>Link building digital PR</strong> - Assessoria de imprensa online</li>
+<li><strong>Conteúdo linkável</strong> - Infográficos, pesquisas, ferramentas gratuitas</li>
+<li><strong>Parcerias estratégicas</strong> com empresas complementares</li>
+<li><strong>Menções de marca</strong> - Transformar menções em links</li>
+<li><strong>Broken link building</strong> - Substituir links quebrados</li>
+</ol>
+
+<p><strong>O que evitar absolutamente:</strong></p>
+
+<ol>
+<li>Compra de links (penalização garantida)</li>
+<li>Redes de blogs privados (PBN)</li>
+<li>Links em massa de diretórios</li>
+<li>Comentários spam em blogs</li>
+<li>Link exchange excessivo</li>
+</ol>
+
+<h3>6. SEO Local: Dominando Buscas Regionais</h3>
+
+<p>Para negócios locais, <strong>46% das buscas no Google têm intenção local</strong>. Estratégias essenciais:</p>
+
+<ol>
+<li><strong>Google Meu Negócio</strong> - Perfil 100% completo e atualizado</li>
+<li><strong>NAP consistente</strong> - Nome, Endereço e Telefone idênticos em todos os sites</li>
+<li><strong>Reviews positivos</strong> - Mínimo 15-20 avaliações com 4+ estrelas</li>
+<li><strong>Conteúdo local</strong> - Páginas específicas por região/cidade</li>
+<li><strong>Citações locais</strong> - Presença em diretórios regionais</li>
+</ol>
+
+<h3>7. SEO para IA e Busca por Voz</h3>
+
+<p>Em 2026, <strong>50% das buscas são por voz</strong>. Otimize para:</p>
+
+<ol>
+<li><strong>Perguntas conversacionais</strong> - "Como fazer", "Onde encontrar", "Qual o melhor"</li>
+<li><strong>Featured Snippets</strong> - Respostas diretas em listas ou parágrafos</li>
+<li><strong>FAQ pages</strong> - Seção de perguntas frequentes otimizada</li>
+<li><strong>Linguagem natural</strong> - Tom conversacional, não robotizado</li>
+</ol>
+
+<h2>📊 Métricas de SEO que Você Deve Acompanhar</h2>
+
+<h3>Métricas de Visibilidade</h3>
+
+<ol>
+<li><strong>Posição média no Google</strong> - Acompanhar evolução das keywords</li>
+<li><strong>Tráfego orgânico</strong> - Visitantes vindos de busca</li>
+<li><strong>Impressões</strong> - Quantas vezes seu site aparece nas buscas</li>
+<li><strong>CTR orgânico</strong> - Taxa de cliques nos resultados</li>
+</ol>
+
+<h3>Métricas de Engajamento</h3>
+
+<ol>
+<li><strong>Taxa de rejeição</strong> - Ideal abaixo de 60%</li>
+<li><strong>Tempo na página</strong> - Quanto maior, melhor</li>
+<li><strong>Páginas por sessão</strong> - Engajamento e navegação</li>
+<li><strong>Taxa de retorno</strong> - Visitantes que voltam</li>
+</ol>
+
+<h3>Métricas de Conversão</h3>
+
+<ol>
+<li><strong>Taxa de conversão orgânica</strong> - Visitante para lead/cliente</li>
+<li><strong>Leads orgânicos</strong> - Quantidade e qualidade</li>
+<li><strong>Receita de SEO</strong> - Vendas atribuídas ao canal orgânico</li>
+<li><strong>ROI de SEO</strong> - Retorno sobre investimento</li>
+</ol>
+
+<h2>🚀 Checklist de SEO para 2026</h2>
+
+<p><strong>SEO On-Page (Para cada página/artigo):</strong></p>
+
+<ol>
+<li>✅ Pesquisa de palavra-chave feita</li>
+<li>✅ Title tag otimizada (50-60 caracteres)</li>
+<li>✅ Meta description persuasiva (150-160 caracteres)</li>
+<li>✅ URL amigável com palavra-chave</li>
+<li>✅ H1 único com keyword principal</li>
+<li>✅ Estrutura H2, H3 organizada</li>
+<li>✅ Conteúdo mínimo de 1500 palavras</li>
+<li>✅ Palavra-chave nos primeiros 100 caracteres</li>
+<li>✅ 3-5 links internos relevantes</li>
+<li>✅ Imagens com alt text otimizado</li>
+<li>✅ CTA claro e visível</li>
+</ol>
+
+<p><strong>SEO Técnico (Para o site completo):</strong></p>
+
+<ol>
+<li>✅ Site 100% mobile-friendly</li>
+<li>✅ Velocidade de carregamento abaixo de 3s</li>
+<li>✅ Certificado SSL instalado (HTTPS)</li>
+<li>✅ XML Sitemap criado e submetido</li>
+<li>✅ Robots.txt configurado</li>
+<li>✅ Google Search Console instalado</li>
+<li>✅ Google Analytics instalado</li>
+<li>✅ Schema markup implementado</li>
+<li>✅ Core Web Vitals no verde</li>
+<li>✅ Sem erros 404 ou links quebrados</li>
+</ol>
+
+<p><strong>SEO Off-Page (Construindo autoridade):</strong></p>
+
+<ol>
+<li>✅ Backlinks de qualidade sendo construídos</li>
+<li>✅ Presença em redes sociais ativa</li>
+<li>✅ Google Meu Negócio otimizado (local)</li>
+<li>✅ Reviews positivos sendo gerados</li>
+<li>✅ Citações locais consistentes</li>
+</ol>
+
+<h2>💡 Erros Fatais de SEO a Evitar</h2>
+
+<ol>
+<li><strong>Keyword stuffing</strong> - Repetir palavra-chave excessivamente</li>
+<li><strong>Conteúdo duplicado</strong> - Copiar de outros sites ou suas próprias páginas</li>
+<li><strong>Links comprados</strong> - Google penaliza essa prática</li>
+<li><strong>Mobile não otimizado</strong> - Mais de 60% das buscas são mobile</li>
+<li><strong>Site lento</strong> - Velocidade é fator de rankeamento</li>
+<li><strong>Ignorar search intent</strong> - Não corresponder à intenção de busca</li>
+<li><strong>Falta de HTTPS</strong> - Google marca como "não seguro"</li>
+<li><strong>Conteúdo raso</strong> - Artigos superficiais não rankeiam</li>
+<li><strong>Não atualizar conteúdo</strong> - Freshness é importante</li>
+<li><strong>Ignorar dados</strong> - Não analisar métricas regularmente</li>
+</ol>
+
+<h2>🎯 Timeline Realista: Quanto Tempo Leva para Ver Resultados?</h2>
+
+<p>SEO é investimento de médio a longo prazo:</p>
+
+<ol>
+<li><strong>0-3 meses</strong> - Indexação, primeiras posições em keywords fáceis</li>
+<li><strong>4-6 meses</strong> - Crescimento consistente de tráfego orgânico</li>
+<li><strong>6-12 meses</strong> - Posições consolidadas, aumento significativo de leads</li>
+<li><strong>12+ meses</strong> - Autoridade estabelecida, ROI exponencial</li>
+</ol>
+
+<p><strong>A chave é consistência:</strong> publicar regularmente, otimizar continuamente e construir autoridade gradualmente.</p>
+
+<h2>🔧 Ferramentas Essenciais de SEO para 2026</h2>
+
+<p><strong>Gratuitas:</strong></p>
+
+<ol>
+<li>Google Search Console - Monitoramento de performance</li>
+<li>Google Analytics - Análise de tráfego</li>
+<li>Google Keyword Planner - Pesquisa de palavras-chave</li>
+<li>Ubersuggest - Alternativa gratuita ao SEMrush</li>
+<li>Answer The Public - Ideias de conteúdo</li>
+<li>PageSpeed Insights - Velocidade do site</li>
+</ol>
+
+<p><strong>Pagas (Profissionais):</strong></p>
+
+<ol>
+<li>SEMrush - Plataforma completa de SEO</li>
+<li>Ahrefs - Análise de backlinks e concorrentes</li>
+<li>Moz Pro - Auditoria e tracking</li>
+<li>Screaming Frog - SEO técnico</li>
+<li>Surfer SEO - Otimização de conteúdo</li>
+</ol>
+
+<h2>🎯 Próximos Passos para Começar Hoje</h2>
+
+<ol>
+<li><strong>Auditoria inicial</strong> - Analise a situação atual do seu site</li>
+<li><strong>Pesquisa de palavras-chave</strong> - Liste 20-50 keywords estratégicas</li>
+<li><strong>Corrija SEO técnico</strong> - Resolva erros críticos primeiro</li>
+<li><strong>Crie calendário editorial</strong> - Planeje 12 artigos otimizados</li>
+<li><strong>Otimize páginas existentes</strong> - Comece pelas mais importantes</li>
+<li><strong>Construa links</strong> - 2-3 backlinks de qualidade por mês</li>
+<li><strong>Monitore resultados</strong> - Análise semanal de métricas</li>
+<li><strong>Ajuste estratégia</strong> - Otimização contínua baseada em dados</li>
+</ol>
+
+<p>Lembre-se: SEO é uma maratona, não uma corrida de velocidade. Empresas que investem consistentemente em SEO constroem ativos digitais duradouros que geram tráfego qualificado por anos.</p>`
+  },
+  {
     id: "1736278800000",
     title: "Marketing de Conteúdo em 2026: Como Criar Estratégias que Convertem e Geram Resultados Reais",
     excerpt: "Descubra as melhores práticas, formatos que mais engajam e estratégias de SEO para criar conteúdo que atrai, educa e converte seu público em clientes fiéis.",

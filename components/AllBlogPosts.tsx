@@ -6,6 +6,15 @@ import Link from "next/link";
 
 const defaultPosts = [
   {
+    id: "1736365200000",
+    title: "SEO em 2026: O Guia Definitivo para Rankear no Google e Dominar as Buscas Orgânicas",
+    excerpt: "Aprenda as técnicas mais avançadas de SEO, algoritmos atualizados do Google, estratégias de palavras-chave e como conquistar a primeira página dos resultados de busca.",
+    date: "08 Jan 2026",
+    readTime: "14 min",
+    category: "SEO",
+    image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
     id: "1736278800000",
     title: "Marketing de Conteúdo em 2026: Como Criar Estratégias que Convertem e Geram Resultados Reais",
     excerpt: "Descubra as melhores práticas, formatos que mais engajam e estratégias de SEO para criar conteúdo que atrai, educa e converte seu público em clientes fiéis.",
