@@ -298,7 +298,7 @@ export default function BlogPostPage() {
               <div className="flex items-center justify-center mb-6">
                 <Zap className="w-8 h-8 text-gold mr-3 animate-pulse" />
                 <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  Gostou do Conteúdo?
+                  Gostou do Conteúdo? Fale com nossos especialistas
                 </h2>
               </div>
 
@@ -309,7 +309,9 @@ export default function BlogPostPage() {
               {/* Contact Information */}
               <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto">
                 <a
-                  href="tel:+5562993265713"
+                  href="https://wa.me/5562993265713?text=Tenho%20interesse%20em%20saber%20mais"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group hover:scale-105"
                 >
                   <div className="flex items-center gap-4">
