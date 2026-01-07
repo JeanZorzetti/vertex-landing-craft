@@ -1,29 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(xcopy:*)",
-      "Bash(robocopy:*)",
-      "Bash(powershell -Command:*)",
-      "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "Bash(powershell -NoProfile -Command \"Get-ChildItem -Filter ''*.tsx'' | ForEach-Object { $content = Get-Content $_FullName -Raw; if \\($content -and $content -notmatch ''^\\\\s*\"\"use client\"\"''\\) { Set-Content $_FullName -Value \\(''\"\"use client\"\";'' + [Environment]::NewLine + [Environment]::NewLine + $content\\) -NoNewline } }\")",
-      "Bash(timeout 10 npm run dev:*)",
-      "Bash(for file in accordion.tsx alert-dialog.tsx avatar.tsx checkbox.tsx collapsible.tsx command.tsx context-menu.tsx dialog.tsx dropdown-menu.tsx hover-card.tsx label.tsx menubar.tsx navigation-menu.tsx popover.tsx progress.tsx radio-group.tsx scroll-area.tsx select.tsx separator.tsx sheet.tsx slider.tsx switch.tsx tabs.tsx toast.tsx toggle.tsx tooltip.tsx)",
-      "Bash(done)",
-      "Bash(powershell:*)",
-      "Bash(del add-use-client.ps1)",
-      "Bash(git init:*)",
+      "Bash(git diff:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nMigração completa de Vite para Next.js 15\n\n- Removido Vite e React Router\n- Implementado Next.js 15 com App Router\n- Convertidos componentes para Server/Client Components\n- Atualizado tsconfig, eslint e postcss para Next.js\n- Adicionada diretiva \"use client\" em componentes interativos\n- Mantidas todas as bibliotecas de UI \\(shadcn/ui, Radix UI, TailwindCSS\\)\n- Build de produção funcionando perfeitamente\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git remote:*)",
-      "Bash(git branch:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nTorna blog interativo com elementos dinâmicos e perfil da especialista Maria Eduarda\n\nAdiciona recursos interativos:\n- Barra de progresso de leitura no topo\n- Botões flutuantes de curtir, salvar e compartilhar\n- Cards informativos com animações \\(ROI, conversão, investimento\\)\n- Contador de likes persistente no localStorage\n- Seção destacada da especialista Maria Eduarda\n- Cards de contato clicáveis \\(telefone e e-mail\\)\n- Botão CTA flutuante para mobile\n- Animações e efeitos hover em toda interface\n\nMelhora experiência do usuário com design moderno e responsivo.\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git push:*)",
-      "Bash(git commit:*)",
-      "Bash(npm run dev:*)",
-      "Bash(cat:*)",
-      "Bash(timeout 60 npm run build:*)",
-      "Bash(dir:*)",
-      "Bash(findstr:*)"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove botões de curtir e salvar, mantém apenas compartilhar\n\nRemove funcionalidades de like e bookmark do blog, simplificando\na interface para manter apenas o botão de compartilhamento.\n\nAlterações:\n- Remove estados de liked, bookmarked e likes\n- Remove funções handleLike e handleBookmark\n- Remove botões flutuantes de curtir e salvar\n- Mantém apenas botão de compartilhar\n- Remove imports não utilizados \\(Heart, Bookmark\\)\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nMelhora design e tipografia do blog com estilo editorial sofisticado\n\nRemove cards de destaque simples e implementa:\n- Tipografia editorial moderna com prose-xl\n- Títulos com gradientes e bordas douradas\n- Espaçamento e line-height otimizados para leitura\n- Textos maiores e mais legíveis \\(text-lg\\)\n- Listas com marcadores dourados e espaçamento amplo\n- Strong tags com destaque visual \\(text-xl\\)\n- Separadores de seção estilizados\n- Code blocks e tabelas com design refinado\n- Elementos decorativos sutis no background\n- Remove imports não utilizados \\(TrendingUp, Target, DollarSign\\)\n\nDesign focado em experiência de leitura premium.\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nRemove seção de CTA duplicada do conteúdo do artigo\n\nRemove a seção \"Quer ajuda profissional?\" que aparecia no meio\ndo artigo, pois já existe uma seção CTA completa e elaborada\nno final da página com informações da especialista Maria Eduarda.\n\nIsso evita redundância e melhora o fluxo de leitura do artigo.\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)"
     ]
   }
 }

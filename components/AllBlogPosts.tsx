@@ -6,6 +6,15 @@ import Link from "next/link";
 
 const defaultPosts = [
   {
+    id: "1736278800000",
+    title: "Marketing de Conteúdo em 2026: Como Criar Estratégias que Convertem e Geram Resultados Reais",
+    excerpt: "Descubra as melhores práticas, formatos que mais engajam e estratégias de SEO para criar conteúdo que atrai, educa e converte seu público em clientes fiéis.",
+    date: "07 Jan 2026",
+    readTime: "12 min",
+    category: "Marketing de Conteúdo",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
     id: "1736105400000",
     title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
     excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
