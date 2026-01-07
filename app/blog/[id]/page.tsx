@@ -287,6 +287,77 @@ export default function BlogPostPage() {
               dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
             />
           </div>
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-br from-navy via-navy-dark to-navy rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden relative">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-gold mr-3 animate-pulse" />
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  Gostou do Conteúdo?
+                </h2>
+              </div>
+
+              <p className="text-white/90 text-lg mb-8 max-w-3xl mx-auto text-center leading-relaxed">
+                Entre em contato e descubra como podemos ajudar seu negócio a crescer com estratégias de tráfego pago personalizadas.
+              </p>
+
+              {/* Contact Information */}
+              <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto">
+                <a
+                  href="tel:+5562993265713"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group hover:scale-105"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="bg-gold/20 p-4 rounded-lg group-hover:bg-gold/30 transition-colors">
+                      <svg className="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white/60 text-sm mb-1 font-medium">Telefone/WhatsApp</p>
+                      <p className="text-white font-bold text-lg">(62) 99326-5713</p>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:verticecomp@gmail.com"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group hover:scale-105"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="bg-gold/20 p-4 rounded-lg group-hover:bg-gold/30 transition-colors">
+                      <svg className="w-6 h-6 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white/60 text-sm mb-1 font-medium">E-mail</p>
+                      <p className="text-white font-bold text-lg break-all">verticecomp@gmail.com</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              {/* CTA Button */}
+              <div className="text-center">
+                <Link href="/contato">
+                  <Button size="lg" className="bg-gold hover:bg-gold-light text-navy font-bold text-lg px-10 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                    <Zap className="w-5 h-5 mr-2" />
+                    Fale Conosco
+                  </Button>
+                </Link>
+                <p className="text-white/60 text-sm mt-4">
+                  Resposta rápida • Atendimento personalizado
+                </p>
+              </div>
+            </div>
+          </div>
         </article>
       </main>
 
