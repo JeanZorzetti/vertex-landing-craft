@@ -68,18 +68,7 @@ const defaultPosts = [
 <li><strong>Criativos de Alta Performance</strong> - UGC performando 3x melhor</li>
 <li><strong>Funil Completo</strong> - Do awareness à conversão</li>
 <li><strong>Remarketing Avançado</strong> - Sequência de anúncios inteligente</li>
-</ol>
-
-<hr>
-
-<p><strong>Quer ajuda profissional?</strong></p>
-
-<p>Entre em contato com a <strong>Maria Eduarda</strong>, especialista em tráfego pago da Vértice Marketing, e descubra como triplicar seu ROI com estratégias personalizadas.</p>
-
-<p>📞 (62) 99326-5713<br>
-📧 verticecomp@gmail.com</p>
-
-<p><em>Resposta em até 24 horas • Consultoria gratuita</em></p>`
+</ol>`
   },
 ];
 
