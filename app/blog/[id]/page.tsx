@@ -18,55 +18,208 @@ const defaultPosts = [
     category: "Tráfego Pago",
     author: "Vértice Marketing",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
-    content: `<p>O mercado de tráfego pago está passando pela maior transformação da última década. Com a chegada de 2026, profissionais e empresas precisam dominar não apenas as plataformas tradicionais, mas também entender profundamente como a inteligência artificial, novos custos e mudanças regulatórias impactam diretamente o ROI das campanhas.</p>
+    content: `
+<div class="intro-highlight">
+  <p class="lead-text">O mercado de tráfego pago está passando pela maior transformação da última década. Com a chegada de 2026, profissionais e empresas precisam dominar não apenas as plataformas tradicionais, mas também entender profundamente como a inteligência artificial, novos custos e mudanças regulatórias impactam diretamente o ROI das campanhas.</p>
+</div>
 
-<p>Neste guia completo, vamos explorar tudo o que você precisa saber para ter sucesso em tráfego pago em 2026, com dados reais do mercado brasileiro e estratégias práticas.</p>
+<p class="text-highlight">Neste guia completo, vamos explorar tudo o que você precisa saber para ter sucesso em tráfego pago em 2026, com dados reais do mercado brasileiro e estratégias práticas.</p>
+
+<div class="section-divider"></div>
 
 <h2>📊 O Cenário Atual: Números que Você Precisa Conhecer</h2>
 
-<h3>ROI Médio no Brasil</h3>
+<div class="stats-grid">
+  <div class="stat-card gold-gradient">
+    <div class="stat-number">422%</div>
+    <div class="stat-label">ROI Médio no Brasil</div>
+    <div class="stat-desc">Varia entre 200% e 1000% dependendo do setor</div>
+  </div>
 
-<p>Segundo pesquisas recentes, o <strong>ROI médio de tráfego pago no Brasil é de 422%</strong>, mas essa métrica varia drasticamente entre 200% e 1000% dependendo do setor, qualidade da gestão e estratégia implementada.</p>
+  <div class="stat-card blue-gradient">
+    <div class="stat-number">12,15%</div>
+    <div class="stat-label">Aumento de Custos</div>
+    <div class="stat-desc">No Meta Ads a partir de janeiro/2026</div>
+  </div>
 
-<p>Para 2026, a métrica de ouro não é mais apenas o ROAS (Return on Ad Spend), mas sim a <strong>relação LTV/CAC</strong> (Lifetime Value dividido pelo Custo de Aquisição de Cliente). Se o cliente não retorna para comprar ou se o serviço não tem recorrência, o custo de aquisição inicial via tráfego pago pode inviabilizar completamente a operação no longo prazo.</p>
+  <div class="stat-card purple-gradient">
+    <div class="stat-number">3:1</div>
+    <div class="stat-label">LTV/CAC Ideal</div>
+    <div class="stat-desc">Métrica de ouro para 2026</div>
+  </div>
+</div>
 
-<h3>O Impacto dos Novos Custos</h3>
+<div class="alert-box warning">
+  <div class="alert-icon">⚠️</div>
+  <div class="alert-content">
+    <h3>ATENÇÃO: Mudança Importante para 2026</h3>
+    <p>A partir de 1º de janeiro de 2026, <strong>todas as empresas que investem em Meta Ads no Brasil enfrentarão um aumento de 12,15%</strong> no custo final das campanhas. Esse aumento é resultado do repasse direto de PIS/Cofins e ISS aos anunciantes brasileiros.</p>
+  </div>
+</div>
 
-<p>A partir de 1º de janeiro de 2026, <strong>todas as empresas que investem em Meta Ads no Brasil enfrentarão um aumento de 12,15%</strong> no custo final das campanhas. Esse aumento é resultado do repasse direto de PIS/Cofins e ISS aos anunciantes brasileiros.</p>
+<div class="insight-box">
+  <h3>💡 Insight Estratégico</h3>
+  <p>Para 2026, a métrica de ouro não é mais apenas o ROAS (Return on Ad Spend), mas sim a <strong>relação LTV/CAC</strong> (Lifetime Value dividido pelo Custo de Aquisição de Cliente). Se o cliente não retorna para comprar ou se o serviço não tem recorrência, o custo de aquisição inicial via tráfego pago pode inviabilizar completamente a operação no longo prazo.</p>
+</div>
+
+<div class="section-divider"></div>
 
 <h2>🤖 A Revolução da Inteligência Artificial</h2>
 
-<p>A Meta oficializou seu plano mais ambicioso: <strong>automatizar completamente a criação de anúncios usando inteligência artificial até o final de 2026</strong>. Isso significa que sistemas inteligentes farão ajustes automáticos de lances, segmentação, distribuição de orçamento e testes contínuos.</p>
+<div class="feature-card ai-card">
+  <div class="feature-header">
+    <span class="feature-badge">TENDÊNCIA 2026</span>
+    <h3>Automação Completa de Anúncios</h3>
+  </div>
+  <p>A Meta oficializou seu plano mais ambicioso: <strong>automatizar completamente a criação de anúncios usando inteligência artificial até o final de 2026</strong>.</p>
+  <ul class="feature-list">
+    <li>✅ Ajustes automáticos de lances</li>
+    <li>✅ Segmentação inteligente</li>
+    <li>✅ Distribuição otimizada de orçamento</li>
+    <li>✅ Testes A/B contínuos</li>
+  </ul>
+</div>
+
+<div class="section-divider"></div>
 
 <h2>📈 Google Ads vs Meta Ads: Qual Escolher em 2026?</h2>
 
-<p>A resposta não é "ou/ou", mas "e/e". As agências e empresas que mais crescem em 2026 utilizam Google Ads para capturar demanda imediata (bottom-funnel) e Meta Ads para educação e conscientização (top-funnel).</p>
+<div class="comparison-grid">
+  <div class="platform-card google-card">
+    <div class="platform-logo">G</div>
+    <h3>Google Ads</h3>
+    <div class="platform-badge">Bottom-Funnel</div>
+    <p class="platform-desc">Captura demanda imediata de quem já está buscando sua solução</p>
+    <ul class="platform-features">
+      <li>🎯 Alta intenção de compra</li>
+      <li>📊 Conversão rápida</li>
+      <li>💰 ROI mensurável</li>
+    </ul>
+  </div>
+
+  <div class="platform-card meta-card">
+    <div class="platform-logo">M</div>
+    <h3>Meta Ads</h3>
+    <div class="platform-badge">Top-Funnel</div>
+    <p class="platform-desc">Educa e conscientiza seu público sobre problemas e soluções</p>
+    <ul class="platform-features">
+      <li>👥 Segmentação avançada</li>
+      <li>📱 Engajamento social</li>
+      <li>🎨 Criativos visuais</li>
+    </ul>
+  </div>
+</div>
+
+<div class="tip-box success">
+  <strong>💡 Estratégia Vencedora:</strong> A resposta não é "ou/ou", mas "e/e". As agências e empresas que mais crescem em 2026 utilizam ambas plataformas de forma integrada no funil completo.
+</div>
+
+<div class="section-divider"></div>
 
 <h2>🎯 Métricas que Realmente Importam em 2026</h2>
 
-<ol>
-<li><strong>CAC</strong> (Custo de Aquisição de Cliente)</li>
-<li><strong>LTV</strong> (Lifetime Value)</li>
-<li><strong>Relação LTV/CAC</strong> - Ideal: acima de 3:1</li>
-<li><strong>CTR</strong> - Meta: acima de 2% para Search</li>
-<li><strong>Taxa de Conversão</strong> - Meta: acima de 3% para e-commerce</li>
-</ol>
+<div class="metrics-list">
+  <div class="metric-item">
+    <div class="metric-icon">1</div>
+    <div class="metric-content">
+      <h4>CAC (Custo de Aquisição de Cliente)</h4>
+      <p>Quanto você gasta para conquistar cada novo cliente</p>
+    </div>
+  </div>
 
-<h2>💰 Quanto Investir?</h2>
+  <div class="metric-item">
+    <div class="metric-icon">2</div>
+    <div class="metric-content">
+      <h4>LTV (Lifetime Value)</h4>
+      <p>Valor total que um cliente gera durante seu relacionamento com sua empresa</p>
+    </div>
+  </div>
 
-<p><strong>Google Ads:</strong> Mínimo R$ 3.000/mês<br>
-<strong>Meta Ads:</strong> Mínimo R$ 2.000/mês<br>
-<strong>Estratégia Integrada:</strong> Ideal R$ 10.000-20.000/mês</p>
+  <div class="metric-item highlight">
+    <div class="metric-icon">3</div>
+    <div class="metric-content">
+      <h4>Relação LTV/CAC</h4>
+      <p><strong>Meta Ideal: Acima de 3:1</strong> - Para cada R$1 gasto em aquisição, retorno de R$3 em valor</p>
+    </div>
+  </div>
 
-<h2>🚀 Estratégias Que Funcionam</h2>
+  <div class="metric-item">
+    <div class="metric-icon">4</div>
+    <div class="metric-content">
+      <h4>CTR (Taxa de Cliques)</h4>
+      <p>Meta: Acima de 2% para campanhas de Search</p>
+    </div>
+  </div>
 
-<ol>
-<li><strong>Segmentação por Intenção</strong> - Não por demografia</li>
-<li><strong>First-Party Data</strong> - Dados próprios são ouro</li>
-<li><strong>Criativos de Alta Performance</strong> - UGC performando 3x melhor</li>
-<li><strong>Funil Completo</strong> - Do awareness à conversão</li>
-<li><strong>Remarketing Avançado</strong> - Sequência de anúncios inteligente</li>
-</ol>`
+  <div class="metric-item">
+    <div class="metric-icon">5</div>
+    <div class="metric-content">
+      <h4>Taxa de Conversão</h4>
+      <p>Meta: Acima de 3% para e-commerce</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<h2>💰 Quanto Investir em Tráfego Pago?</h2>
+
+<div class="investment-grid">
+  <div class="investment-card">
+    <div class="investment-platform">Google Ads</div>
+    <div class="investment-amount">R$ 3.000<span>/mês</span></div>
+    <div class="investment-label">Investimento Mínimo</div>
+  </div>
+
+  <div class="investment-card">
+    <div class="investment-platform">Meta Ads</div>
+    <div class="investment-amount">R$ 2.000<span>/mês</span></div>
+    <div class="investment-label">Investimento Mínimo</div>
+  </div>
+
+  <div class="investment-card featured">
+    <div class="investment-badge">RECOMENDADO</div>
+    <div class="investment-platform">Estratégia Integrada</div>
+    <div class="investment-amount">R$ 10-20k<span>/mês</span></div>
+    <div class="investment-label">Investimento Ideal</div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<h2>🚀 Estratégias Que Funcionam em 2026</h2>
+
+<div class="strategies-grid">
+  <div class="strategy-card">
+    <div class="strategy-number">01</div>
+    <h4>Segmentação por Intenção</h4>
+    <p>Não por demografia - Foque no comportamento e intenção real de compra</p>
+  </div>
+
+  <div class="strategy-card">
+    <div class="strategy-number">02</div>
+    <h4>First-Party Data</h4>
+    <p>Dados próprios são ouro - Construa sua base e não dependa de third-party cookies</p>
+  </div>
+
+  <div class="strategy-card">
+    <div class="strategy-number">03</div>
+    <h4>Criativos de Alta Performance</h4>
+    <p>UGC performando 3x melhor - Conte histórias reais de clientes</p>
+  </div>
+
+  <div class="strategy-card">
+    <div class="strategy-number">04</div>
+    <h4>Funil Completo</h4>
+    <p>Do awareness à conversão - Trabalhe todas as etapas da jornada</p>
+  </div>
+
+  <div class="strategy-card">
+    <div class="strategy-number">05</div>
+    <h4>Remarketing Avançado</h4>
+    <p>Sequência de anúncios inteligente - Reforce mensagens em momentos estratégicos</p>
+  </div>
+</div>`
   },
 ];
 
@@ -255,58 +408,212 @@ export default function BlogPostPage() {
 
               <div
                 className="prose prose-xl max-w-none relative z-10
-                [&>h1]:text-4xl [&>h1]:md:text-5xl [&>h1]:lg:text-6xl [&>h1]:font-bold [&>h1]:mb-10
-                [&>h1]:leading-tight [&>h1]:text-navy [&>h1]:tracking-tight
-
                 [&>h2]:text-3xl [&>h2]:md:text-4xl [&>h2]:font-bold [&>h2]:mt-16 [&>h2]:mb-8
                 [&>h2]:pb-6 [&>h2]:border-b-4 [&>h2]:border-gold/40 [&>h2]:text-navy
-                [&>h2]:tracking-wide [&>h2]:relative
+                [&>h2]:tracking-wide
 
-                [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:font-bold [&>h3]:mt-12 [&>h3]:mb-6
-                [&>h3]:text-navy/90 [&>h3]:tracking-wide
+                [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:font-bold [&>h3]:mt-8 [&>h3]:mb-4
+                [&>h3]:text-navy/90
 
-                [&>p]:text-lg [&>p]:md:text-xl [&>p]:leading-[2] [&>p]:mb-10
-                [&>p]:text-zinc-700 [&>p]:tracking-normal
+                [&>h4]:text-xl [&>h4]:md:text-2xl [&>h4]:font-bold [&>h4]:text-navy [&>h4]:mb-3
 
-                [&>p:first-of-type]:text-xl [&>p:first-of-type]:md:text-2xl
-                [&>p:first-of-type]:leading-[1.8] [&>p:first-of-type]:font-medium
-                [&>p:first-of-type]:text-navy/80
+                [&>p]:text-base [&>p]:md:text-lg [&>p]:leading-relaxed [&>p]:mb-6
+                [&>p]:text-zinc-700
 
-                [&>strong]:text-navy [&>strong]:font-bold [&>strong]:text-xl
+                [&>strong]:text-navy [&>strong]:font-bold
                 [&>strong]:px-1 [&>strong]:bg-gold/10 [&>strong]:rounded
 
-                [&>ol]:my-10 [&>ol]:space-y-4 [&>ol]:pl-6
-                [&>ul]:my-10 [&>ul]:space-y-4 [&>ul]:pl-6
-                [&>li]:text-lg [&>li]:md:text-xl [&>li]:leading-relaxed [&>li]:pl-3
-                [&>li]:marker:text-gold [&>li]:marker:font-bold [&>li]:marker:text-2xl
+                [&>ul]:my-4 [&>ul]:space-y-2
+                [&>li]:text-base [&>li]:md:text-lg [&>li]:leading-relaxed
 
-                [&>a]:text-gold [&>a]:font-semibold [&>a]:no-underline [&>a]:underline-offset-4
-                [&>a]:transition-all [&>a]:duration-300 hover:[&>a]:underline hover:[&>a]:text-gold-light
+                [&_.intro-highlight]:bg-gradient-to-br [&_.intro-highlight]:from-navy/5 [&_.intro-highlight]:via-gold/5 [&_.intro-highlight]:to-navy/5
+                [&_.intro-highlight]:rounded-2xl [&_.intro-highlight]:p-8 [&_.intro-highlight]:mb-8 [&_.intro-highlight]:border-l-4 [&_.intro-highlight]:border-gold
 
-                [&>blockquote]:border-l-4 [&>blockquote]:border-gold [&>blockquote]:bg-gradient-to-r
-                [&>blockquote]:from-gold/10 [&>blockquote]:to-gold/5 [&>blockquote]:pl-8 [&>blockquote]:pr-6
-                [&>blockquote]:py-8 [&>blockquote]:my-12 [&>blockquote]:rounded-r-2xl
-                [&>blockquote]:italic [&>blockquote]:text-navy/80 [&>blockquote]:shadow-sm
+                [&_.lead-text]:text-xl [&_.lead-text]:md:text-2xl [&_.lead-text]:font-medium [&_.lead-text]:text-navy/90
+                [&_.lead-text]:leading-relaxed [&_.lead-text]:mb-0
 
-                [&>code]:bg-navy/10 [&>code]:text-navy [&>code]:px-2 [&>code]:py-1
-                [&>code]:rounded [&>code]:font-mono [&>code]:text-base
+                [&_.text-highlight]:text-lg [&_.text-highlight]:text-center [&_.text-highlight]:font-medium
+                [&_.text-highlight]:text-gold [&_.text-highlight]:my-8
 
-                [&>pre]:bg-gradient-to-br [&>pre]:from-navy [&>pre]:to-navy-dark
-                [&>pre]:text-white [&>pre]:rounded-2xl [&>pre]:p-8 [&>pre]:my-10
-                [&>pre]:overflow-x-auto [&>pre]:shadow-2xl [&>pre]:border [&>pre]:border-gold/20
+                [&_.section-divider]:h-px [&_.section-divider]:bg-gradient-to-r [&_.section-divider]:from-transparent
+                [&_.section-divider]:via-gold/30 [&_.section-divider]:to-transparent [&_.section-divider]:my-12
 
-                [&>hr]:border-t-2 [&>hr]:border-gold/30 [&>hr]:my-16 [&>hr]:w-24
-                [&>hr]:mx-auto [&>hr]:rounded-full
+                [&_.stats-grid]:grid [&_.stats-grid]:grid-cols-1 [&_.stats-grid]:md:grid-cols-3
+                [&_.stats-grid]:gap-6 [&_.stats-grid]:my-10
 
-                [&>table]:w-full [&>table]:border-2 [&>table]:border-navy/20 [&>table]:rounded-xl
-                [&>table]:overflow-hidden [&>table]:my-10 [&>table]:shadow-lg
-                [&>thead]:bg-gradient-to-r [&>thead]:from-navy/10 [&>thead]:to-navy/5
-                [&>th]:p-5 [&>th]:font-bold [&>th]:text-left [&>th]:text-navy [&>th]:border-b-2 [&>th]:border-gold/30
-                [&>td]:p-5 [&>td]:border-t [&>td]:border-navy/10
-                [&>tbody>tr]:transition-colors [&>tbody>tr]:duration-200 hover:[&>tbody>tr]:bg-gold/5
+                [&_.stat-card]:rounded-2xl [&_.stat-card]:p-6 [&_.stat-card]:text-center
+                [&_.stat-card]:shadow-xl [&_.stat-card]:transform [&_.stat-card]:transition-transform
+                [&_.stat-card]:duration-300 hover:[&_.stat-card]:scale-105
 
-                [&>img]:rounded-3xl [&>img]:shadow-2xl [&>img]:my-12 [&>img]:w-full
-                [&>img]:border-4 [&>img]:border-gold/20"
+                [&_.stat-card.gold-gradient]:bg-gradient-to-br [&_.stat-card.gold-gradient]:from-amber-50
+                [&_.stat-card.gold-gradient]:to-yellow-100 [&_.stat-card.gold-gradient]:border-2
+                [&_.stat-card.gold-gradient]:border-gold/30
+
+                [&_.stat-card.blue-gradient]:bg-gradient-to-br [&_.stat-card.blue-gradient]:from-blue-50
+                [&_.stat-card.blue-gradient]:to-cyan-100 [&_.stat-card.blue-gradient]:border-2
+                [&_.stat-card.blue-gradient]:border-blue-300
+
+                [&_.stat-card.purple-gradient]:bg-gradient-to-br [&_.stat-card.purple-gradient]:from-purple-50
+                [&_.stat-card.purple-gradient]:to-pink-100 [&_.stat-card.purple-gradient]:border-2
+                [&_.stat-card.purple-gradient]:border-purple-300
+
+                [&_.stat-number]:text-5xl [&_.stat-number]:md:text-6xl [&_.stat-number]:font-black
+                [&_.stat-number]:text-navy [&_.stat-number]:mb-3
+
+                [&_.stat-label]:text-lg [&_.stat-label]:font-bold [&_.stat-label]:text-navy/80 [&_.stat-label]:mb-2
+
+                [&_.stat-desc]:text-sm [&_.stat-desc]:text-zinc-600
+
+                [&_.alert-box]:rounded-2xl [&_.alert-box]:p-6 [&_.alert-box]:my-10 [&_.alert-box]:flex
+                [&_.alert-box]:gap-4 [&_.alert-box]:shadow-xl [&_.alert-box]:border-2
+
+                [&_.alert-box.warning]:bg-gradient-to-br [&_.alert-box.warning]:from-orange-50
+                [&_.alert-box.warning]:to-red-50 [&_.alert-box.warning]:border-orange-300
+
+                [&_.alert-icon]:text-4xl [&_.alert-icon]:flex-shrink-0
+
+                [&_.alert-content>h3]:text-xl [&_.alert-content>h3]:font-bold [&_.alert-content>h3]:text-orange-900
+                [&_.alert-content>h3]:mb-2 [&_.alert-content>h3]:mt-0
+
+                [&_.alert-content>p]:text-base [&_.alert-content>p]:text-orange-800 [&_.alert-content>p]:mb-0
+
+                [&_.insight-box]:bg-gradient-to-br [&_.insight-box]:from-emerald-50 [&_.insight-box]:to-teal-100
+                [&_.insight-box]:rounded-2xl [&_.insight-box]:p-8 [&_.insight-box]:my-10 [&_.insight-box]:border-2
+                [&_.insight-box]:border-emerald-300 [&_.insight-box]:shadow-xl
+
+                [&_.insight-box>h3]:text-2xl [&_.insight-box>h3]:font-bold [&_.insight-box>h3]:text-emerald-900
+                [&_.insight-box>h3]:mb-4 [&_.insight-box>h3]:mt-0
+
+                [&_.insight-box>p]:text-base [&_.insight-box>p]:md:text-lg [&_.insight-box>p]:text-emerald-800 [&_.insight-box>p]:mb-0
+
+                [&_.feature-card]:bg-gradient-to-br [&_.feature-card]:from-indigo-50 [&_.feature-card]:to-purple-100
+                [&_.feature-card]:rounded-2xl [&_.feature-card]:p-8 [&_.feature-card]:my-10 [&_.feature-card]:border-2
+                [&_.feature-card]:border-indigo-300 [&_.feature-card]:shadow-xl
+
+                [&_.feature-header]:mb-6
+
+                [&_.feature-badge]:inline-block [&_.feature-badge]:bg-indigo-600 [&_.feature-badge]:text-white
+                [&_.feature-badge]:px-4 [&_.feature-badge]:py-2 [&_.feature-badge]:rounded-full [&_.feature-badge]:text-xs
+                [&_.feature-badge]:font-bold [&_.feature-badge]:uppercase [&_.feature-badge]:tracking-wider [&_.feature-badge]:mb-3
+
+                [&_.feature-header>h3]:text-2xl [&_.feature-header>h3]:font-bold [&_.feature-header>h3]:text-indigo-900
+                [&_.feature-header>h3]:mt-0 [&_.feature-header>h3]:mb-0
+
+                [&_.feature-card>p]:text-base [&_.feature-card>p]:md:text-lg [&_.feature-card>p]:text-indigo-800
+
+                [&_.feature-list]:space-y-3 [&_.feature-list]:mt-6 [&_.feature-list]:mb-0
+
+                [&_.feature-list>li]:text-base [&_.feature-list>li]:md:text-lg [&_.feature-list>li]:text-indigo-900
+                [&_.feature-list>li]:font-medium [&_.feature-list>li]:list-none
+
+                [&_.comparison-grid]:grid [&_.comparison-grid]:grid-cols-1 [&_.comparison-grid]:md:grid-cols-2
+                [&_.comparison-grid]:gap-6 [&_.comparison-grid]:my-10
+
+                [&_.platform-card]:rounded-2xl [&_.platform-card]:p-8 [&_.platform-card]:shadow-xl
+                [&_.platform-card]:transform [&_.platform-card]:transition-all [&_.platform-card]:duration-300
+                hover:[&_.platform-card]:scale-105 hover:[&_.platform-card]:shadow-2xl
+
+                [&_.platform-card.google-card]:bg-gradient-to-br [&_.platform-card.google-card]:from-red-50
+                [&_.platform-card.google-card]:to-orange-100 [&_.platform-card.google-card]:border-2
+                [&_.platform-card.google-card]:border-red-300
+
+                [&_.platform-card.meta-card]:bg-gradient-to-br [&_.platform-card.meta-card]:from-blue-50
+                [&_.platform-card.meta-card]:to-indigo-100 [&_.platform-card.meta-card]:border-2
+                [&_.platform-card.meta-card]:border-blue-400
+
+                [&_.platform-logo]:w-16 [&_.platform-logo]:h-16 [&_.platform-logo]:rounded-full
+                [&_.platform-logo]:bg-white [&_.platform-logo]:flex [&_.platform-logo]:items-center
+                [&_.platform-logo]:justify-center [&_.platform-logo]:text-3xl [&_.platform-logo]:font-black
+                [&_.platform-logo]:text-navy [&_.platform-logo]:mb-4 [&_.platform-logo]:shadow-lg
+
+                [&_.platform-card>h3]:text-2xl [&_.platform-card>h3]:font-bold [&_.platform-card>h3]:text-navy
+                [&_.platform-card>h3]:mb-3 [&_.platform-card>h3]:mt-0
+
+                [&_.platform-badge]:inline-block [&_.platform-badge]:bg-navy [&_.platform-badge]:text-gold
+                [&_.platform-badge]:px-4 [&_.platform-badge]:py-1 [&_.platform-badge]:rounded-full
+                [&_.platform-badge]:text-xs [&_.platform-badge]:font-bold [&_.platform-badge]:uppercase [&_.platform-badge]:mb-4
+
+                [&_.platform-desc]:text-base [&_.platform-desc]:text-zinc-700 [&_.platform-desc]:mb-6
+
+                [&_.platform-features]:space-y-2 [&_.platform-features]:mb-0
+
+                [&_.platform-features>li]:text-base [&_.platform-features>li]:font-medium
+                [&_.platform-features>li]:text-navy [&_.platform-features>li]:list-none
+
+                [&_.tip-box]:bg-gradient-to-r [&_.tip-box]:from-green-50 [&_.tip-box]:to-emerald-100
+                [&_.tip-box]:rounded-2xl [&_.tip-box]:p-6 [&_.tip-box]:my-8 [&_.tip-box]:border-2
+                [&_.tip-box]:border-green-300 [&_.tip-box]:shadow-lg [&_.tip-box]:text-center
+
+                [&_.tip-box]:text-base [&_.tip-box]:md:text-lg [&_.tip-box]:text-green-900
+
+                [&_.metrics-list]:space-y-4 [&_.metrics-list]:my-10
+
+                [&_.metric-item]:bg-white [&_.metric-item]:rounded-2xl [&_.metric-item]:p-6
+                [&_.metric-item]:flex [&_.metric-item]:items-start [&_.metric-item]:gap-6
+                [&_.metric-item]:shadow-lg [&_.metric-item]:border-2 [&_.metric-item]:border-gray-200
+                [&_.metric-item]:transform [&_.metric-item]:transition-all [&_.metric-item]:duration-300
+                hover:[&_.metric-item]:shadow-xl hover:[&_.metric-item]:scale-[1.02]
+
+                [&_.metric-item.highlight]:bg-gradient-to-br [&_.metric-item.highlight]:from-amber-50
+                [&_.metric-item.highlight]:to-yellow-100 [&_.metric-item.highlight]:border-gold
+
+                [&_.metric-icon]:w-12 [&_.metric-icon]:h-12 [&_.metric-icon]:rounded-full
+                [&_.metric-icon]:bg-gradient-to-br [&_.metric-icon]:from-gold [&_.metric-icon]:to-yellow-600
+                [&_.metric-icon]:flex [&_.metric-icon]:items-center [&_.metric-icon]:justify-center
+                [&_.metric-icon]:text-xl [&_.metric-icon]:font-black [&_.metric-icon]:text-white
+                [&_.metric-icon]:flex-shrink-0 [&_.metric-icon]:shadow-lg
+
+                [&_.metric-content>h4]:text-xl [&_.metric-content>h4]:font-bold [&_.metric-content>h4]:text-navy
+                [&_.metric-content>h4]:mb-2 [&_.metric-content>h4]:mt-0
+
+                [&_.metric-content>p]:text-base [&_.metric-content>p]:text-zinc-600 [&_.metric-content>p]:mb-0
+
+                [&_.investment-grid]:grid [&_.investment-grid]:grid-cols-1 [&_.investment-grid]:md:grid-cols-3
+                [&_.investment-grid]:gap-6 [&_.investment-grid]:my-10
+
+                [&_.investment-card]:bg-gradient-to-br [&_.investment-card]:from-gray-50 [&_.investment-card]:to-gray-100
+                [&_.investment-card]:rounded-2xl [&_.investment-card]:p-8 [&_.investment-card]:text-center
+                [&_.investment-card]:shadow-xl [&_.investment-card]:border-2 [&_.investment-card]:border-gray-300
+                [&_.investment-card]:transform [&_.investment-card]:transition-all [&_.investment-card]:duration-300
+                hover:[&_.investment-card]:scale-105
+
+                [&_.investment-card.featured]:bg-gradient-to-br [&_.investment-card.featured]:from-gold/20
+                [&_.investment-card.featured]:to-yellow-100 [&_.investment-card.featured]:border-gold
+                [&_.investment-card.featured]:shadow-2xl [&_.investment-card.featured]:relative
+
+                [&_.investment-badge]:absolute [&_.investment-badge]:-top-3 [&_.investment-badge]:left-1/2
+                [&_.investment-badge]:-translate-x-1/2 [&_.investment-badge]:bg-navy [&_.investment-badge]:text-gold
+                [&_.investment-badge]:px-6 [&_.investment-badge]:py-2 [&_.investment-badge]:rounded-full
+                [&_.investment-badge]:text-xs [&_.investment-badge]:font-bold [&_.investment-badge]:uppercase
+                [&_.investment-badge]:shadow-lg
+
+                [&_.investment-platform]:text-lg [&_.investment-platform]:font-bold [&_.investment-platform]:text-navy/80
+                [&_.investment-platform]:mb-4
+
+                [&_.investment-amount]:text-5xl [&_.investment-amount]:md:text-6xl [&_.investment-amount]:font-black
+                [&_.investment-amount]:text-navy [&_.investment-amount]:mb-2
+
+                [&_.investment-amount>span]:text-2xl [&_.investment-amount>span]:text-navy/60 [&_.investment-amount>span]:font-medium
+
+                [&_.investment-label]:text-sm [&_.investment-label]:text-zinc-600 [&_.investment-label]:uppercase
+                [&_.investment-label]:tracking-wider [&_.investment-label]:font-semibold
+
+                [&_.strategies-grid]:grid [&_.strategies-grid]:grid-cols-1 [&_.strategies-grid]:md:grid-cols-2
+                [&_.strategies-grid]:lg:grid-cols-3 [&_.strategies-grid]:gap-6 [&_.strategies-grid]:my-10
+
+                [&_.strategy-card]:bg-white [&_.strategy-card]:rounded-2xl [&_.strategy-card]:p-6
+                [&_.strategy-card]:shadow-xl [&_.strategy-card]:border-2 [&_.strategy-card]:border-gray-200
+                [&_.strategy-card]:transform [&_.strategy-card]:transition-all [&_.strategy-card]:duration-300
+                hover:[&_.strategy-card]:shadow-2xl hover:[&_.strategy-card]:scale-105
+                hover:[&_.strategy-card]:border-gold
+
+                [&_.strategy-number]:text-6xl [&_.strategy-number]:font-black [&_.strategy-number]:text-gold/20
+                [&_.strategy-number]:mb-4 [&_.strategy-number]:leading-none
+
+                [&_.strategy-card>h4]:text-xl [&_.strategy-card>h4]:font-bold [&_.strategy-card>h4]:text-navy
+                [&_.strategy-card>h4]:mb-3 [&_.strategy-card>h4]:mt-0
+
+                [&_.strategy-card>p]:text-base [&_.strategy-card>p]:text-zinc-600 [&_.strategy-card>p]:mb-0"
                 dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
               />
             </div>
