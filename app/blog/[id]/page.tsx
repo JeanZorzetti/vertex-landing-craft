@@ -257,36 +257,58 @@ export default function BlogPostPage() {
 
               <div
                 className="prose prose-xl max-w-none relative z-10
-                prose-headings:text-navy prose-headings:font-bold prose-headings:tracking-tight
-                prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:mb-8 prose-h1:leading-tight
-                prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:mt-16 prose-h2:mb-8
-                prose-h2:pb-4 prose-h2:border-b-2 prose-h2:border-gold/30
-                prose-h2:bg-gradient-to-r prose-h2:from-navy prose-h2:to-navy/80
-                prose-h2:bg-clip-text prose-h2:text-transparent
-                prose-h3:text-2xl prose-h3:md:text-3xl prose-h3:mt-12 prose-h3:mb-6
-                prose-h3:text-navy/90
-                prose-p:text-foreground/90 prose-p:leading-[1.8] prose-p:mb-6
-                prose-p:text-lg prose-p:tracking-wide
-                prose-strong:text-navy prose-strong:font-bold prose-strong:text-xl
-                prose-ol:my-8 prose-ol:space-y-4
-                prose-ul:my-8 prose-ul:space-y-4
-                prose-li:text-lg prose-li:leading-relaxed prose-li:pl-2
-                prose-li:marker:text-gold prose-li:marker:font-bold
-                prose-a:text-gold prose-a:font-semibold prose-a:no-underline
-                prose-a:underline-offset-4 hover:prose-a:underline hover:prose-a:text-gold-light
-                prose-blockquote:border-l-4 prose-blockquote:border-gold
-                prose-blockquote:bg-gradient-to-r prose-blockquote:from-gold/5 prose-blockquote:to-transparent
-                prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:italic
-                prose-blockquote:rounded-r-lg prose-blockquote:my-8
-                prose-code:bg-navy/10 prose-code:text-navy prose-code:px-2
-                prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-base
-                prose-pre:bg-navy/95 prose-pre:text-white prose-pre:rounded-xl
-                prose-pre:p-6 prose-pre:overflow-x-auto prose-pre:shadow-lg
-                prose-hr:border-gold/20 prose-hr:my-12
-                prose-table:border prose-table:border-navy/20 prose-table:rounded-lg
-                prose-th:bg-navy/5 prose-th:p-4 prose-th:font-bold
-                prose-td:p-4 prose-td:border prose-td:border-navy/10
-                prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-8"
+                [&>h1]:text-4xl [&>h1]:md:text-5xl [&>h1]:lg:text-6xl [&>h1]:font-bold [&>h1]:mb-10
+                [&>h1]:leading-tight [&>h1]:text-navy [&>h1]:tracking-tight
+
+                [&>h2]:text-3xl [&>h2]:md:text-4xl [&>h2]:font-bold [&>h2]:mt-16 [&>h2]:mb-8
+                [&>h2]:pb-6 [&>h2]:border-b-4 [&>h2]:border-gold/40 [&>h2]:text-navy
+                [&>h2]:tracking-wide [&>h2]:relative
+
+                [&>h3]:text-2xl [&>h3]:md:text-3xl [&>h3]:font-bold [&>h3]:mt-12 [&>h3]:mb-6
+                [&>h3]:text-navy/90 [&>h3]:tracking-wide
+
+                [&>p]:text-lg [&>p]:md:text-xl [&>p]:leading-[2] [&>p]:mb-10
+                [&>p]:text-zinc-700 [&>p]:tracking-normal
+
+                [&>p:first-of-type]:text-xl [&>p:first-of-type]:md:text-2xl
+                [&>p:first-of-type]:leading-[1.8] [&>p:first-of-type]:font-medium
+                [&>p:first-of-type]:text-navy/80
+
+                [&>strong]:text-navy [&>strong]:font-bold [&>strong]:text-xl
+                [&>strong]:px-1 [&>strong]:bg-gold/10 [&>strong]:rounded
+
+                [&>ol]:my-10 [&>ol]:space-y-4 [&>ol]:pl-6
+                [&>ul]:my-10 [&>ul]:space-y-4 [&>ul]:pl-6
+                [&>li]:text-lg [&>li]:md:text-xl [&>li]:leading-relaxed [&>li]:pl-3
+                [&>li]:marker:text-gold [&>li]:marker:font-bold [&>li]:marker:text-2xl
+
+                [&>a]:text-gold [&>a]:font-semibold [&>a]:no-underline [&>a]:underline-offset-4
+                [&>a]:transition-all [&>a]:duration-300 hover:[&>a]:underline hover:[&>a]:text-gold-light
+
+                [&>blockquote]:border-l-4 [&>blockquote]:border-gold [&>blockquote]:bg-gradient-to-r
+                [&>blockquote]:from-gold/10 [&>blockquote]:to-gold/5 [&>blockquote]:pl-8 [&>blockquote]:pr-6
+                [&>blockquote]:py-8 [&>blockquote]:my-12 [&>blockquote]:rounded-r-2xl
+                [&>blockquote]:italic [&>blockquote]:text-navy/80 [&>blockquote]:shadow-sm
+
+                [&>code]:bg-navy/10 [&>code]:text-navy [&>code]:px-2 [&>code]:py-1
+                [&>code]:rounded [&>code]:font-mono [&>code]:text-base
+
+                [&>pre]:bg-gradient-to-br [&>pre]:from-navy [&>pre]:to-navy-dark
+                [&>pre]:text-white [&>pre]:rounded-2xl [&>pre]:p-8 [&>pre]:my-10
+                [&>pre]:overflow-x-auto [&>pre]:shadow-2xl [&>pre]:border [&>pre]:border-gold/20
+
+                [&>hr]:border-t-2 [&>hr]:border-gold/30 [&>hr]:my-16 [&>hr]:w-24
+                [&>hr]:mx-auto [&>hr]:rounded-full
+
+                [&>table]:w-full [&>table]:border-2 [&>table]:border-navy/20 [&>table]:rounded-xl
+                [&>table]:overflow-hidden [&>table]:my-10 [&>table]:shadow-lg
+                [&>thead]:bg-gradient-to-r [&>thead]:from-navy/10 [&>thead]:to-navy/5
+                [&>th]:p-5 [&>th]:font-bold [&>th]:text-left [&>th]:text-navy [&>th]:border-b-2 [&>th]:border-gold/30
+                [&>td]:p-5 [&>td]:border-t [&>td]:border-navy/10
+                [&>tbody>tr]:transition-colors [&>tbody>tr]:duration-200 hover:[&>tbody>tr]:bg-gold/5
+
+                [&>img]:rounded-3xl [&>img]:shadow-2xl [&>img]:my-12 [&>img]:w-full
+                [&>img]:border-4 [&>img]:border-gold/20"
                 dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
               />
             </div>
@@ -300,9 +322,6 @@ export default function BlogPostPage() {
 
             <div className="relative z-10">
               <div className="text-center mb-6">
-                <div className="flex items-center justify-center mb-2">
-                  <Zap className="w-8 h-8 text-gold animate-pulse" />
-                </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-white">
                   Gostou do Conteúdo? Fale com nossos especialistas
                 </h2>
