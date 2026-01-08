@@ -6,6 +6,15 @@ import Link from "next/link";
 
 const defaultPosts = [
   {
+    id: "1736451600000",
+    title: "Redes Sociais em 2026: Como Criar Estratégias que Geram Engajamento Real e Convertem Seguidores em Clientes",
+    excerpt: "Descubra as melhores práticas para Instagram, LinkedIn, TikTok e Facebook. Aprenda a criar conteúdo que viraliza, construir comunidade engajada e transformar redes sociais em canal de vendas.",
+    date: "09 Jan 2026",
+    readTime: "13 min",
+    category: "Redes Sociais",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
     id: "1736365200000",
     title: "SEO em 2026: O Guia Definitivo para Rankear no Google e Dominar as Buscas Orgânicas",
     excerpt: "Aprenda as técnicas mais avançadas de SEO, algoritmos atualizados do Google, estratégias de palavras-chave e como conquistar a primeira página dos resultados de busca.",

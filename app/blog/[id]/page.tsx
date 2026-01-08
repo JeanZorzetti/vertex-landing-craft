@@ -10,6 +10,343 @@ import { Button } from "@/components/ui/button";
 
 const defaultPosts = [
   {
+    id: "1736451600000",
+    title: "Redes Sociais em 2026: Como Criar Estratégias que Geram Engajamento Real e Convertem Seguidores em Clientes",
+    excerpt: "Descubra as melhores práticas para Instagram, LinkedIn, TikTok e Facebook. Aprenda a criar conteúdo que viraliza, construir comunidade engajada e transformar redes sociais em canal de vendas.",
+    date: "09 Jan 2026",
+    readTime: "13 min",
+    category: "Redes Sociais",
+    author: "Vértice Marketing",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+    content: `<p>As redes sociais deixaram de ser apenas canais de divulgação para se tornarem verdadeiras máquinas de geração de leads e vendas. Em 2026, empresas com estratégia sólida em redes sociais geram <strong>78% mais leads</strong> e têm um custo de aquisição de cliente <strong>55% menor</strong> do que aquelas que dependem apenas de anúncios tradicionais.</p>
+
+<p>Neste guia completo, você vai descobrir como criar uma presença marcante nas principais plataformas, produzir conteúdo que engaja de verdade e transformar seguidores em clientes fiéis.</p>
+
+<h2>📱 Por Que Redes Sociais São Essenciais para Seu Negócio em 2026?</h2>
+
+<p>O comportamento do consumidor mudou radicalmente. Hoje, <strong>4,9 bilhões de pessoas usam redes sociais globalmente</strong>, passando em média <strong>2h30 por dia</strong> nessas plataformas. No Brasil, esse número sobe para <strong>3h45 diárias</strong>.</p>
+
+<h3>Os Números que Comprovam o Poder das Redes Sociais</h3>
+
+<p>Dados recentes do mercado brasileiro mostram que:</p>
+
+<ol>
+<li><strong>87%</strong> dos consumidores seguem marcas nas redes sociais</li>
+<li><strong>71%</strong> das pessoas que tiveram experiência positiva com uma marca nas redes sociais a recomendam</li>
+<li><strong>54%</strong> dos usuários pesquisam produtos nas redes sociais antes de comprar</li>
+<li>Empresas que respondem mensagens em até 1 hora têm <strong>7x mais chances</strong> de converter</li>
+<li>Conteúdo em vídeo gera <strong>1200% mais compartilhamentos</strong> do que texto e imagem juntos</li>
+</ol>
+
+<h2>🎯 As 4 Plataformas Essenciais e Como Dominar Cada Uma</h2>
+
+<h3>1. Instagram: O Rei do Engajamento Visual</h3>
+
+<p>Com <strong>2 bilhões de usuários ativos</strong>, o Instagram continua sendo a plataforma preferida para marcas que vendem produtos visuais e lifestyle.</p>
+
+<p><strong>Estratégias que funcionam em 2026:</strong></p>
+
+<ol>
+<li><strong>Reels em primeiro lugar</strong> - 90% do alcance orgânico vem de Reels</li>
+<li><strong>Stories diários</strong> - Mínimo 3-5 stories por dia para manter engajamento</li>
+<li><strong>Carrosséis educativos</strong> - 5x mais salvamentos do que posts únicos</li>
+<li><strong>Lives semanais</strong> - Geram 3x mais engajamento que vídeos gravados</li>
+<li><strong>DM proativo</strong> - Responder em até 1 hora aumenta conversão em 300%</li>
+</ol>
+
+<p><strong>Frequência ideal:</strong></p>
+
+<ol>
+<li>Feed: 3-4 posts por semana</li>
+<li>Reels: 4-7 por semana</li>
+<li>Stories: 3-10 por dia</li>
+<li>Lives: 1-2 por semana</li>
+</ol>
+
+<h3>2. LinkedIn: B2B e Networking Profissional</h3>
+
+<p>O LinkedIn se consolidou como <strong>a plataforma B2B mais eficaz</strong>, gerando 80% dos leads B2B de redes sociais.</p>
+
+<p><strong>Estratégias que funcionam em 2026:</strong></p>
+
+<ol>
+<li><strong>Perfil otimizado</strong> - Foto profissional, banner estratégico, sobre completo</li>
+<li><strong>Posts educativos</strong> - Compartilhe conhecimento, não apenas venda</li>
+<li><strong>Networking ativo</strong> - Comente em posts relevantes diariamente</li>
+<li><strong>Artigos longos</strong> - Publique 1-2 artigos completos por mês</li>
+<li><strong>LinkedIn Live</strong> - Webinars e painéis ao vivo</li>
+</ol>
+
+<p><strong>Frequência ideal:</strong></p>
+
+<ol>
+<li>Posts: 3-5 por semana</li>
+<li>Comentários: 10-20 por dia</li>
+<li>Artigos: 1-2 por mês</li>
+<li>Mensagens: Networking diário</li>
+</ol>
+
+<h3>3. TikTok: Alcance Viral e Público Jovem</h3>
+
+<p>Com <strong>1,5 bilhão de usuários</strong>, o TikTok tem o <strong>maior potencial de viralização</strong> entre todas as plataformas.</p>
+
+<p><strong>Estratégias que funcionam em 2026:</strong></p>
+
+<ol>
+<li><strong>Trends e desafios</strong> - Participe das trends enquanto estão quentes</li>
+<li><strong>Vídeos curtos (15-60s)</strong> - Hook nos primeiros 3 segundos</li>
+<li><strong>Autenticidade acima de produção</strong> - Conteúdo real > super produzido</li>
+<li><strong>Storytelling</strong> - Conte histórias envolventes</li>
+<li><strong>CTA claro</strong> - Direcione para link na bio</li>
+</ol>
+
+<p><strong>Frequência ideal:</strong></p>
+
+<ol>
+<li>Vídeos: 1-3 por dia</li>
+<li>Duração: 15-60 segundos</li>
+<li>Horários: Testar entre 18h-21h</li>
+</ol>
+
+<h3>4. Facebook: Comunidades e Conversão</h3>
+
+<p>Apesar de ser considerado "mais antigo", o Facebook ainda tem <strong>3 bilhões de usuários</strong> e é excelente para construir comunidades.</p>
+
+<p><strong>Estratégias que funcionam em 2026:</strong></p>
+
+<ol>
+<li><strong>Grupos privados</strong> - Crie comunidade engajada</li>
+<li><strong>Facebook Lives</strong> - Transmissões ao vivo semanais</li>
+<li><strong>Vídeos nativos</strong> - Melhor alcance que links externos</li>
+<li><strong>Stories e Reels</strong> - Sim, Facebook também tem!</li>
+<li><strong>Messenger</strong> - Atendimento rápido e chatbot</li>
+</ol>
+
+<h2>🚀 Tipos de Conteúdo que Mais Geram Engajamento</h2>
+
+<h3>1. Conteúdo Educativo (40% do mix)</h3>
+
+<ol>
+<li>Tutoriais e how-tos</li>
+<li>Dicas e truques práticos</li>
+<li>Infográficos informativos</li>
+<li>Carrosséis educativos</li>
+<li>Lives de perguntas e respostas</li>
+</ol>
+
+<h3>2. Conteúdo de Entretenimento (30% do mix)</h3>
+
+<ol>
+<li>Memes relacionados ao nicho</li>
+<li>Trends e desafios</li>
+<li>Behind the scenes</li>
+<li>Stories do dia a dia</li>
+<li>Vídeos engraçados relevantes</li>
+</ol>
+
+<h3>3. Conteúdo Inspiracional (20% do mix)</h3>
+
+<ol>
+<li>Histórias de sucesso</li>
+<li>Depoimentos de clientes</li>
+<li>Superação de desafios</li>
+<li>Frases motivacionais (com contexto)</li>
+<li>Transformações reais</li>
+</ol>
+
+<h3>4. Conteúdo Promocional (10% do mix)</h3>
+
+<ol>
+<li>Lançamentos de produtos</li>
+<li>Ofertas exclusivas</li>
+<li>Promoções limitadas</li>
+<li>Destaques de serviços</li>
+<li>Cases de sucesso</li>
+</ol>
+
+<h2>📊 Métricas Essenciais para Acompanhar</h2>
+
+<h3>Métricas de Alcance</h3>
+
+<ol>
+<li><strong>Impressões</strong> - Quantas vezes seu conteúdo foi exibido</li>
+<li><strong>Alcance</strong> - Quantas pessoas únicas viram seu conteúdo</li>
+<li><strong>Crescimento de seguidores</strong> - Taxa de crescimento mensal</li>
+<li><strong>Taxa de alcance</strong> - Alcance / Seguidores (%)</li>
+</ol>
+
+<h3>Métricas de Engajamento</h3>
+
+<ol>
+<li><strong>Taxa de engajamento</strong> - (Likes + Comentários + Compartilhamentos) / Alcance</li>
+<li><strong>Comentários</strong> - Qualidade e quantidade</li>
+<li><strong>Compartilhamentos</strong> - Indicador de conteúdo valioso</li>
+<li><strong>Salvamentos</strong> - Conteúdo útil que as pessoas querem guardar</li>
+<li><strong>Tempo de visualização</strong> - Para vídeos</li>
+</ol>
+
+<h3>Métricas de Conversão</h3>
+
+<ol>
+<li><strong>Cliques no link</strong> - CTR do link na bio</li>
+<li><strong>DMs recebidos</strong> - Interesse direto</li>
+<li><strong>Leads gerados</strong> - Via formulários ou landing pages</li>
+<li><strong>Vendas diretas</strong> - Atribuídas às redes sociais</li>
+<li><strong>ROI</strong> - Retorno sobre investimento em social media</li>
+</ol>
+
+<h2>🎨 Como Criar Conteúdo que Viraliza</h2>
+
+<h3>A Fórmula do Conteúdo Viral</h3>
+
+<ol>
+<li><strong>Hook poderoso (3 primeiros segundos)</strong> - Capture atenção imediatamente</li>
+<li><strong>Valor claro</strong> - Eduque, inspire ou entretenha</li>
+<li><strong>Storytelling</strong> - Conte uma história envolvente</li>
+<li><strong>Emoção</strong> - Faça as pessoas sentirem algo</li>
+<li><strong>CTA forte</strong> - Diga exatamente o que quer que façam</li>
+</ol>
+
+<h3>Elementos Visuais que Funcionam</h3>
+
+<ol>
+<li><strong>Cores vibrantes</strong> - Chamam atenção no feed</li>
+<li><strong>Texto em destaque</strong> - Facilita compreensão sem áudio</li>
+<li><strong>Rosto humano</strong> - Gera 38% mais engajamento</li>
+<li><strong>Movimento</strong> - Vídeos > imagens estáticas</li>
+<li><strong>Identidade visual consistente</strong> - Reconhecimento de marca</li>
+</ol>
+
+<h2>💡 Estratégias Avançadas de Crescimento</h2>
+
+<h3>1. Parcerias e Colaborações</h3>
+
+<ol>
+<li><strong>Co-criação de conteúdo</strong> - Lives e posts colaborativos</li>
+<li><strong>Menções estratégicas</strong> - Marque parceiros relevantes</li>
+<li><strong>Takeover</strong> - Troque de conta por um dia</li>
+<li><strong>Sorteios colaborativos</strong> - Cresça junto com parceiros</li>
+</ol>
+
+<h3>2. User Generated Content (UGC)</h3>
+
+<ol>
+<li><strong>Incentive clientes a postarem</strong> - Crie hashtag própria</li>
+<li><strong>Reposte conteúdo de clientes</strong> - Sempre com créditos</li>
+<li><strong>Campanhas UGC</strong> - Desafios e concursos</li>
+<li><strong>Depoimentos em vídeo</strong> - Peça para clientes gravarem</li>
+</ol>
+
+<h3>3. Comunidade Engajada</h3>
+
+<ol>
+<li><strong>Responda TODOS os comentários</strong> - Nas primeiras 2 horas</li>
+<li><strong>Faça perguntas</strong> - Incentive conversa</li>
+<li><strong>Crie enquetes</strong> - Stories interativos</li>
+<li><strong>Reconheça seguidores fiéis</strong> - Destaque quem sempre interage</li>
+</ol>
+
+<h2>🔧 Ferramentas Essenciais para Redes Sociais</h2>
+
+<h3>Planejamento e Agendamento</h3>
+
+<ol>
+<li><strong>Meta Business Suite</strong> - Facebook e Instagram (gratuito)</li>
+<li><strong>Hootsuite</strong> - Multi-plataformas</li>
+<li><strong>Buffer</strong> - Agendamento simples</li>
+<li><strong>Later</strong> - Visual para Instagram</li>
+</ol>
+
+<h3>Criação de Conteúdo</h3>
+
+<ol>
+<li><strong>Canva Pro</strong> - Design gráfico intuitivo</li>
+<li><strong>CapCut</strong> - Edição de vídeo mobile</li>
+<li><strong>Adobe Express</strong> - Templates profissionais</li>
+<li><strong>InShot</strong> - Edição rápida de vídeos</li>
+</ol>
+
+<h3>Análise e Métricas</h3>
+
+<ol>
+<li><strong>Meta Business Suite Insights</strong> - Nativo e gratuito</li>
+<li><strong>Google Analytics</strong> - Tráfego vindo das redes</li>
+<li><strong>Sprout Social</strong> - Analytics avançado</li>
+<li><strong>Iconosquare</strong> - Especializado em Instagram</li>
+</ol>
+
+<h2>📅 Como Criar um Calendário Editorial Matador</h2>
+
+<h3>Estrutura Semanal</h3>
+
+<ol>
+<li><strong>Segunda</strong> - Motivação e inspiração</li>
+<li><strong>Terça</strong> - Tutorial ou dica prática</li>
+<li><strong>Quarta</strong> - Behind the scenes ou bastidores</li>
+<li><strong>Quinta</strong> - Conteúdo educativo aprofundado</li>
+<li><strong>Sexta</strong> - Entretenimento ou trend</li>
+<li><strong>Sábado</strong> - Depoimento ou case de sucesso</li>
+<li><strong>Domingo</strong> - Reflexão ou conteúdo leve</li>
+</ol>
+
+<h3>Planejamento Mensal</h3>
+
+<ol>
+<li><strong>Semana 1</strong> - Foco em educação</li>
+<li><strong>Semana 2</strong> - Foco em engajamento</li>
+<li><strong>Semana 3</strong> - Foco em inspiração</li>
+<li><strong>Semana 4</strong> - Foco em conversão</li>
+</ol>
+
+<h2>💡 Erros Fatais a Evitar</h2>
+
+<ol>
+<li><strong>Comprar seguidores</strong> - Engajamento falso prejudica alcance</li>
+<li><strong>Postar só quando lembra</strong> - Consistência é fundamental</li>
+<li><strong>Ignorar comentários</strong> - Responder é essencial</li>
+<li><strong>Vender o tempo todo</strong> - Regra 80/20: 80% valor, 20% venda</li>
+<li><strong>Copiar concorrentes</strong> - Seja autêntico</li>
+<li><strong>Não analisar métricas</strong> - Dados guiam estratégia</li>
+<li><strong>Usar hashtags banidas</strong> - Pesquise antes de usar</li>
+<li><strong>Qualidade baixa</strong> - Invista em bom equipamento</li>
+<li><strong>Sem chamada para ação</strong> - Sempre direcione próximo passo</li>
+</ol>
+
+<h2>🎯 Plano de Ação: Primeiros 90 Dias</h2>
+
+<h3>Dias 1-30: Fundação</h3>
+
+<ol>
+<li><strong>Otimize perfis</strong> - Bio, foto, destaques</li>
+<li><strong>Defina personas</strong> - Quem você quer alcançar</li>
+<li><strong>Crie calendário editorial</strong> - 30 dias de conteúdo</li>
+<li><strong>Configure ferramentas</strong> - Agendamento e analytics</li>
+<li><strong>Estude concorrentes</strong> - Analise o que funciona</li>
+</ol>
+
+<h3>Dias 31-60: Consistência</h3>
+
+<ol>
+<li><strong>Poste regularmente</strong> - Siga o calendário à risca</li>
+<li><strong>Engaje ativamente</strong> - Responda tudo, comente em outros perfis</li>
+<li><strong>Teste formatos</strong> - Veja o que gera mais engajamento</li>
+<li><strong>Ajuste estratégia</strong> - Baseado nos dados</li>
+<li><strong>Inicie parcerias</strong> - Busque primeiras colaborações</li>
+</ol>
+
+<h3>Dias 61-90: Otimização</h3>
+
+<ol>
+<li><strong>Analise resultados</strong> - O que funcionou melhor</li>
+<li><strong>Dobre o que funciona</strong> - Foque no que dá resultado</li>
+<li><strong>Elimine o que não funciona</strong> - Corte conteúdo com baixo engajamento</li>
+<li><strong>Lance primeira campanha</strong> - Conversão ou crescimento</li>
+<li><strong>Planeje próximos 90 dias</strong> - Com base no aprendizado</li>
+</ol>
+
+<p>Lembre-se: redes sociais são sobre construir relacionamentos reais. Seja autêntico, consistente e sempre entregue valor. Resultados sólidos vêm com o tempo, mas a construção de uma comunidade engajada vale cada esforço.</p>`
+  },
+  {
     id: "1736365200000",
     title: "SEO em 2026: O Guia Definitivo para Rankear no Google e Dominar as Buscas Orgânicas",
     excerpt: "Aprenda as técnicas mais avançadas de SEO, algoritmos atualizados do Google, estratégias de palavras-chave e como conquistar a primeira página dos resultados de busca.",
