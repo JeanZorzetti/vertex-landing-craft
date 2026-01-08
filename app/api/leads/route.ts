@@ -38,23 +38,21 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString(),
     };
 
-    // Preparar dados no formato que o Sirius espera
+    // Preparar dados no formato simples que o Sirius espera
+    // Baseado no formulário do Sirius: apenas name, email, phone, company
     const contactData = {
       name,
       email,
       phone,
-      company: company || undefined,
-      notes: message,
-      source: "Website Vértice Marketing",
-      customFields: {
-        revenue: annualRevenue || undefined,
-      },
+      company: company || "",
     };
 
     // Log para debug
     console.log("Enviando contato para Sirius CRM...");
     console.log("URL:", `${apiUrl}/contacts`);
     console.log("Contact data:", JSON.stringify(contactData, null, 2));
+    console.log("Message (salva apenas localmente):", message);
+    console.log("Revenue (salva apenas localmente):", annualRevenue);
 
     // Send contact to Sirius CRM
     const siriusResponse = await fetch(`${apiUrl}/contacts`, {
