@@ -47,22 +47,19 @@ const AllBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState(defaultPosts);
 
   useEffect(() => {
-    // Carregar TODOS os posts do localStorage
+    // Sempre garantir que temos os posts padrão no localStorage
     const savedPosts = localStorage.getItem("blogPosts");
-    if (savedPosts) {
-      const posts = JSON.parse(savedPosts);
-      // Formatar posts para o formato esperado
-      const formattedPosts = posts.map((post: any) => ({
+    if (!savedPosts || JSON.parse(savedPosts).length === 0) {
+      // Se não há posts salvos ou está vazio, salvar os posts padrão
+      localStorage.setItem("blogPosts", JSON.stringify(defaultPosts.map(post => ({
         id: post.id,
         title: post.title,
         excerpt: post.excerpt,
-        date: new Date(post.date).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
-        readTime: post.readTime || "5 min",
+        date: post.date,
+        readTime: post.readTime,
         category: post.category,
         image: post.image,
-      }));
-      // Mostrar TODOS os posts (sem limite)
-      setBlogPosts(formattedPosts);
+      }))));
     }
   }, []);
 
