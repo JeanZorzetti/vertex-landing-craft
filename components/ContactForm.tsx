@@ -76,12 +76,29 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Simular envio - substituir por integração real (API route, Resend, etc.)
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Enviar para API que integra com Sirius CRM
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company || "",
+          annualRevenue: data.annualRevenue || "",
+          message: data.message,
+        }),
+      });
 
-      console.log("Formulário enviado:", data);
+      const result = await response.json();
 
-      // Salvar no localStorage para o admin visualizar
+      if (!response.ok) {
+        throw new Error(result.error || "Erro ao enviar mensagem");
+      }
+
+      // Salvar no localStorage como backup para o admin visualizar
       const contactSubmission = {
         id: Date.now().toString(),
         name: data.name,
@@ -91,6 +108,7 @@ export default function ContactForm() {
         revenue: data.annualRevenue || "",
         message: data.message,
         date: new Date().toISOString(),
+        syncedToCRM: response.status === 200,
       };
 
       const savedContacts = localStorage.getItem("contactSubmissions");
@@ -98,9 +116,16 @@ export default function ContactForm() {
       contacts.unshift(contactSubmission);
       localStorage.setItem("contactSubmissions", JSON.stringify(contacts));
 
-      toast.success("Mensagem enviada com sucesso!", {
-        description: "Entraremos em contato em breve. Obrigado!",
-      });
+      // Mostrar mensagem de sucesso
+      if (result.warning) {
+        toast.warning("Mensagem salva com aviso", {
+          description: result.warning,
+        });
+      } else {
+        toast.success("Mensagem enviada com sucesso!", {
+          description: "Lead integrado ao CRM Sirius. Entraremos em contato em breve!",
+        });
+      }
 
       form.reset();
     } catch (error) {
