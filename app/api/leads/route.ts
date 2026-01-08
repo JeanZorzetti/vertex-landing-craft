@@ -38,19 +38,32 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString(),
     };
 
-    // Log para debug
-    console.log("Tentando enviar lead para Sirius CRM...");
-    console.log("URL:", `${apiUrl}/leads`);
-    console.log("Lead data:", leadData);
+    // Preparar dados no formato que o Sirius espera
+    const contactData = {
+      name,
+      email,
+      phone,
+      company: company || undefined,
+      notes: message,
+      source: "Website Vértice Marketing",
+      customFields: {
+        revenue: annualRevenue || undefined,
+      },
+    };
 
-    // Send lead to Sirius CRM
-    const siriusResponse = await fetch(`${apiUrl}/leads`, {
+    // Log para debug
+    console.log("Enviando contato para Sirius CRM...");
+    console.log("URL:", `${apiUrl}/contacts`);
+    console.log("Contact data:", JSON.stringify(contactData, null, 2));
+
+    // Send contact to Sirius CRM
+    const siriusResponse = await fetch(`${apiUrl}/contacts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify(leadData),
+      body: JSON.stringify(contactData),
     });
 
     console.log("Resposta Sirius status:", siriusResponse.status);
