@@ -94,10 +94,6 @@ export default function ContactForm() {
 
       const result = await response.json();
 
-      if (!response.ok) {
-        throw new Error(result.error || "Erro ao enviar mensagem");
-      }
-
       // Salvar no localStorage como backup para o admin visualizar
       const contactSubmission = {
         id: Date.now().toString(),
@@ -108,7 +104,7 @@ export default function ContactForm() {
         revenue: data.annualRevenue || "",
         message: data.message,
         date: new Date().toISOString(),
-        syncedToCRM: response.status === 200,
+        syncedToCRM: result.success && !result.warning,
       };
 
       const savedContacts = localStorage.getItem("contactSubmissions");
@@ -116,16 +112,11 @@ export default function ContactForm() {
       contacts.unshift(contactSubmission);
       localStorage.setItem("contactSubmissions", JSON.stringify(contacts));
 
-      // Mostrar mensagem de sucesso
-      if (result.warning) {
-        toast.warning("Mensagem salva com aviso", {
-          description: result.warning,
-        });
-      } else {
-        toast.success("Mensagem enviada com sucesso!", {
-          description: "Lead integrado ao CRM Sirius. Entraremos em contato em breve!",
-        });
-      }
+      // Sempre mostrar sucesso para o usuário
+      // O lead está salvo localmente e a integração será verificada nos logs
+      toast.success("Mensagem enviada com sucesso!", {
+        description: "Entraremos em contato em breve. Obrigado!",
+      });
 
       form.reset();
     } catch (error) {

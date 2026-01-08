@@ -38,6 +38,11 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString(),
     };
 
+    // Log para debug
+    console.log("Tentando enviar lead para Sirius CRM...");
+    console.log("URL:", `${apiUrl}/leads`);
+    console.log("Lead data:", leadData);
+
     // Send lead to Sirius CRM
     const siriusResponse = await fetch(`${apiUrl}/leads`, {
       method: "POST",
@@ -48,22 +53,29 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(leadData),
     });
 
+    console.log("Resposta Sirius status:", siriusResponse.status);
+
     // Check if Sirius API request was successful
     if (!siriusResponse.ok) {
       const errorData = await siriusResponse.text();
       console.error("Erro ao enviar lead para Sirius:", errorData);
+      console.error("Status code:", siriusResponse.status);
 
-      // Still save to localStorage backup even if Sirius fails
+      // Por enquanto, retornar sucesso para o usuário mesmo que Sirius falhe
+      // O lead fica salvo no localStorage como backup
       return NextResponse.json(
         {
-          warning: "Lead salvo localmente, mas houve erro ao sincronizar com CRM",
-          leadData,
+          success: true,
+          warning: "Lead salvo localmente. Verificando integração com CRM.",
+          error: errorData,
+          status: siriusResponse.status,
         },
-        { status: 207 } // Multi-Status
+        { status: 200 }
       );
     }
 
     const siriusData = await siriusResponse.json();
+    console.log("Lead enviado com sucesso para Sirius:", siriusData);
 
     return NextResponse.json(
       {
@@ -75,9 +87,16 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error("Erro no endpoint de leads:", error);
+
+    // Retornar sucesso para o usuário mesmo em caso de erro
+    // O lead fica salvo no localStorage
     return NextResponse.json(
-      { error: "Erro interno do servidor" },
-      { status: 500 }
+      {
+        success: true,
+        warning: "Lead salvo localmente. Erro ao conectar com CRM.",
+        error: error instanceof Error ? error.message : "Erro desconhecido",
+      },
+      { status: 200 }
     );
   }
 }
