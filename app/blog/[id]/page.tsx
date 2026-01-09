@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, Share2, Zap } from "lucide-react";
@@ -923,7 +923,6 @@ const defaultPosts = [
 
 export default function BlogPostPage() {
   const params = useParams();
-  const router = useRouter();
   const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [readProgress, setReadProgress] = useState(0);
@@ -1319,7 +1318,7 @@ export default function BlogPostPage() {
                 [&_.strategy-card>h4]:mb-2 [&_.strategy-card>h4]:mt-0
 
                 [&_.strategy-card>p]:text-sm [&_.strategy-card>p]:text-zinc-600 [&_.strategy-card>p]:mb-0"
-                dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }}
+                dangerouslySetInnerHTML={{ __html: post.content }}
               />
             </div>
           </div>
