@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Corrigir Posts do Blog - Vértice Marketing</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #d4af37;
+            color: #0a1d3d;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #b8941f;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            display: none;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Correção dos Posts do Blog</h1>
+
+        <div class="info">
+            <strong>Instruções:</strong>
+            <p>Esta página vai limpar o localStorage e recriar todos os 5 posts do blog corretamente.</p>
+            <p>Clique no botão abaixo para corrigir os posts.</p>
+        </div>
+
+        <button onclick="fixBlogPosts()">Corrigir Posts Agora</button>
+        <button onclick="showPosts()">Ver Posts Atuais</button>
+        <button onclick="clearAll()">Limpar Tudo</button>
+
+        <div id="success" class="success">
+            ✅ Posts corrigidos com sucesso! Agora acesse <a href="/">a página inicial</a> ou <a href="/blog">o blog</a>.
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        const defaultPosts = [
+            {
+                id: "1736451600000",
+                title: "Redes Sociais em 2026: Como Criar Estratégias que Geram Engajamento Real e Convertem Seguidores em Clientes",
+                excerpt: "Descubra as melhores práticas para Instagram, LinkedIn, TikTok e Facebook. Aprenda a criar conteúdo que viraliza, construir comunidade engajada e transformar redes sociais em canal de vendas.",
+                date: "09 Jan 2026",
+                readTime: "13 min",
+                category: "Redes Sociais",
+                image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+            },
+            {
+                id: "1736365200000",
+                title: "SEO em 2026: O Guia Definitivo para Rankear no Google e Dominar as Buscas Orgânicas",
+                excerpt: "Aprenda as técnicas mais avançadas de SEO, algoritmos atualizados do Google, estratégias de palavras-chave e como conquistar a primeira página dos resultados de busca.",
+                date: "08 Jan 2026",
+                readTime: "14 min",
+                category: "SEO",
+                image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?auto=format&fit=crop&w=1200&q=80",
+            },
+            {
+                id: "1736278800000",
+                title: "Marketing de Conteúdo em 2026: Como Criar Estratégias que Convertem e Geram Resultados Reais",
+                excerpt: "Descubra as melhores práticas, formatos que mais engajam e estratégias de SEO para criar conteúdo que atrai, educa e converte seu público em clientes fiéis.",
+                date: "07 Jan 2026",
+                readTime: "12 min",
+                category: "Marketing de Conteúdo",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+            },
+            {
+                id: "1736438400000",
+                title: "CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%",
+                excerpt: "Descubra como um CRM bem implementado e automações inteligentes podem revolucionar seu negócio, reduzir custos operacionais e criar uma máquina de vendas previsível e escalável.",
+                date: "09 Jan 2026",
+                readTime: "18 min",
+                category: "CRM e Automação",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+            },
+            {
+                id: "1736105400000",
+                title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
+                excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
+                date: "05 Jan 2026",
+                readTime: "15 min",
+                category: "Tráfego Pago",
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+            },
+        ];
+
+        function fixBlogPosts() {
+            // Limpar localStorage
+            localStorage.removeItem('blogPosts');
+
+            // Salvar posts corretos
+            localStorage.setItem('blogPosts', JSON.stringify(defaultPosts));
+
+            // Mostrar mensagem de sucesso
+            document.getElementById('success').style.display = 'block';
+
+            // Mostrar posts salvos
+            showPosts();
+        }
+
+        function showPosts() {
+            const posts = localStorage.getItem('blogPosts');
+            const output = document.getElementById('output');
+
+            if (posts) {
+                const parsed = JSON.parse(posts);
+                output.innerHTML = `
+                    <h3>📝 Posts Salvos no localStorage (${parsed.length}):</h3>
+                    <pre>${JSON.stringify(parsed, null, 2)}</pre>
+                `;
+            } else {
+                output.innerHTML = `
+                    <h3>⚠️ Nenhum post encontrado no localStorage</h3>
+                    <p>Clique em "Corrigir Posts Agora" para adicionar os posts.</p>
+                `;
+            }
+        }
+
+        function clearAll() {
+            localStorage.clear();
+            document.getElementById('output').innerHTML = `
+                <h3>🗑️ localStorage limpo!</h3>
+                <p>Todos os dados foram removidos. Clique em "Corrigir Posts Agora" para adicionar os posts novamente.</p>
+            `;
+        }
+
+        // Mostrar posts ao carregar a página
+        showPosts();
+    </script>
+</body>
+</html>
