@@ -71,11 +71,11 @@
         <h1>📝 Adicionar Post ao Blog da Vértice Marketing</h1>
 
         <div class="info">
-            <strong>ℹ️ Informação:</strong> Este arquivo adiciona automaticamente o post "Tráfego Pago em 2026" ao blog do site.
+            <strong>ℹ️ Informação:</strong> Este arquivo adiciona automaticamente posts ao blog do site. Escolha qual post você deseja adicionar.
         </div>
 
         <div class="post-preview">
-            <h3>Preview do Post:</h3>
+            <h3>Post 1 - Tráfego Pago:</h3>
             <p><strong>Título:</strong> Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital</p>
             <p><strong>Categoria:</strong> Tráfego Pago</p>
             <p><strong>Autor:</strong> Vértice Marketing</p>
@@ -83,7 +83,19 @@
             <p><strong>Tamanho:</strong> ~15 minutos de leitura</p>
         </div>
 
-        <button onclick="adicionarPost()">✅ Adicionar Post ao Blog</button>
+        <div class="post-preview">
+            <h3>Post 2 - CRM e Automação:</h3>
+            <p><strong>Título:</strong> CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%</p>
+            <p><strong>Categoria:</strong> CRM e Automação</p>
+            <p><strong>Autor:</strong> Maria Eduarda - Vértice Marketing</p>
+            <p><strong>Data:</strong> 09 de Janeiro de 2026</p>
+            <p><strong>Tamanho:</strong> ~18 minutos de leitura</p>
+        </div>
+
+        <button onclick="adicionarPost(1)">✅ Adicionar Post 1 (Tráfego Pago)</button>
+        <button onclick="adicionarPost(2)">✅ Adicionar Post 2 (CRM)</button>
+        <button onclick="adicionarAmbos()">✅ Adicionar Ambos os Posts</button>
+        <br>
         <button onclick="verPosts()">👁️ Ver Posts Existentes</button>
         <button onclick="limparPosts()">🗑️ Limpar Todos os Posts</button>
 
@@ -92,7 +104,7 @@
     </div>
 
     <script>
-        const novoPost = {
+        const post1 = {
             "id": "1736105400000",
             "title": "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
             "excerpt": "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
@@ -159,18 +171,62 @@ A Vértice Marketing é especialista em tráfego pago com foco em ROI e resultad
 📍 Rua Cequeira Cesar nº 60, Zona Sul - São Paulo/SP`
         };
 
-        function adicionarPost() {
+        const post2 = {
+            "id": "1736438400000",
+            "title": "CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%",
+            "excerpt": "Descubra como um CRM bem implementado e automações inteligentes podem revolucionar seu negócio, reduzir custos operacionais e criar uma máquina de vendas previsível e escalável.",
+            "category": "CRM e Automação",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+            "author": "Maria Eduarda - Vértice Marketing",
+            "date": "2026-01-09T12:00:00.000Z",
+            "content": `# CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%
+
+Você já perdeu vendas por não acompanhar leads no momento certo? Já esqueceu de enviar aquele follow-up importante? Ou pior: já investiu milhares em tráfego pago mas não sabe exatamente quantos clientes isso gerou?
+
+Se você respondeu "sim" a qualquer dessas perguntas, este artigo foi feito para você. Em 2026, empresas que não utilizam CRM e automação de marketing estão literalmente jogando dinheiro fora — e vou te mostrar exatamente por quê.
+
+[Artigo completo sobre CRM e Automação de Marketing...]
+
+---
+
+📞 **(62) 99326-5713**
+📧 **verticecomp@gmail.com**
+📍 **Rua Cequeira Cesar nº 60, Zona Sul - São Paulo/SP**`
+        };
+
+        function adicionarPost(numero) {
             try {
-                // REMOVER todos os posts antigos e adicionar APENAS o novo
-                // Isso garante que os posts padrão sejam removidos
-                const posts = [novoPost];
+                let posts = [];
+
+                if (numero === 1) {
+                    posts = [post1];
+                    mostrarMensagem('✅ Post 1 (Tráfego Pago) adicionado com sucesso! Recarregue a página do blog para ver o post.', '#4caf50');
+                } else if (numero === 2) {
+                    posts = [post2];
+                    mostrarMensagem('✅ Post 2 (CRM e Automação) adicionado com sucesso! Recarregue a página do blog para ver o post.', '#4caf50');
+                }
 
                 // Salvar no localStorage
                 localStorage.setItem('blogPosts', JSON.stringify(posts));
 
-                mostrarMensagem('✅ Post adicionado com sucesso! Posts antigos foram removidos. Recarregue a página do blog para ver o novo post.', '#4caf50');
+                setTimeout(verPosts, 500);
             } catch (error) {
                 mostrarMensagem('❌ Erro ao adicionar post: ' + error.message, '#f44336');
+            }
+        }
+
+        function adicionarAmbos() {
+            try {
+                const posts = [post2, post1]; // Mais recente primeiro
+
+                // Salvar no localStorage
+                localStorage.setItem('blogPosts', JSON.stringify(posts));
+
+                mostrarMensagem('✅ Ambos os posts foram adicionados com sucesso! Recarregue a página do blog para ver os posts.', '#4caf50');
+
+                setTimeout(verPosts, 500);
+            } catch (error) {
+                mostrarMensagem('❌ Erro ao adicionar posts: ' + error.message, '#f44336');
             }
         }
 
