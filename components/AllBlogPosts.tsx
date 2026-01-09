@@ -55,15 +55,24 @@ const AllBlogPosts = () => {
         const parsed = JSON.parse(savedPosts);
         if (parsed && parsed.length > 0) {
           // Formatar posts do localStorage para o formato esperado
-          const formattedPosts = parsed.map((post: any) => ({
-            id: post.id,
-            title: post.title,
-            excerpt: post.excerpt,
-            date: post.date || new Date(post.date || Date.now()).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
-            readTime: post.readTime || "15 min",
-            category: post.category,
-            image: post.image,
-          }));
+          const formattedPosts = parsed.map((post: any) => {
+            // Formatar data corretamente
+            let formattedDate = post.date;
+            if (post.date && typeof post.date === 'string' && post.date.includes('T')) {
+              const dateObj = new Date(post.date);
+              formattedDate = dateObj.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
+            }
+
+            return {
+              id: post.id,
+              title: post.title,
+              excerpt: post.excerpt,
+              date: formattedDate,
+              readTime: post.readTime || "15 min",
+              category: post.category,
+              image: post.image,
+            };
+          });
           setBlogPosts(formattedPosts);
           return;
         }
