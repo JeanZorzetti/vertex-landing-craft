@@ -47,20 +47,34 @@ const AllBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState(defaultPosts);
 
   useEffect(() => {
-    // Sempre garantir que temos os posts padrão no localStorage
+    // Carregar posts do localStorage
     const savedPosts = localStorage.getItem("blogPosts");
-    if (!savedPosts || JSON.parse(savedPosts).length === 0) {
-      // Se não há posts salvos ou está vazio, salvar os posts padrão
-      localStorage.setItem("blogPosts", JSON.stringify(defaultPosts.map(post => ({
-        id: post.id,
-        title: post.title,
-        excerpt: post.excerpt,
-        date: post.date,
-        readTime: post.readTime,
-        category: post.category,
-        image: post.image,
-      }))));
+
+    if (savedPosts) {
+      try {
+        const parsed = JSON.parse(savedPosts);
+        if (parsed && parsed.length > 0) {
+          // Formatar posts do localStorage para o formato esperado
+          const formattedPosts = parsed.map((post: any) => ({
+            id: post.id,
+            title: post.title,
+            excerpt: post.excerpt,
+            date: post.date || new Date(post.date || Date.now()).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }),
+            readTime: post.readTime || "15 min",
+            category: post.category,
+            image: post.image,
+          }));
+          setBlogPosts(formattedPosts);
+          return;
+        }
+      } catch (error) {
+        console.error("Erro ao carregar posts:", error);
+      }
     }
+
+    // Se não há posts salvos, usar os padrão
+    localStorage.setItem("blogPosts", JSON.stringify(defaultPosts));
+    setBlogPosts(defaultPosts);
   }, []);
 
   return (
