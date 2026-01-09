@@ -930,19 +930,8 @@ export default function BlogPostPage() {
   useEffect(() => {
     const postId = params.id as string;
 
-    // Buscar post do localStorage primeiro
-    const savedPosts = localStorage.getItem("blogPosts");
-    let foundPost = null;
-
-    if (savedPosts) {
-      const posts = JSON.parse(savedPosts);
-      foundPost = posts.find((p: any) => p.id === postId);
-    }
-
-    // Se não encontrou no localStorage, buscar nos posts padrão
-    if (!foundPost) {
-      foundPost = defaultPosts.find((p) => p.id === postId);
-    }
+    // SEMPRE buscar post dos defaultPosts (que tem o conteúdo completo)
+    const foundPost = defaultPosts.find((p) => p.id === postId);
 
     if (foundPost) {
       setPost(foundPost);

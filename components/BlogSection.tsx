@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Link from "next/link";
 
@@ -35,24 +35,8 @@ const defaultPosts = [
 ];
 
 const BlogSection = () => {
-  const [blogPosts, setBlogPosts] = useState(defaultPosts);
-
-  useEffect(() => {
-    // Sempre garantir que temos os posts padrão no localStorage
-    const savedPosts = localStorage.getItem("blogPosts");
-    if (!savedPosts || JSON.parse(savedPosts).length === 0) {
-      // Se não há posts salvos ou está vazio, salvar os posts padrão
-      localStorage.setItem("blogPosts", JSON.stringify(defaultPosts.map(post => ({
-        id: post.id,
-        title: post.title,
-        excerpt: post.excerpt,
-        date: post.date,
-        readTime: post.readTime,
-        category: post.category,
-        image: post.image,
-      }))));
-    }
-  }, []);
+  // SEMPRE usar defaultPosts - não depender do localStorage
+  const [blogPosts] = useState(defaultPosts);
 
   return (
     <section id="blog" className="py-24 bg-gradient-to-br from-navy via-navy-dark to-navy relative overflow-hidden">

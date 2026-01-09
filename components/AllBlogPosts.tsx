@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Link from "next/link";
 
@@ -53,47 +53,8 @@ const defaultPosts = [
 ];
 
 const AllBlogPosts = () => {
-  const [blogPosts, setBlogPosts] = useState(defaultPosts);
-
-  useEffect(() => {
-    // Carregar posts do localStorage
-    const savedPosts = localStorage.getItem("blogPosts");
-
-    if (savedPosts) {
-      try {
-        const parsed = JSON.parse(savedPosts);
-        if (parsed && parsed.length > 0) {
-          // Formatar posts do localStorage para o formato esperado
-          const formattedPosts = parsed.map((post: any) => {
-            // Formatar data corretamente
-            let formattedDate = post.date;
-            if (post.date && typeof post.date === 'string' && post.date.includes('T')) {
-              const dateObj = new Date(post.date);
-              formattedDate = dateObj.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' });
-            }
-
-            return {
-              id: post.id,
-              title: post.title,
-              excerpt: post.excerpt,
-              date: formattedDate,
-              readTime: post.readTime || "15 min",
-              category: post.category,
-              image: post.image,
-            };
-          });
-          setBlogPosts(formattedPosts);
-          return;
-        }
-      } catch (error) {
-        console.error("Erro ao carregar posts:", error);
-      }
-    }
-
-    // Se não há posts salvos, usar os padrão
-    localStorage.setItem("blogPosts", JSON.stringify(defaultPosts));
-    setBlogPosts(defaultPosts);
-  }, []);
+  // SEMPRE usar defaultPosts - não depender do localStorage
+  const [blogPosts] = useState(defaultPosts);
 
   return (
     <section className="py-24 bg-gradient-to-br from-navy via-navy-dark to-navy relative overflow-hidden">
