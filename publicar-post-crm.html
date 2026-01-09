@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Post CRM - Vértice Marketing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1f36;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #D4AF37;
+            color: #1a1f36;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #c19b2e;
+        }
+        .success {
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+        .info {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Publicar Artigo CRM Completo</h1>
+
+        <div class="info">
+            <strong>ℹ️ Informação:</strong> Este script vai carregar o artigo completo de CRM e Automação (18 minutos de leitura) diretamente do arquivo JSON.
+        </div>
+
+        <button onclick="publicarPost()">✅ Publicar Post CRM Completo</button>
+        <button onclick="publicarAmbos()">✅ Publicar CRM + Tráfego Pago</button>
+
+        <div id="success" class="success"></div>
+    </div>
+
+    <script>
+        async function publicarPost() {
+            try {
+                // Carregar o JSON do post
+                const response = await fetch('./blog-post-crm-automacao-2026.json');
+                const postCRM = await response.json();
+
+                // Salvar no localStorage
+                localStorage.setItem('blogPosts', JSON.stringify([postCRM]));
+
+                mostrarMensagem('✅ Post CRM completo publicado! Recarregue a página do blog para ver.', '#4caf50');
+            } catch (error) {
+                mostrarMensagem('❌ Erro: ' + error.message, '#f44336');
+            }
+        }
+
+        async function publicarAmbos() {
+            try {
+                // Carregar ambos os posts
+                const [responseCRM, responseTrafego] = await Promise.all([
+                    fetch('./blog-post-crm-automacao-2026.json'),
+                    fetch('./blog-post-trafego-pago-2026.json')
+                ]);
+
+                const postCRM = await responseCRM.json();
+                const postTrafego = await responseTrafego.json();
+
+                // Salvar no localStorage (mais recente primeiro)
+                localStorage.setItem('blogPosts', JSON.stringify([postCRM, postTrafego]));
+
+                mostrarMensagem('✅ Ambos os posts publicados! Recarregue a página do blog.', '#4caf50');
+            } catch (error) {
+                mostrarMensagem('❌ Erro: ' + error.message, '#f44336');
+            }
+        }
+
+        function mostrarMensagem(mensagem, cor) {
+            const successDiv = document.getElementById('success');
+            successDiv.textContent = mensagem;
+            successDiv.style.display = 'block';
+            successDiv.style.background = cor;
+        }
+    </script>
+</body>
+</html>
