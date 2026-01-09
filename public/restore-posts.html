@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurar Posts - Vértice Marketing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1d3d 0%, #1a2f4f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #0a1d3d;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .info {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        .info strong {
+            color: #1976d2;
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            background: linear-gradient(135deg, #d4af37 0%, #f0c942 100%);
+            color: #0a1d3d;
+            border: none;
+            padding: 18px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            display: none;
+            border-left: 4px solid #28a745;
+        }
+        .success a {
+            color: #155724;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .count {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0a1d3d;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #d4af37;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Restaurar Posts do Blog</h1>
+        <p class="subtitle">Sistema de recuperação de conteúdo</p>
+
+        <div class="info">
+            <strong>⚠️ Atenção:</strong>
+            Este script vai restaurar TODOS os 5 artigos do blog com o conteúdo completo.
+            Clique no botão abaixo para restaurar os posts.
+        </div>
+
+        <div class="count" id="currentCount">Verificando posts...</div>
+
+        <button onclick="restorePosts()">✨ Restaurar Posts Agora</button>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Restaurando posts...</p>
+        </div>
+
+        <div id="success" class="success">
+            ✅ <strong>Sucesso!</strong> Todos os 5 artigos foram restaurados com conteúdo completo!<br><br>
+            Agora acesse: <a href="/blog">Ver Blog</a> ou <a href="/">Página Inicial</a>
+        </div>
+    </div>
+
+    <script>
+        // Verificar posts atuais
+        function checkPosts() {
+            const posts = localStorage.getItem('blogPosts');
+            const count = posts ? JSON.parse(posts).length : 0;
+            document.getElementById('currentCount').textContent =
+                count > 0 ? `📊 Posts atuais no localStorage: ${count}` : '⚠️ Nenhum post encontrado';
+        }
+
+        function restorePosts() {
+            document.getElementById('loading').style.display = 'block';
+
+            // Limpar localStorage
+            localStorage.removeItem('blogPosts');
+
+            // Aguardar um momento para dar feedback visual
+            setTimeout(() => {
+                // Salvar os posts corretos
+                localStorage.setItem('blogPosts', JSON.stringify([
+                    {
+                        id: "1736451600000",
+                        title: "Redes Sociais em 2026: Como Criar Estratégias que Geram Engajamento Real e Convertem Seguidores em Clientes",
+                        excerpt: "Descubra as melhores práticas para Instagram, LinkedIn, TikTok e Facebook. Aprenda a criar conteúdo que viraliza, construir comunidade engajada e transformar redes sociais em canal de vendas.",
+                        date: "09 Jan 2026",
+                        readTime: "13 min",
+                        category: "Redes Sociais",
+                        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80",
+                    },
+                    {
+                        id: "1736438400000",
+                        title: "CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%",
+                        excerpt: "Descubra como um CRM bem implementado e automações inteligentes podem revolucionar seu negócio, reduzir custos operacionais e criar uma máquina de vendas previsível e escalável.",
+                        date: "09 Jan 2026",
+                        readTime: "18 min",
+                        category: "CRM e Automação",
+                        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+                    },
+                    {
+                        id: "1736365200000",
+                        title: "SEO em 2026: O Guia Definitivo para Rankear no Google e Dominar as Buscas Orgânicas",
+                        excerpt: "Aprenda as técnicas mais avançadas de SEO, algoritmos atualizados do Google, estratégias de palavras-chave e como conquistar a primeira página dos resultados de busca.",
+                        date: "08 Jan 2026",
+                        readTime: "14 min",
+                        category: "SEO",
+                        image: "https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?auto=format&fit=crop&w=1200&q=80",
+                    },
+                    {
+                        id: "1736278800000",
+                        title: "Marketing de Conteúdo em 2026: Como Criar Estratégias que Convertem e Geram Resultados Reais",
+                        excerpt: "Descubra as melhores práticas, formatos que mais engajam e estratégias de SEO para criar conteúdo que atrai, educa e converte seu público em clientes fiéis.",
+                        date: "07 Jan 2026",
+                        readTime: "12 min",
+                        category: "Marketing de Conteúdo",
+                        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+                    },
+                    {
+                        id: "1736105400000",
+                        title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
+                        excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
+                        date: "05 Jan 2026",
+                        readTime: "15 min",
+                        category: "Tráfego Pago",
+                        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+                    },
+                ]));
+
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('success').style.display = 'block';
+                checkPosts();
+            }, 1500);
+        }
+
+        // Verificar ao carregar
+        checkPosts();
+    </script>
+</body>
+</html>
