@@ -6,6 +6,15 @@ import Link from "next/link";
 
 const defaultPosts = [
   {
+    id: "1736438400000",
+    title: "CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%",
+    excerpt: "Descubra como um CRM bem implementado e automações inteligentes podem revolucionar seu negócio, reduzir custos operacionais e criar uma máquina de vendas previsível e escalável.",
+    date: "09 Jan 2026",
+    readTime: "18 min",
+    category: "CRM e Automação",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
     id: "1736451600000",
     title: "Redes Sociais em 2026: Como Criar Estratégias que Geram Engajamento Real e Convertem Seguidores em Clientes",
     excerpt: "Descubra as melhores práticas para Instagram, LinkedIn, TikTok e Facebook. Aprenda a criar conteúdo que viraliza, construir comunidade engajada e transformar redes sociais em canal de vendas.",

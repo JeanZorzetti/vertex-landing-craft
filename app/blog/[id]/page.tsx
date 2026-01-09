@@ -817,6 +817,50 @@ const defaultPosts = [
 <p>Lembre-se: marketing de conteúdo é uma maratona, não uma corrida de velocidade. Consistência e qualidade sempre vencem quantidade.</p>`
   },
   {
+    id: "1736438400000",
+    title: "CRM e Automação de Marketing em 2026: Como Transformar Leads em Clientes Fiéis e Aumentar Vendas em até 300%",
+    excerpt: "Descubra como um CRM bem implementado e automações inteligentes podem revolucionar seu negócio, reduzir custos operacionais e criar uma máquina de vendas previsível e escalável.",
+    date: "09 Jan 2026",
+    readTime: "18 min",
+    category: "CRM e Automação",
+    author: "Maria Eduarda - Vértice Marketing",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    content: `<p>Você já perdeu vendas por não acompanhar leads no momento certo? Já esqueceu de enviar aquele follow-up importante? Ou pior: já investiu milhares em tráfego pago mas não sabe exatamente quantos clientes isso gerou?</p>
+
+<p>Se você respondeu "sim" a qualquer dessas perguntas, este artigo foi feito para você. Em 2026, <strong>empresas que não utilizam CRM e automação de marketing estão literalmente jogando dinheiro fora</strong> — e vou te mostrar exatamente por quê.</p>
+
+<h2>📊 O Problema Que Ninguém Fala (Mas Que Custa Caro)</h2>
+
+<h3>A Realidade dos Negócios Sem CRM</h3>
+
+<p>Segundo pesquisas recentes do mercado brasileiro:</p>
+
+<ol>
+<li><strong>79% dos leads nunca se convertem em vendas</strong> por falta de follow-up adequado</li>
+<li><strong>68% dos clientes abandonam empresas</strong> por sentirem que não recebem atenção suficiente</li>
+<li><strong>Empresas perdem, em média, 26% de receita anual</strong> por não terem processos automatizados de vendas</li>
+<li><strong>O custo de aquisição (CAC) pode ser até 5x maior</strong> sem um sistema que nutra leads adequadamente</li>
+</ol>
+
+<p>E o pior: <strong>a maioria dos empresários nem sabe que está perdendo essas vendas</strong>.</p>
+
+<h2>🎯 O Que é CRM e Por Que Você Precisa de Um (Agora)</h2>
+
+<p><strong>CRM (Customer Relationship Management)</strong> é um sistema que centraliza <strong>todos os dados dos seus clientes e leads</strong> em um único lugar.</p>
+
+<h2>🚀 Como Implementar CRM no Seu Negócio</h2>
+
+<p>O processo de implementação do Sirius CRM leva apenas 30 dias e inclui consultoria completa da nossa equipe.</p>
+
+<h2>📞 Fale Com Nossa Especialista: Maria Eduarda</h2>
+
+<p><strong>Maria Eduarda</strong> é especialista em CRM, automação de marketing e otimização de funis de vendas.</p>
+
+<p><strong>📞 Telefone/WhatsApp:</strong> (62) 99326-5713<br>
+<strong>📧 E-mail:</strong> verticecomp@gmail.com<br>
+<strong>📍 Endereço:</strong> Rua Cequeira Cesar nº 60, Zona Sul - São Paulo/SP</p>`
+  },
+  {
     id: "1736105400000",
     title: "Tráfego Pago em 2026: O Guia Completo para Dominar Google Ads e Meta Ads no Novo Cenário Digital",
     excerpt: "Descubra as estratégias essenciais, tendências de IA, novos custos e métricas de ROI que vão definir o sucesso em tráfego pago em 2026. Um guia completo baseado em dados reais do mercado brasileiro.",
