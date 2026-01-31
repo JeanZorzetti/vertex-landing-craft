@@ -26,6 +26,7 @@ import { toast } from "sonner";
 import { Loader2, Send } from "lucide-react";
 import { useBehavioralTracking } from "@/hooks/use-behavioral-tracking";
 import { trackConversion } from "@/lib/analytics";
+import { submitLead } from "@/lib/actions/submit-lead";
 
 const contactFormSchema = z.object({
   name: z
@@ -116,25 +117,18 @@ export default function ContactForm() {
       // Obter dados comportamentais do Invisible Sales
       const behavioralData = getCRMData();
 
-      // Enviar para API que integra com Sirius CRM
-      const response = await fetch("/api/leads", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
+      // Usar Server Action para enviar ao Sirius CRM (mais seguro que API route)
+      const result = await submitLead(
+        {
           name: data.name,
           email: data.email,
           phone: data.phone,
           company: data.company || "",
           annualRevenue: data.annualRevenue || "",
           message: data.message,
-          // Dados comportamentais do Invisible Sales
-          behavioralData,
-        }),
-      });
-
-      const result = await response.json();
+        },
+        behavioralData || undefined
+      );
 
       // Rastrear conversão
       trackConversion('lead_form_submission', undefined, {
@@ -154,7 +148,7 @@ export default function ContactForm() {
         revenue: data.annualRevenue || "",
         message: data.message,
         date: new Date().toISOString(),
-        syncedToCRM: result.success && !result.warning,
+        syncedToCRM: result.success && !result.error,
         // Adicionar dados comportamentais ao backup local
         behavioral: behavioralData,
       };
@@ -164,14 +158,18 @@ export default function ContactForm() {
       contacts.unshift(contactSubmission);
       localStorage.setItem("contactSubmissions", JSON.stringify(contacts));
 
-      // Sempre mostrar sucesso para o usuário
-      // O lead está salvo localmente e a integração será verificada nos logs
-      toast.success("Mensagem enviada com sucesso!", {
-        description: "Entraremos em contato em breve. Obrigado!",
-      });
-
-      form.reset();
-      setFormStarted(false);
+      // Mostrar resultado ao usuário
+      if (result.success) {
+        toast.success("Mensagem enviada com sucesso!", {
+          description: result.message,
+        });
+        form.reset();
+        setFormStarted(false);
+      } else {
+        toast.error("Erro ao enviar mensagem", {
+          description: result.message,
+        });
+      }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
       onFormError('contact-form', 'submit', 'Erro ao enviar formulário');
