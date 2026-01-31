@@ -8,6 +8,7 @@ import { ReactQueryProvider } from "./providers";
 import StructuredData from "@/components/StructuredData";
 import { GoogleTagManager } from '@next/third-parties/google';
 import Script from 'next/script';
+import { InvisibleSalesProvider } from "@/components/InvisibleSalesProvider";
 
 const gotham = localFont({
   src: [
@@ -138,9 +139,11 @@ export default function RootLayout({
         )}
         <ReactQueryProvider>
           <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            {children}
+            <InvisibleSalesProvider>
+              <Toaster />
+              <Sonner />
+              {children}
+            </InvisibleSalesProvider>
           </TooltipProvider>
         </ReactQueryProvider>
       </body>

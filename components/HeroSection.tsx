@@ -1,18 +1,38 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useCTATracking } from "@/hooks/use-behavioral-tracking";
 
 const HeroSection = () => {
+  const { onCTAClick } = useCTATracking();
+
+  const handleCTAClick = () => {
+    // Rastrear clique no CTA principal
+    onCTAClick('hero-cta', 'Agendar Conversa Gratuita', 'hero');
+
+    const contactSection = document.getElementById('contato');
+    if (contactSection) {
+      const headerOffset = 80;
+      const elementPosition = contactSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80)`,
-          backgroundPosition: 'center 75%'
-        }}
-      >
+    <section id="hero" data-section="hero" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Background Image - Otimizado com Next.js Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80"
+          alt="Background estratégico de negócios"
+          fill
+          priority
+          quality={80}
+          sizes="100vw"
+          className="object-cover object-[center_75%]"
+        />
         {/* Overlay escuro pesado para máximo contraste */}
         <div className="absolute inset-0 bg-black/85" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/70 via-navy-dark/60 to-navy-dark/70" />
@@ -38,15 +58,7 @@ const HeroSection = () => {
               variant="gold"
               size="xl"
               className="gold-shimmer"
-              onClick={() => {
-                const contactSection = document.getElementById('contato');
-                if (contactSection) {
-                  const headerOffset = 80;
-                  const elementPosition = contactSection.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                  window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                }
-              }}
+              onClick={handleCTAClick}
             >
               Agendar Conversa Gratuita
             </Button>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -24,6 +24,8 @@ import {
 } from "@/components/ui/select";
 import { toast } from "sonner";
 import { Loader2, Send } from "lucide-react";
+import { useBehavioralTracking } from "@/hooks/use-behavioral-tracking";
+import { trackConversion } from "@/lib/analytics";
 
 const contactFormSchema = z.object({
   name: z
@@ -59,6 +61,17 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStarted, setFormStarted] = useState(false);
+
+  // Behavioral Tracking (Invisible Sales)
+  const {
+    onFormStart,
+    onFormFieldFocus,
+    onFormFieldBlur,
+    onFormSubmit,
+    onFormError,
+    getCRMData,
+  } = useBehavioralTracking();
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -72,10 +85,37 @@ export default function ContactForm() {
     },
   });
 
+  // Rastrear início do preenchimento do formulário
+  useEffect(() => {
+    const subscription = form.watch(() => {
+      if (!formStarted) {
+        setFormStarted(true);
+        onFormStart('contact-form');
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, [form, formStarted, onFormStart]);
+
+  // Handler para focus em campos
+  const handleFieldFocus = (fieldName: string) => {
+    onFormFieldFocus('contact-form', fieldName);
+  };
+
+  // Handler para blur em campos
+  const handleFieldBlur = (fieldName: string) => {
+    onFormFieldBlur('contact-form', fieldName);
+  };
+
   async function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
 
     try {
+      // Rastrear envio do formulário
+      onFormSubmit('contact-form');
+
+      // Obter dados comportamentais do Invisible Sales
+      const behavioralData = getCRMData();
+
       // Enviar para API que integra com Sirius CRM
       const response = await fetch("/api/leads", {
         method: "POST",
@@ -89,10 +129,20 @@ export default function ContactForm() {
           company: data.company || "",
           annualRevenue: data.annualRevenue || "",
           message: data.message,
+          // Dados comportamentais do Invisible Sales
+          behavioralData,
         }),
       });
 
       const result = await response.json();
+
+      // Rastrear conversão
+      trackConversion('lead_form_submission', undefined, {
+        hasEmail: true,
+        hasPhone: !!data.phone,
+        hasCompany: !!data.company,
+        revenue: data.annualRevenue,
+      });
 
       // Salvar no localStorage como backup para o admin visualizar
       const contactSubmission = {
@@ -105,6 +155,8 @@ export default function ContactForm() {
         message: data.message,
         date: new Date().toISOString(),
         syncedToCRM: result.success && !result.warning,
+        // Adicionar dados comportamentais ao backup local
+        behavioral: behavioralData,
       };
 
       const savedContacts = localStorage.getItem("contactSubmissions");
@@ -119,8 +171,10 @@ export default function ContactForm() {
       });
 
       form.reset();
+      setFormStarted(false);
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
+      onFormError('contact-form', 'submit', 'Erro ao enviar formulário');
       toast.error("Erro ao enviar mensagem", {
         description: "Por favor, tente novamente ou entre em contato diretamente.",
       });
@@ -147,6 +201,8 @@ export default function ContactForm() {
                   {...field}
                   className="bg-background border-border focus:border-gold focus:ring-gold"
                   disabled={isSubmitting}
+                  onFocus={() => handleFieldFocus('name')}
+                  onBlur={() => handleFieldBlur('name')}
                 />
               </FormControl>
               <FormMessage className="text-sm" />
@@ -171,6 +227,8 @@ export default function ContactForm() {
                     {...field}
                     className="bg-background border-border focus:border-gold focus:ring-gold"
                     disabled={isSubmitting}
+                    onFocus={() => handleFieldFocus('email')}
+                    onBlur={() => handleFieldBlur('email')}
                   />
                 </FormControl>
                 <FormMessage className="text-sm" />
@@ -193,6 +251,8 @@ export default function ContactForm() {
                     {...field}
                     className="bg-background border-border focus:border-gold focus:ring-gold"
                     disabled={isSubmitting}
+                    onFocus={() => handleFieldFocus('phone')}
+                    onBlur={() => handleFieldBlur('phone')}
                   />
                 </FormControl>
                 <FormMessage className="text-sm" />
@@ -217,6 +277,8 @@ export default function ContactForm() {
                     {...field}
                     className="bg-background border-border focus:border-gold focus:ring-gold"
                     disabled={isSubmitting}
+                    onFocus={() => handleFieldFocus('company')}
+                    onBlur={() => handleFieldBlur('company')}
                   />
                 </FormControl>
                 <FormMessage className="text-sm" />
@@ -267,6 +329,8 @@ export default function ContactForm() {
                   className="bg-background border-border focus:border-gold focus:ring-gold min-h-[150px] resize-none"
                   {...field}
                   disabled={isSubmitting}
+                  onFocus={() => handleFieldFocus('message')}
+                  onBlur={() => handleFieldBlur('message')}
                 />
               </FormControl>
               <FormMessage className="text-sm" />

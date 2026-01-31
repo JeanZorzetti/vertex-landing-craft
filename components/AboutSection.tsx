@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 bg-background v-pattern">
+    <section id="sobre" data-section="sobre" className="py-24 bg-background v-pattern">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header Section */}
         <div className="max-w-3xl mb-16 mx-auto text-center">
@@ -28,14 +30,13 @@ const AboutSection = () => {
         <div className="relative">
           {/* Background Image do Dashboard - Cobrindo todo o método */}
           <div className="absolute inset-0 overflow-hidden rounded-3xl">
-            <div
-              className="absolute w-full h-full opacity-40"
-              style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}
+            <Image
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80"
+              alt="Dashboard de métricas de negócios"
+              fill
+              sizes="(max-width: 768px) 100vw, 1200px"
+              className="object-cover opacity-40"
+              loading="lazy"
             />
             {/* Overlay escuro para contraste */}
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
